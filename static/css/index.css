@@ -1,0 +1,233 @@
+:root {
+    --primaryFontColor: #000000;
+    --secondaryFontColor: #505050;
+    --backgroundColor: #F8FBFF;
+    --blogBackgroundColor: #fff;
+
+    --shapePrimaryFontColor: #000000;
+    --shapeSecondaryFontColor: #393939;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primaryFontColor: #eeeeee;
+        --secondaryFontColor: #C3C3C3;
+        --backgroundColor: #1E1E1E;
+        --blogBackgroundColor: #2B2B2B;
+    }
+}
+body {
+    background-color: var(--backgroundColor);
+    color: var(--primaryFontColor);
+    max-width: 1000px;
+    margin: auto auto;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    margin-bottom: 200px;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: var(--primaryFontColor);
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: var(--secondaryFontColor);
+    margin-bottom: 5px;
+}
+
+h4 {
+    color: var(--secondaryFontColor);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+p {
+    color: var(--primaryFontColor);
+}
+/*
+    Header
+*/
+
+header img {
+    width: 128px;
+    height: 128px;
+    border-radius: 7px;
+    margin: 20px;
+}
+.headerTitle {
+    margin: 20px;
+}
+
+.headerTitle h1 {
+    font-weight: 700;
+    margin: 10px;
+    padding: 0px;
+}
+
+.headerTitle h2 {
+    font-weight: 600;
+    margin: 10px;
+    padding: 0px;
+}
+
+/*
+    Work Stack
+*/
+
+.WorkStack {
+    display: flex;
+}
+
+.WorkStack img {
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.WorkStack h4 {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.WorkStack h4 img {
+    padding: 5px;
+}
+
+.WorkStack button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.underlinedHeader {
+    text-decoration: underline;
+}
+
+/*
+    Work Cards
+*/
+.WorkCards {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.WorkCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 125px;
+    min-height: 175px;
+
+    border-radius: 7px;
+    
+    margin-right: 50px;
+}
+
+.WorkCardHexagon {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.WorkCardHexagon img {
+    width: 100px;
+    height: 100px;
+
+    z-index: 1;
+}
+
+.WorkCardHexagon h5 {
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0px;
+    margin: 0px;
+
+    z-index: 2;
+}
+
+.WorkCardHexagon h6 {
+    text-transform: uppercase;
+    color: var(--secondaryFontColor);
+    font-weight: 400;
+    padding: 0px;
+    margin: 0px;
+
+    z-index: 2;
+}
+
+/*
+    Card IDs
+*/
+#hephaestusCard h5 {
+    font-size: 0.78em;
+}
+
+/*
+    Blog Cards
+*/
+.BlogCards {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.BlogCard {
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    min-height: 125px;
+    max-width: 350px;
+    max-height: 125px;
+
+    background-color: var(--blogBackgroundColor);
+
+    border-radius: 7px;
+    padding: 10px;
+    margin-right: 5e0px;
+}
+
+.BlogCard h3 {
+    margin: 0px;
+}
+
+.BlogCard h6 {
+    margin: 0px;
+    padding-top: 5px;
+    color: var(--secondaryFontColor);
+    font-weight: 400;
+}
+
+.BlogCard img {
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.BlogCard p {
+    margin: 0px;
+    margin-bottom: 7px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}

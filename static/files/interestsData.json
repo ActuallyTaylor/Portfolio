@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Roe v. Wade",
+        "id": "roevwade",
+        "subtitle": "Event",
+        "path": "../assets/design/roevwade",
+        "category": "photography"
+    },
+    {
+        "title": "R.I.T",
+        "id": "ritinfared",
+        "subtitle": "Infared",
+        "path": "../assets/design/ritinfared",
+        "category": "infaredphotography"
+    },
+    {
+        "title": "Wonder",
+        "id": "wonderspace",
+        "subtitle": "Place",
+        "path": "../assets/design/wonderspace",
+        "category": "photography"
+    },
+    {
+        "title": "Misc",
+        "id": "miscinfared",
+        "subtitle": "Infared",
+        "path": "../assets/design/miscinfared",
+        "category": "infaredphotography"
+    }
+]

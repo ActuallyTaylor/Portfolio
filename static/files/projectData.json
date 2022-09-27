@@ -1,0 +1,52 @@
+[
+    {
+        "title": "Jellycuts",
+        "id": "jellycuts",
+        "subtitle": "iOS App",
+        "path": "../assets/design/jellycuts",
+        "category": "ios"
+    },
+    {
+        "title": "SCUM Map",
+        "id": "scum",
+        "subtitle": "iOS App",
+        "path": "../assets/design/scum",
+        "category": "ios"
+    },
+    {
+        "title": "Firefly",
+        "id": "firefly",
+        "subtitle": "Framework",
+        "path": "../assets/design/firefly",
+        "category": "ios"
+    },
+    {
+        "title": "Hephaestus",
+        "id": "hephaestus",
+        "subtitle": "Game Engine",
+        "path": "../assets/design/hephaestus",
+        "category": "software"
+    },
+    {
+        "title": "Solar Explorer",
+        "id": "solarexplorer",
+        "subtitle": "Simulation",
+        "path": "../assets/design/solarexplorer",
+        "category": "simulations"
+    },
+    {
+        "title": "T.I.A",
+        "id": "tia",
+        "subtitle": "Simulation",
+        "path": "../assets/design/tia",
+        "category": "simulations"
+    },
+    {
+        "title": "Dungeon<br/>of Epsilon",
+        "id": "dungeonofepsilon",
+        "subtitle": "Game",
+        "path": "../assets/design/dungoenofepsilon",
+        "category": "software"
+    }
+]
+
