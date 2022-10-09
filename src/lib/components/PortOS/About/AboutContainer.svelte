@@ -6,10 +6,12 @@
 <style>
     .Container {
         background-color: #F8F8F8;
+        border: 1px solid;
         border-color: #4E5253;
 
         box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.2);
         padding: 10px;
+        margin: 20px;
     }
 </style>
 

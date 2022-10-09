@@ -2,6 +2,13 @@
     export let isDraggable: boolean = true
 	export let left: number = 100
 	export let top: number = 100
+    export let centerAnchor: boolean = false
+
+    export let translateAmount = "0px"
+    if (centerAnchor) {
+        translateAmount = "-50%"
+    }
+    
 	
 	let moving: boolean = false
     
@@ -30,7 +37,7 @@
 	}
 </style>
 
-<section on:mousedown={onMouseDown} style="left: {left}px; top: {top}px;cursor: {isDraggable ? "move" : ""};" class="draggable">
+<section on:mousedown={onMouseDown} style="left: {left}px; top: {top}px;cursor: {isDraggable ? "move" : ""};transform: translate({translateAmount}, {translateAmount}); " class="draggable">
 	<slot>
 
     </slot>
