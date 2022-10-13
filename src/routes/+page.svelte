@@ -3,18 +3,11 @@
     import ProjectCard from "$lib/components/ProjectCard.svelte";
     import BlogCard from "$lib/components/BlogCard.svelte";
     import { BlogEntry } from "$lib/models/BlogEntry";
+    import { Data } from "$lib/data";
+    import { dataset_dev } from "svelte/internal";
 
     // MARK: My Work
     let selectedWork = "allWork"
-    let works: Project[] = [
-        new Project("Jellycuts", "iOS App", "jellycuts", "ios"),
-        new Project("SCUM Map", "iOS App", "scum", "ios"),
-        new Project("Firefly", "iOS App", "firefly", "ios"),
-        new Project("Hephaestus", "Game Engine", "hephaestus", "software"),
-        new Project("Solar Explorer", "Simulation", "solarexplorer", "simulations"),
-        new Project("T.I.A", "Simulation", "tia", "simulations"),
-        new Project("Dungeon <br/>of Epsilon", "Game", "dungoenofepsilon", "software")
-    ];
 
     function handleAllWorkClick() {
         selectedWork = "allWork"
@@ -33,12 +26,6 @@
     }
 
     let selectedInterest = "allInterests"
-    let interests: Project[] = [
-        new Project("Roe v. Wade", "Event", "roevwade", "photography"),
-        new Project("R.I.T", "Infared", "ritinfared", "infaredPhotography"),
-        new Project("Wonder", "Place", "wonderspace", "photography"),
-        new Project("Misc", "Infared", "miscinfared", "infaredPhotography"),
-    ];
 
     function handleAllInterests() {
         selectedInterest = "allInterests"
@@ -51,13 +38,6 @@
     function handleInfared() {
         selectedInterest = "infaredPhotography"
     }
-
-    // MARK: Blogs
-    let blogs: BlogEntry[] = [
-        new BlogEntry("helloWorld", "Hello World!", "Tuesday September 7th", `
-            Welcome to my new website! I have been working on this site for quite some time now.
-        `)
-    ];
 </script>
 
 <svelte:head>
@@ -147,7 +127,7 @@
         </button>
     </div>
     <div class="WorkCards" id="WorkCards">
-        {#each works as project}
+        {#each Data.works as project}
             {#if selectedWork == project.category || selectedWork == "allWork" }
                 <ProjectCard project={project}/>
             {/if}
@@ -202,7 +182,7 @@
         </button>
     </div>
     <div class="WorkCards" id="InterestsCards">
-        {#each interests as project}
+        {#each Data.interests as project}
             {#if selectedInterest == project.category || selectedInterest == "allInterests" }
                 <ProjectCard project={project}/>
             {/if}
@@ -226,7 +206,7 @@
         <h1>Blog</h1>
     </div>
     <div class="BlogCards" id="blogArray">
-        {#each blogs as blog}
+        {#each Data.blogs as blog}
             <BlogCard blog={blog}/>
         {/each}
     </div>
