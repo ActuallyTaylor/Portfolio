@@ -45,7 +45,82 @@
     <link rel="stylesheet" href="/css/index.css" />
 </svelte:head>
 
-<header class="HorizontalStack">
+<style>
+/*
+    Header
+*/
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 128px;
+    height: 128px;
+    border-radius: 7px;
+    margin: 10px;
+}
+.headerTitle {
+    margin: 0px;
+}
+
+.headerTitle h1 {
+    font-weight: 700;
+    margin: 10px;
+    padding: 0px;
+}
+
+.headerTitle h2 {
+    font-weight: 600;
+    margin: 10px;
+    padding: 0px;
+}
+/*
+Work Stack
+*/
+.WorkStack {
+    display: flex;
+}
+
+.WorkStack img {
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.WorkStack h4 {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.WorkStack h4 img {
+    padding: 5px;
+}
+
+.WorkStack button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.underlinedHeader {
+    text-decoration: underline;
+}
+
+.WorkCards {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+</style>
+
+<header>
     <img src="/assets/icon.png" alt="User Icon" />
     <div class="headerTitle">
         <h1 class="headerTitle">Zachary Lineman</h1>

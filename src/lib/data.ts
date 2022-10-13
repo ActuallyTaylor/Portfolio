@@ -1,5 +1,6 @@
 import { BlogEntry } from "./models/BlogEntry";
 import { Project } from "./models/Project";
+import { WebPage, WebPageSection, WebPageSectionType } from "./models/WebPage/WebPage";
 
 export class Data {
     static works: Project[] = [
@@ -23,5 +24,12 @@ export class Data {
             Welcome to my new website! I have been working on this site for quite some time now.
         `)
     ];
+
+    static pages: WebPage[] = [
+        new WebPage("jellycuts", "Jellycuts", "Supercharge your Shortcuts", "#EECAFF", [
+            new WebPageSection(WebPageSectionType.description, "Powerful Shortcuts", "Create extremely powerful shortcuts with Jellycuts. Jellycuts is an IDE for iOS shortcuts that allows you to create complex shortcuts quickly and easily. You can create a shortcut in the Jelly language, a full language for iOS Shortcuts. Jellycuts takes your code and converts it into shortcuts that are runnable in the shortcuts app.", undefined),
+            new WebPageSection(WebPageSectionType.leftAlignedDescription, "iOS App", "Jellycuts offers both an iOS and iPad OS app! These apps can be used to directly intereact with Shortcuts on iOS and iPadOS devices. It uses both SwiftUI and UIKit as UI framework, and my custom text editor Firefly.", "/assets/icon.png")
+        ])
+    ]
 }
 
