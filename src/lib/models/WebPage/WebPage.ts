@@ -29,10 +29,13 @@ export class WebPageSection {
     description: string | undefined
     photoURL: string | undefined
 
-    constructor(type: WebPageSectionType, title: string | undefined, description: string | undefined, photoURL: string | undefined) {
+    extra: string | undefined
+
+    constructor(type: WebPageSectionType, title: string | undefined, description: string | undefined, photoURL: string | undefined, extra: string | undefined) {
         this.title = title
         this.sectionType = type
         this.description = description
         this.photoURL = photoURL
+        this.extra = extra
     }
 }

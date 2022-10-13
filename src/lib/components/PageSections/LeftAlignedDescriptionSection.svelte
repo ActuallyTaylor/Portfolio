@@ -9,10 +9,12 @@
 .leftAligned {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-.leftAligned img {
+.image {
     border-radius: 20px;
+    width: 40%;
 }
 .descriptionStack { 
     margin-right: 20px;
@@ -24,8 +26,11 @@
     <div class="descriptionStack">
         <h2>{section.title}</h2>
         <p>
-            {section.description ?? ""}
+            {@html section.description ?? ""}
         </p>    
+        {#if section.extra != undefined}
+            {@html section.extra}
+        {/if}
     </div>
-    <img src="{section.photoURL}" alt="Section"/>
+    <img class="image" src="{section.photoURL}" alt="Section"/>
 </div>

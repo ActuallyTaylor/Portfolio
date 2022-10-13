@@ -4,8 +4,11 @@
     --backgroundColor: #F8FBFF;
     --blogBackgroundColor: #fff;
 
+    --navBarBackgroundColor: #fff;
+
     --shapePrimaryFontColor: #000000;
     --shapeSecondaryFontColor: #393939;
+
 
 }
 
@@ -15,6 +18,7 @@
         --secondaryFontColor: #C3C3C3;
         --backgroundColor: #1E1E1E;
         --blogBackgroundColor: #2B2B2B;
+        --navBarBackgroundColor: #2B2B2B;
     }
 }
 body {

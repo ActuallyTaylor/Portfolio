@@ -27,6 +27,32 @@
         margin-bottom: 0px;
     }
 
+    nav {
+        display: flex;
+        background-color: var(--navBarBackgroundColor);
+        border-radius: 7px;
+        align-items: center;
+        padding-left: 20px;
+        margin-top: 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--primaryFontColor);
+    }
+
+    nav a:last-child {
+        font-weight: 600;
+    }
+
+    .name {
+        position: absolute;
+        left: 50%;
+        translate: -50%;
+
+        font-weight: 700;
+    }
+
     header {
         margin-right: auto;
         margin-left: auto;
@@ -69,6 +95,14 @@
 </style>
 
 <div class="smallerBody">
+    <nav>
+        <p class="name">Zachary Lineman</p>   
+        <p>
+            <a href="/">Home</a> / <a href="/project/{webpage.id}">{webpage.title}</a>
+            <!-- <a href="/project">Projects</a> /  -->
+        </p>
+    </nav>
+
     <header style='background: url("/assets/design/{webpage.id}/background.png"); background-size: cover; background-repeat: no-repeat; background-position: center;'>
         <div class="headerContainer" style="background-color: {webpage.headerColor};">
             <h1 class="headerTitle">{webpage.title}</h1>

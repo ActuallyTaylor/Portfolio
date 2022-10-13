@@ -9,13 +9,14 @@
 .photo {
     display: flex;
     justify-content: center;
+    margin-bottom: 20px;
 }
 
-.photo img {
+.image {
     border-radius: 20px;
 }
 
-.photo h2 {
+.sectionTitle {
     margin-bottom: 20px;
 }
 
@@ -28,7 +29,10 @@
 
 <div class="photo">
     <div class="stack">
-        <h2>{section.title}</h2>
-        <img src="{section.photoURL}" alt="Section"/>    
+        <h2 class="sectionTitle">{section.title}</h2>
+        <img class="image" src="{section.photoURL}" alt="Section"/>    
+        {#if section.extra != undefined}
+            {@html section.extra}
+        {/if}
     </div>
 </div>
