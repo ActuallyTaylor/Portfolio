@@ -6,7 +6,7 @@ export class Data {
     static works: Project[] = [
         new Project("Jellycuts", "iOS App", "jellycuts", "ios"),
         new Project("SCUM Map", "iOS App", "scum", "ios"),
-        new Project("Firefly", "iOS App", "firefly", "ios"),
+        new Project("Firefly", "iOS Framework", "firefly", "ios"),
         new Project("Hephaestus", "Game Engine", "hephaestus", "software"),
         new Project("Solar Explorer", "Simulation", "solarexplorer", "simulations"),
         new Project("T.I.A", "Simulation", "tia", "simulations"),
@@ -49,8 +49,23 @@ export class Data {
                     <img alt="Scum AppStore Badge" srcset="/assets/badges/appBadge.png 1x, /assets/badges/appBadge@2x.png 2x" class="appstoreButton" />
                 </a>
                 `)
+        ]),
+        new WebPage("firefly", "Firefly Editor", "", "#D1FFCA", [
+            new WebPageSection(WebPageSectionType.description, undefined, "Firefly is a pure swift Syntax highlighter for iOS. It was created to be a fast and native solution to a problem that did not have many good solutions. The project is open sourced so that anyone can help improve it and make it the best syntax highlighter for iOS.", undefined,
+            `
+            <a href="https://github.com/ActuallyZach/Firefly" target="_blank">
+                <img alt="Firefly Github" srcset="/assets/badges/GithubBadge.png 1x, /assets/badges/GithubBadge@2x.png 2x" class="appstoreButton" />
+            </a>
+            `),
+        ]),
+        new WebPage("firefly", "Firefly Editor", "", "#D1FFCA", [
+            new WebPageSection(WebPageSectionType.description, undefined, "Firefly is a pure swift Syntax highlighter for iOS. It was created to be a fast and native solution to a problem that did not have many good solutions. The project is open sourced so that anyone can help improve it and make it the best syntax highlighter for iOS.", undefined,
+            `
+            <a href="https://github.com/ActuallyZach/Firefly" target="_blank">
+                <img alt="Firefly Github" srcset="/assets/badges/GithubBadge.png 1x, /assets/badges/GithubBadge@2x.png 2x" class="appstoreButton" />
+            </a>
+            `),
         ])
-
     ]
 }
 

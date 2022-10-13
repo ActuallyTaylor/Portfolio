@@ -26,7 +26,10 @@
 <div class="rightAligned">
     <img class="image" src="{section.photoURL}" alt="Section"/>
     <div class="descriptionStack">
-        <h2>{section.title}</h2>
+        {#if section.title != undefined }
+        <h2 class="sectionTitle">{section.title}</h2>
+        {/if}
+
         <p>
             {@html section.description ?? ""}
         </p>    

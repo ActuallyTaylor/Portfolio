@@ -266,14 +266,14 @@ Work Stack
 </section>
 
 <!-- My Skills -->
-<section>
+<!-- <section>
     <div class="WorkStack HorizontalStack VerticallyCentered">
         <h1>My Skills</h1>
     </div>
     <div>
         <progress id="file" value="10" max="10"> 32% </progress>
     </div>
-</section>
+</section> -->
 
 <!-- Blog -->
 <section>

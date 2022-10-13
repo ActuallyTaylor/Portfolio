@@ -24,7 +24,9 @@
 
 <div class="leftAligned">
     <div class="descriptionStack">
+        {#if section.title != undefined }
         <h2>{section.title}</h2>
+        {/if}
         <p>
             {@html section.description ?? ""}
         </p>    

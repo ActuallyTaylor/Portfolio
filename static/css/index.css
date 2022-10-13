@@ -53,3 +53,8 @@ h4 {
 p {
     color: var(--primaryFontColor);
 }
+
+.appstoreButton {
+    height: 3em;
+    width: auto;
+}

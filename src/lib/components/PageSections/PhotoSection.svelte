@@ -29,7 +29,10 @@
 
 <div class="photo">
     <div class="stack">
+        {#if section.title != undefined }
         <h2 class="sectionTitle">{section.title}</h2>
+        {/if}
+            
         <img class="image" src="{section.photoURL}" alt="Section"/>    
         {#if section.extra != undefined}
             {@html section.extra}
