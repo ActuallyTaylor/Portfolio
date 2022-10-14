@@ -1,8 +1,6 @@
 <script lang="ts">
-    import type { WebPageSection } from "$lib/models/WebPage/WebPage";
-
-
-    export let section: WebPageSection;
+    export let title: string | undefined
+    export let path: string
 </script>
 
 <style>
@@ -29,13 +27,13 @@
 
 <div class="photo">
     <div class="stack">
-        {#if section.title != undefined }
-        <h2 class="sectionTitle">{section.title}</h2>
+        {#if title != undefined }
+        <h2 class="sectionTitle">{title}</h2>
         {/if}
             
-        <img class="image" src="{section.photoURL}" alt="Section"/>    
-        {#if section.extra != undefined}
-            {@html section.extra}
-        {/if}
+        <img class="image" src="{path}" alt="Section"/>    
+        <slot name="extras">
+    
+        </slot>
     </div>
 </div>

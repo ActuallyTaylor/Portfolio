@@ -1,8 +1,6 @@
 <script lang="ts">
-    import type { WebPageSection } from "$lib/models/WebPage/WebPage";
-
-
-    export let section: WebPageSection;
+    export let title: string | undefined
+    export let path: string
 </script>
 
 <style>
@@ -24,15 +22,17 @@
 
 <div class="leftAligned">
     <div class="descriptionStack">
-        {#if section.title != undefined }
-        <h2>{section.title}</h2>
+        {#if title != undefined }
+        <h2>{title}</h2>
         {/if}
         <p>
-            {@html section.description ?? ""}
-        </p>    
-        {#if section.extra != undefined}
-            {@html section.extra}
-        {/if}
+            <slot name="description">
+    
+            </slot>    
+        </p>
+        <slot name="extras">
+    
+        </slot>
     </div>
-    <img class="image" src="{section.photoURL}" alt="Section"/>
+    <img class="image" src="{path}" alt="Section"/>
 </div>
