@@ -10,7 +10,7 @@ export class Data {
         new Project("Hephaestus", "Game Engine", "hephaestus", "software"),
         new Project("Solar Explorer", "Simulation", "solarexplorer", "simulations"),
         new Project("T.I.A", "Simulation", "tia", "simulations"),
-        new Project("Dungeon <br/>of Epsilon", "Game", "dungoenofepsilon", "software")
+        new Project("Dungeon <br>of Epsilon", "Game", "dungoenofepsilon", "software")
     ];
     static interests: Project[] = [
         new Project("Roe v. Wade", "Protest", "roevwade", "photography"),

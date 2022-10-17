@@ -20,11 +20,6 @@
         <span slot="description">
             Terran Integration Application (or T.I.A. for short) is my 2021 submission to <a href="https://developer.apple.com/wwdc22/swift-student-challenge/">Apple's Swift Student Challenge</a>. This was my second year submitting a project to the challenge and also my second year being one of the 350 winners.
         </span>
-        <span slot="extras">
-            <a href="https://github.com/ActuallyZach/Terran-Integration-Application-WWDC21" target="_blank">
-                <img alt="TIA WWDC22 GitHub" srcset="/assets/badges/GithubBadge.png 1x, /assets/badges/GithubBadge@2x.png 2x" class="appstoreButton" />
-            </a>        
-        </span>
     </DescriptionSection>
     <DescriptionSection title={"About"}>
         <span slot="description">
@@ -38,6 +33,11 @@
             On top of the genetic algorithm, TIA also has a small storyline built into the application. The storyline puts you in the place of a person who has been discovered an other wordly being.
             This being has put you down in front of a genetic simulation to see how you would perform as a species ruling over an enviorment. The storyline can be discovered through interacting with
             the floating TIA ball.
+        </span>
+        <span slot="extras">
+            <a href="https://github.com/ActuallyZach/Terran-Integration-Application-WWDC21" target="_blank">
+                <img alt="TIA WWDC21 GitHub" srcset="/assets/badges/GithubBadge.png 1x, /assets/badges/GithubBadge@2x.png 2x" class="appstoreButton" />
+            </a>        
         </span>
     </DescriptionSection>
     <VideoSection title={"Expo Video"} youtubeEmbedID={"qPPdZWZiEEY"}>
