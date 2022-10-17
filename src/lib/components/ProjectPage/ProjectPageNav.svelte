@@ -34,7 +34,7 @@
 <nav>
     <p class="name">Zachary Lineman</p>   
     <p>
-        <a href="/">Home</a> / <a href="/project/{id}">{name}</a>
+        <a href="/">Home</a> / <a href="/{id}">{name}</a>
         <!-- <a href="/project">Projects</a> /  -->
     </p>
 </nav>

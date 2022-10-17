@@ -35,8 +35,8 @@
         selectedInterest = "photography"
     }
 
-    function handleInfared() {
-        selectedInterest = "infaredPhotography"
+    function handleinfrared() {
+        selectedInterest = "infraredPhotography"
     }
 </script>
 
@@ -227,7 +227,7 @@ Work Stack
                 />
                 <img
                     src="/assets/design/headerShapes/hexagon.svg"
-                    alt="Infared Hexagon"
+                    alt="infrared Hexagon"
                     width="18"
                     height="18"
                 />
@@ -244,12 +244,12 @@ Work Stack
                 />
             </h4>
         </button>
-        <button id="infaredPhotography" on:click={handleInfared}  class:underlinedHeader="{selectedInterest == "infaredPhotography"}">
+        <button id="infraredPhotography" on:click={handleinfrared}  class:underlinedHeader="{selectedInterest == "infraredPhotography"}">
             <h4>
-                Infared Photography
+                infrared Photography
                 <img
                     src="/assets/design/headerShapes/hexagon.svg"
-                    alt="Infared Hexagon"
+                    alt="infrared Hexagon"
                     width="18"
                     height="18"
                 />

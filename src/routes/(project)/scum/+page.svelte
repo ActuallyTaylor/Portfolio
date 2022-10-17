@@ -1,5 +1,4 @@
 <script lang="ts">
-    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte";
     import LeftAlignedDescriptionSection from "$lib/components/PageSections/LeftAlignedDescriptionSection.svelte";
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte";
     import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte";

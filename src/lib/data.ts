@@ -13,10 +13,10 @@ export class Data {
         new Project("Dungeon <br/>of Epsilon", "Game", "dungoenofepsilon", "software")
     ];
     static interests: Project[] = [
-        new Project("Roe v. Wade", "Event", "roevwade", "photography"),
-        new Project("R.I.T", "Infared", "ritinfared", "infaredPhotography"),
+        new Project("Roe v. Wade", "Protest", "roevwade", "photography"),
+        new Project("R.I.T", "Infrared", "ritinfrared", "infraredPhotography"),
         new Project("Wonder", "Place", "wonderspace", "photography"),
-        new Project("Misc", "Infared", "miscinfared", "infaredPhotography"),
+        new Project("Misc", "Infrared", "miscinfrared", "infraredPhotography"),
     ];
 
     static blogs: BlogEntry[]= [

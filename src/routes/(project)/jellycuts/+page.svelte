@@ -1,6 +1,7 @@
 <script lang="ts">
     import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte";
     import LeftAlignedDescriptionSection from "$lib/components/PageSections/LeftAlignedDescriptionSection.svelte";
+    import VideoSection from "$lib/components/PageSections/VideoSection.svelte";
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte";
     import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte";
 
@@ -32,4 +33,5 @@
             </a>
         </span>
     </LeftAlignedDescriptionSection>
+    <VideoSection title={"1.0 Launch Trailer"} youtubeEmbedID={"6JqJXJ_2A44"}></VideoSection>
 </span>
