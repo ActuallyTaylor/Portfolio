@@ -1,6 +1,4 @@
 <script lang="ts">
-    import type { WebPageSection } from "$lib/models/WebPage/WebPage";
-
     export let title: string | undefined
 </script>
 
