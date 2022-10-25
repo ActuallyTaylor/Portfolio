@@ -1,14 +1,14 @@
 <script lang="ts">
-    import { each } from "svelte/internal";
-
-
     export let title: string | undefined
     export let imagePaths: string[]
 
-    export let selectedPhoto: string = imagePaths[0]
+    export let selectedPhoto: string = imagePaths[0].replace("compressed", "uncompressed")
+    export let originalSelectedPhoto: string = imagePaths[0]
 
     function clickedPhoto(path: string) {
+        originalSelectedPhoto = path
         selectedPhoto = path
+        selectedPhoto = selectedPhoto.replace("compressed", "uncompressed")
     }
 </script>
 
@@ -38,6 +38,12 @@
     width: 100px;
     object-fit: cover;
     margin-right: 10px; 
+    opacity: .5;
+    border-radius: 7px;
+}
+
+.bottomBarButton img:hover {
+    opacity: .75;
 }
 
 .bottomBarButton {
@@ -49,6 +55,11 @@
 	cursor: pointer;
 	outline: inherit;
 }
+
+.selected {
+    opacity: 1.0;
+}
+
 </style>
 
 <div class="description">
@@ -61,7 +72,7 @@
     <div class="photoBottomScroll">
         {#each imagePaths as path}
         <button class="bottomBarButton" id="{path}" on:click={() => clickedPhoto(path)}>
-            <img class="bottomBarPhoto" src="{path}" alt="{path}"/>
+            <img class="bottomBarPhoto" src="{path}" alt="{path}" class:selected="{originalSelectedPhoto == path}"/>
         </button>
         {/each}
     </div>

@@ -143,7 +143,7 @@ Work Stack
 <section>
     <div class="WorkStack HorizontalStack VerticallyCentered">
         <h1>My Work</h1>
-        <img src="/assets//element/VerticalDivider.svg" alt="" height="32px" />
+        <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
         <button on:click={handleAllWorkClick} id="allWork" class:underlinedHeader="{selectedWork == "allWork"}">
             <h4>
                 All Work
