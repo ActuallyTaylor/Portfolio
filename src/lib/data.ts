@@ -21,7 +21,7 @@ export class Data {
 
     static blogs: BlogEntry[]= [
         new BlogEntry("helloWorld", "Hello World!", "Tuesday September 7th", `
-            Welcome to my new website! I have been working on this site for quite some time now.
+            Welcome to my new website!
         `)
     ];
 

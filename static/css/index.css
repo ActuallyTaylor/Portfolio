@@ -9,6 +9,8 @@
     --shapePrimaryFontColor: #000000;
     --shapeSecondaryFontColor: #393939;
 
+    --visitedLink: #85beef;
+    --link: #85efca;
 
 }
 
@@ -21,6 +23,7 @@
         --navBarBackgroundColor: #2B2B2B;
     }
 }
+
 body {
     background-color: var(--backgroundColor);
     color: var(--primaryFontColor);
@@ -28,6 +31,12 @@ body {
     margin: auto auto;
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     margin-bottom: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 10px 10px;
+    }
 }
 
 section {
@@ -52,6 +61,14 @@ h4 {
 
 p {
     color: var(--primaryFontColor);
+}
+
+a {
+    color: var(--link);
+}
+
+a:visited {
+    color: var(--visitedLink);
 }
 
 .appstoreButton {

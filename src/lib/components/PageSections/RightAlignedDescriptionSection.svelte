@@ -19,6 +19,19 @@
     margin-left: 20px;
     display: block;
 }
+
+@media screen and (max-width: 600px) {
+    .rightAligned {
+        flex-direction: column-reverse;
+    }
+    .image {
+        border-radius: 20px;
+        width: 90%;
+    }
+    .descriptionStack {
+        margin-left: 0px;
+    }
+}
 </style>
 
 <div class="rightAligned">

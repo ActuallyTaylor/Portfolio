@@ -62,6 +62,13 @@ header img {
     border-radius: 7px;
     margin: 10px;
 }
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 .headerTitle {
     margin: 0px;
 }
@@ -77,11 +84,31 @@ header img {
     margin: 10px;
     padding: 0px;
 }
+
+/* .linkStack img {
+    width: 24px;
+    height: 24px;
+} */
 /*
 Work Stack
 */
 .WorkStack {
     display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+@media screen and (max-width: 600px) {
+    .FilterStack {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        overflow-x: scroll;
+    }
+}
+
+.WorkStack h1 {
+    min-width: fit-content;
 }
 
 .WorkStack img {
@@ -93,6 +120,7 @@ Work Stack
     display: flex;
     align-items: center;
     padding-left: 30px;
+    min-width: fit-content;
 }
 
 .WorkStack h4 img {
@@ -107,6 +135,7 @@ Work Stack
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
+    min-width: fit-content;
 }
 
 .underlinedHeader {
@@ -118,6 +147,14 @@ Work Stack
     overflow-x: auto;
     overflow-y: hidden;
 }
+
+@media screen and (max-width: 600px) {
+    .WorkCards {
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
 </style>
 
 <header>
@@ -125,6 +162,23 @@ Work Stack
     <div class="headerTitle">
         <h1 class="headerTitle">Zachary Lineman</h1>
         <h2 class="headerTitle">Freelance iOS Development</h2>
+        <div>
+            <a href="https://twitter.com/LinemanZachary">
+                <img src="assets/design/headerLinks/twitter.svg" style="height: 24px; width: 24px;" alt="Twitter Logo" title="My Twitter">
+            </a>
+            <a href="https://github.com/ActuallyZach">
+                <img src="assets/design/headerLinks/github.svg" style="height: 24px; width: 24px;" alt="GitHub Logo" title="My GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/zacharylineman/">
+                <img src="assets/design/headerLinks/linkedin.svg" style="height: 24px; width: 24px;" alt="LinkedIn Logo" title="My LinkedIn">
+            </a>
+            <a href="/files/Zachary Lineman Resume 2022.pdf">
+                <img src="assets/design/headerLinks/doc.svg" style="height: 24px; width: 24px;" alt="Resume Logo" title="My Resume">
+            </a>
+            <a href="mailto://zachary.lineman@gmail.com">
+                <img src="assets/design/headerLinks/mail.svg" style="height: 24px; width: 24px;" alt="Mail Logo" title="My Email">
+            </a>
+        </div>
     </div>
 </header>
 <!-- About Me -->
@@ -134,72 +188,85 @@ Work Stack
         Hey 👋 I am a New York based independent Developer. I have been working
         on iOS Apps since 2018. I started my jounrney of making iOS apps with
         simple one use apps for Journaling, To-Do and Financial tracking. From
-        there I began to branch out into other areas. The first app that I
-        released on the app store was in partnership with a business partner.
+        there I began to branch out into other areas. The <a href="./scum">first app</a> that I
+        released on the app store was in partnership with a business partner. After releasing SCUM Map, 
+        I started to working on <a href="./jellycuts">Jellycuts</a>. After almost a year of developing Jellycuts
+        and growing the community, I released it onto the App Store. I am still supporting both
+        Jellycuts and SCUM Map.
     </p>
+    
+    <p>
+        In between working on Jellycuts and SCUM Map, I also work on contracting jobs. I have developed multiple iOS apps for an array
+        of companies. I have worked on purely iOS apps as well as full stack apps. Most recently, I have worked on a full stack app. 
+        This app used SwiftUI, UIKit, Firebase, NodeJS and a Python Server. Most work for this app was upgrading from UIKit to SwiftUI
+        and then developing Widgets and Live Activities.
+    </p>
+
 </section>
 
 <!-- My Work -->
 <section>
-    <div class="WorkStack HorizontalStack VerticallyCentered">
+    <div class="WorkStack">
         <h1>My Work</h1>
         <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
-        <button on:click={handleAllWorkClick} id="allWork" class:underlinedHeader="{selectedWork == "allWork"}">
-            <h4>
-                All Work
-                <img
-                    src="/assets/design/headerShapes/hexagon.svg"
-                    alt="iOS Apps Hexagon"
-                    width="18"
-                    height="18"
-                />
-                <img
-                    src="/assets/design/headerShapes/diamond.svg"
-                    alt="Software Diamond"
-                    width="18"
-                    height="18"
-                />
-                <img
-                    src="/assets/design/headerShapes/circle.svg"
-                    alt="Simulations Circle"
-                    width="18"
-                    height="18"
-                />
-            </h4>
-        </button>
-        <button on:click={handleiOSClick} id="iOS" class:underlinedHeader="{selectedWork == "ios"}">
-            <h4>
-                iOS Apps
-                <img
-                    src="/assets/design/headerShapes/hexagon.svg"
-                    alt="iOS Apps Hexagon"
-                    width="18"
-                    height="18"
-                />
-            </h4>
-        </button>
-        <button on:click={handleSoftwareClick} id="software" class:underlinedHeader="{selectedWork == "software"}">
-            <h4>
-                Software
-                <img
-                    src="/assets/design/headerShapes/diamond.svg"
-                    alt="Software Diamond"
-                    width="18"
-                    height="18"
-                />
-            </h4>
-        </button>
-        <button on:click={handleSimulationClick} id="simulations" class:underlinedHeader="{selectedWork == "simulations"}">
-            <h4>
-                Simulations
-                <img
-                    src="/assets/design/headerShapes/circle.svg"
-                    alt="Simulations Circle"
-                    width="18"
-                    height="18"
-                />
-            </h4>
-        </button>
+        <div class="FilterStack">
+            <button on:click={handleAllWorkClick} id="allWork" class:underlinedHeader="{selectedWork == "allWork"}">
+                <h4>
+                    All Work
+                    <img
+                        src="/assets/design/headerShapes/hexagon.svg"
+                        alt="iOS Apps Hexagon"
+                        width="18"
+                        height="18"
+                    />
+                    <img
+                        src="/assets/design/headerShapes/diamond.svg"
+                        alt="Software Diamond"
+                        width="18"
+                        height="18"
+                    />
+                    <img
+                        src="/assets/design/headerShapes/circle.svg"
+                        alt="Simulations Circle"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>
+            <button on:click={handleiOSClick} id="iOS" class:underlinedHeader="{selectedWork == "ios"}">
+                <h4>
+                    iOS Apps
+                    <img
+                        src="/assets/design/headerShapes/hexagon.svg"
+                        alt="iOS Apps Hexagon"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>
+            <button on:click={handleSoftwareClick} id="software" class:underlinedHeader="{selectedWork == "software"}">
+                <h4>
+                    Software
+                    <img
+                        src="/assets/design/headerShapes/diamond.svg"
+                        alt="Software Diamond"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>
+            <button on:click={handleSimulationClick} id="simulations" class:underlinedHeader="{selectedWork == "simulations"}">
+                <h4>
+                    Simulations
+                    <img
+                        src="/assets/design/headerShapes/circle.svg"
+                        alt="Simulations Circle"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>    
+        </div>
     </div>
     <div class="WorkCards" id="WorkCards">
         {#each Data.works as project}
@@ -215,46 +282,48 @@ Work Stack
     <div class="WorkStack HorizontalStack VerticallyCentered">
         <h1>My Interests</h1>
         <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
-        <button id="allInterests" on:click={handleAllInterests}  class:underlinedHeader="{selectedInterest == "allInterests"}">
-            <h4>
-                All Interests
-                <!-- <img src="/assets/design/headerShapes/diamond.svg" width="18" height="18"/>  -->
-                <img
-                    src="/assets/design/headerShapes/circle.svg"
-                    alt="Photograpy Circle"
-                    width="18"
-                    height="18"
-                />
-                <img
-                    src="/assets/design/headerShapes/hexagon.svg"
-                    alt="infrared Hexagon"
-                    width="18"
-                    height="18"
-                />
-            </h4>
-        </button>
-        <button id="photography" on:click={handlePhotography}  class:underlinedHeader="{selectedInterest == "photography"}">
-            <h4>
-                Photography
-                <img
-                    src="/assets/design/headerShapes/circle.svg"
-                    alt="Photograpy Circle"
-                    width="18"
-                    height="18"
-                />
-            </h4>
-        </button>
-        <button id="infraredPhotography" on:click={handleinfrared}  class:underlinedHeader="{selectedInterest == "infraredPhotography"}">
-            <h4>
-                infrared Photography
-                <img
-                    src="/assets/design/headerShapes/hexagon.svg"
-                    alt="infrared Hexagon"
-                    width="18"
-                    height="18"
-                />
-            </h4>
-        </button>
+        <div class="FilterStack">
+            <button id="allInterests" on:click={handleAllInterests}  class:underlinedHeader="{selectedInterest == "allInterests"}">
+                <h4>
+                    All Interests
+                    <!-- <img src="/assets/design/headerShapes/diamond.svg" width="18" height="18"/>  -->
+                    <img
+                        src="/assets/design/headerShapes/circle.svg"
+                        alt="Photograpy Circle"
+                        width="18"
+                        height="18"
+                    />
+                    <img
+                        src="/assets/design/headerShapes/hexagon.svg"
+                        alt="infrared Hexagon"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>
+            <button id="photography" on:click={handlePhotography}  class:underlinedHeader="{selectedInterest == "photography"}">
+                <h4>
+                    Photography
+                    <img
+                        src="/assets/design/headerShapes/circle.svg"
+                        alt="Photograpy Circle"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>
+            <button id="infraredPhotography" on:click={handleinfrared}  class:underlinedHeader="{selectedInterest == "infraredPhotography"}">
+                <h4>
+                    infrared Photography
+                    <img
+                        src="/assets/design/headerShapes/hexagon.svg"
+                        alt="infrared Hexagon"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>
+        </div>        
     </div>
     <div class="WorkCards" id="InterestsCards">
         {#each Data.interests as project}

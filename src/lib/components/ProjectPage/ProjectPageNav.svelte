@@ -29,6 +29,12 @@
 
         font-weight: 700;
     }
+
+    @media screen and (max-width: 600px) {
+        .name {
+            display: none;
+        }
+    }
 </style>
 
 <nav>

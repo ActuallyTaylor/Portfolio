@@ -57,6 +57,13 @@
 .nodec {
     text-decoration: none;
 }
+
+@media screen and (max-width: 600px) {
+    .card {
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+}
 </style>
 
 <a href="./{project.id}" class="nodec">

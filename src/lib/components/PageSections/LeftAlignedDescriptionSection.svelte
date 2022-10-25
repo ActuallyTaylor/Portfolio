@@ -18,6 +18,16 @@
     margin-right: 20px;
     display: block;
 }
+
+@media screen and (max-width: 600px) {
+    .leftAligned {
+        flex-direction: column;
+    }
+    .image {
+        border-radius: 20px;
+        width: 90%;
+    }
+}
 </style>
 
 <div class="leftAligned">

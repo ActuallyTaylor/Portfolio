@@ -21,6 +21,7 @@
 }
 
 .BlogCard h3 {
+    color: var(--primaryFontColor);
     margin: 0px;
 }
 
@@ -46,11 +47,17 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
 }
+
+.nodec {
+    text-decoration: none;
+}
 </style>
 
-<div class="BlogCard">
-    <h3>{blog.name}</h3>
-    <h5>{blog.date}</h5>
-    <img src="/assets/element/HorizontalDivider.svg" alt="" width="75px"/>
-    <p>{@html blog.content}</p>
-</div>
+<a href="./blog/{blog.id}" class="nodec">
+    <div class="BlogCard">
+        <h3>{blog.name}</h3>
+        <h5>{blog.date}</h5>
+        <img src="/assets/element/HorizontalDivider.svg" alt="" width="75px"/>
+        <p>{@html blog.content}</p>
+    </div>    
+</a>

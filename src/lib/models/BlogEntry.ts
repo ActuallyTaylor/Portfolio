@@ -1,10 +1,10 @@
 export class BlogEntry {
-    id: String
-    name: String
-    date: String
-    content: String
+    id: string
+    name: string
+    date: string
+    content: string
 
-    constructor(id: String, name: String, date: String, content: String) {
+    constructor(id: string, name: string, date: string, content: string) {
         this.id = id;
         this.name = name;
         this.date = date;
