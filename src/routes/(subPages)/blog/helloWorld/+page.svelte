@@ -11,6 +11,12 @@
         return obj.id == id
     }) ?? new BlogEntry("undefined", "undefined", "undefined", "undefined")
 </script>
+
+<svelte:head>
+  <title>{blog.name} - Blog</title>
+  <meta name="description" content="{blog.content}">
+</svelte:head>
+
 <span>
     
     <PageNavigation id={blog.id} name={blog.name}/>

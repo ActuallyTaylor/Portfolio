@@ -11,6 +11,11 @@
         return obj.id == id
     }) ?? new Project("undefined", "undefined", "undefined", "undefined")
 </script>
+<svelte:head>
+  <title>{project.name} - Project</title>
+  <meta name="description" content="SCUM Map, Know the game">
+</svelte:head>
+
 <span>
     <ProjectPageNav id={id} name={project.name}/>
     <ProjectPageHeader projectID={id} name={project.name} subtitle="Know the game" headerColor="#D1FFCA"/>

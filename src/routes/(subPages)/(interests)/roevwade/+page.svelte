@@ -14,6 +14,10 @@
 
     export let paths = Data.roevwadePhotos
 </script>
+<svelte:head>
+  <title>{project.name} - Project</title>
+  <meta name="description" content="Political Photography">
+</svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name.replaceAll("<br>", "")}/>
     <ProjectPageHeader projectID={id} name={project.name.replaceAll("<br>", "")} subtitle="Political Photography" headerColor="#FFB6B6"/>

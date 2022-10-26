@@ -14,6 +14,11 @@
 
     export let paths = Data.miscInfraredPhotos
 </script>
+<svelte:head>
+  <title>{project.name} - Project</title>
+  <meta name="description" content="Random Infrared Photography">
+</svelte:head>
+
 <span>
     <ProjectPageNav id={id} name={project.name.replaceAll("<br>", "")}/>
     <ProjectPageHeader projectID={id} name={project.name.replaceAll("<br>", "")} subtitle="Random Infrared Photography" headerColor="#FFB6EF"/>

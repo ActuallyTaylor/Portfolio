@@ -14,6 +14,10 @@
 
     export let paths = Data.wonderPhotos
 </script>
+<svelte:head>
+  <title>{project.name} - Project</title>
+  <meta name="description" content="Modern Art Museum">
+</svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name.replaceAll("<br>", "")}/>
     <ProjectPageHeader projectID={id} name={project.name.replaceAll("<br>", "")} subtitle="Modern Art Museum" headerColor="#C9B6FF"/>

@@ -14,6 +14,10 @@
 
     export let paths = Data.ritinfraredPhotos
 </script>
+<svelte:head>
+  <title>{project.name} - Project</title>
+  <meta name="description" content="Infrared Photography">
+</svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name.replaceAll("<br>", "")}/>
     <ProjectPageHeader projectID={id} name={project.name.replaceAll("<br>", "")} subtitle="Infrared Photography" headerColor="#B6FFED"/>
