@@ -35,8 +35,9 @@
 
     <LeftAlignedDescriptionSection title={"Why Hephaestus?"} path={"assets/images/hephaestus/lookingForANameForTheEngine.png"}>
         <span slot="description">
-            I chose the name Hephaestus after a good bit of deliberation. Included in this screenshot, you can see the differnet names that I first thought of using.
+            I chose the name Hephaestus after a good bit of deliberation. Included in this screenshot, you can see the different names that I first thought of using.
             I knew I wanted to use the name of a Greek God from the beginning so I didn't look much past there.
+
         </span>
     </LeftAlignedDescriptionSection>
 

@@ -25,7 +25,7 @@
 
     <LeftAlignedDescriptionSection title="iOS App" path="/assets/images/jellycuts/Screenshot.png">
         <span slot="description">
-            Jellycuts offers both an iOS and iPad OS app! These apps can be used to directly intereact with Shortcuts on iOS and iPadOS devices. It uses both SwiftUI and UIKit as UI framework, and my custom text editor <a href='https://github.com/ActuallyZach/Firefly'>Firefly</a>. The iOS app has been in development for almost 3 years with 2 years on the app store and 11 months in testflight.
+            Jellycuts offers both an iOS and iPad OS app! These apps can be used to directly interact with Shortcuts on iOS and iPadOS devices. It uses both SwiftUI and UIKit as UI framework, and my custom text editor <a href='https://github.com/ActuallyZach/Firefly'>Firefly</a>. The iOS app has been in development for almost 3 years with 2 years on the app store and 11 months in test-flight.
         </span>
         <span slot="extras">
             <a href="https://apps.apple.com/us/app/jellycuts/id1522625245" target="_blank">

@@ -22,7 +22,7 @@
     </DescriptionSection>
     <DescriptionSection title={"About"}>
         <span slot="description">
-            The Dunegoen of Epsilon is a text based random dungeon adventure game. It is modeled after the original text based video games alongside Dungeons and Dragons. In the game you are able to fight monsters, trade with merchants and manage your inventory.
+            The Dungeon of Epsilon is a text based random dungeon adventure game. It is modeled after the original text based video games alongside Dungeons and Dragons. In the game you are able to fight monsters, trade with merchants and manage your inventory.
             As you explore the dungeon you will come upon enemies, friends and treasure. In every room you are allowed to pick your next direction of travel. Depending on what you pick, you will get a different room. As you fight more monsters, the difficulty of the 
             dungeon will scale.
         </span>
