@@ -17,7 +17,8 @@
 
     <DescriptionSection title={undefined}>
         <span slot="description">
-            Firefly is a pure swift Syntax highlighter for iOS. It was created to be a fast and native solution to a problem that did not have many good solutions. The project is open sourced so that anyone can help improve it and make it the best syntax highlighter for iOS.
+            Firefly is a pure swift Syntax highlighter for iOS. It was created to be a fast and native solution to a problem that did not have many good solutions. 
+            The project is open sourced so that anyone can help improve it and make it the best syntax highlighter for iOS.
         </span>
         <span slot="extras">
         </span>

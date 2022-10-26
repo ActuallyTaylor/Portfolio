@@ -20,7 +20,7 @@
 
     <DescriptionSection title={undefined}>
         <span slot="description">
-
+            <a href="https://philadelphia.wonderspaces.com">Wonderspaces Philadelphia</a> is a really cool art installation in center Philly. It is a really nice place to just explore and see the different exhibits.
         </span>
     </DescriptionSection>
     <GallerySection title={"Photos"} imagePaths={paths}>
