@@ -17,7 +17,7 @@
 
     <LeftAlignedDescriptionSection title="SCUM Map App" path="/assets/images/scum/Screenshot.png">
         <span slot="description">
-            Scum map is a map app for the game Scum. It has a modern and sleek design that allows for multiple sets of pins across the map and user-added fully customizable pins. User added pins can shared between you and your squadmates. Pins sync instantly between you and your mates, making sure that you never miss a change in plans.
+            Scum map is a map app for the game Scum. It has a modern and sleek design that allows for multiple sets of pins across the map and user-added fully customizable pins. User added pins can shared between you and your squad-mates. Pins sync instantly between you and your mates, making sure that you never miss a change in plans.
         </span>
         <span slot="extras">
             <a href="https://apps.apple.com/us/app/id1515805855" target="_blank">

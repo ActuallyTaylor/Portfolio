@@ -186,7 +186,7 @@ Work Stack
     <h1>About Me</h1>
     <p>
         Hey 👋 I am a New York based independent Developer. I have been working
-        on iOS Apps since 2018. I started my jounrney of making iOS apps with
+        on iOS Apps since 2018. I started my journey of making iOS apps with
         simple one use apps for Journaling, To-Do and Financial tracking. From
         there I began to branch out into other areas. The <a href="./scum">first app</a> that I
         released on the app store was in partnership with a business partner. After releasing SCUM Map, 

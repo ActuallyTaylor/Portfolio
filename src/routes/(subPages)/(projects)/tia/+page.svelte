@@ -24,14 +24,14 @@
     <DescriptionSection title={"About"}>
         <span slot="description">
             T.I.A is an application that allows the user to create a genetic simulation. The user can create different species with different sets of genes. 
-            These species will then live together in a randomly generated enviroment. Based on the species genes, the genetic algorithm backing the application will
-            simulate the species evolving and changing to better fit their enviroments.
+            These species will then live together in a randomly generated environment. Based on the species genes, the genetic algorithm backing the application will
+            simulate the species evolving and changing to better fit their environments.
 
             <br>
             <br>
 
-            On top of the genetic algorithm, TIA also has a small storyline built into the application. The storyline puts you in the place of a person who has been discovered an other wordly being.
-            This being has put you down in front of a genetic simulation to see how you would perform as a species ruling over an enviorment. The storyline can be discovered through interacting with
+            On top of the genetic algorithm, TIA also has a small storyline built into the application. The storyline puts you in the place of a person who has been discovered an other worldly being.
+            This being has put you down in front of a genetic simulation to see how you would perform as a species ruling over an environment. The storyline can be discovered through interacting with
             the floating TIA ball.
         </span>
         <span slot="extras">

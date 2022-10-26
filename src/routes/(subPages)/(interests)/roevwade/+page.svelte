@@ -22,12 +22,12 @@
         <span slot="description">
             The decision to overturn Roe v. Wade on June 24th 2022 affected millions of people across the country. 
             The decision had protected the lives and wellbeing of all people with uteruses for 49 years. 
-            The original decision to protected the privacy and life of all people with uteresus and provided a constitutionall safe place for them to make decisions about their own bodies.
+            The original decision to protected the privacy and life of all people with uteruses and provided a constitutional safe place for them to make decisions about their own bodies.
         </span>
     </DescriptionSection>
     <DescriptionSection title={"When were the photos taken?"}>
         <span slot="description">
-            On June 27th 2022 me and my partner decided that we were going to travel into Washington DC to join the people protesting the overturning of Roe v. Wade. We made signs in preperation and then drove into DC for the day. 
+            On June 27th 2022 me and my partner decided that we were going to travel into Washington DC to join the people protesting the overturning of Roe v. Wade. We made signs in preparation and then drove into DC for the day. 
             We joined a group of people who were already protesting out front of the Supreme Court. We spent the day out in front of the Supreme Court with the rest of the protesters hearing others share their stories.
         </span>
     </DescriptionSection>

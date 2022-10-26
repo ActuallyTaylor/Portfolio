@@ -23,7 +23,7 @@
     <DescriptionSection title={"About"}>
         <span slot="description">
             My submission this year is another sandbox based game that allows you to create an entire universe. You can spawn in planets, change their mass, and velocity and then watch how they change the universe. 
-            On each of the planets there is an entire genetic simulation of an ecosystem that is based on my <a href="./tia">project last year</a>. The simulation for this yaer is greatly improved with al ot of new features and a much more accurate simulation.
+            On each of the planets there is an entire genetic simulation of an ecosystem that is based on my <a href="./tia">project last year</a>. The simulation for this year is greatly improved with a lot of new features and a much more accurate simulation.
         </span>
         <span slot="extras">
             <a href="https://github.com/ActuallyZach/Solar-Explorer-WWDC22" target="_blank">
