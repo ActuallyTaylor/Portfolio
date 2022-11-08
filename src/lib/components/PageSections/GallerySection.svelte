@@ -2,13 +2,13 @@
     export let title: string | undefined
     export let imagePaths: string[]
 
-    export let selectedPhoto: string = imagePaths[0].replace("compressed", "uncompressed")
+    export let selectedPhoto: string = imagePaths[0].replace("compressed", "gallery")
     export let originalSelectedPhoto: string = imagePaths[0]
 
     function clickedPhoto(path: string) {
         originalSelectedPhoto = path
         selectedPhoto = path
-        selectedPhoto = selectedPhoto.replace("compressed", "uncompressed")
+        selectedPhoto = selectedPhoto.replace("compressed", "gallery")
     }
 </script>
 
