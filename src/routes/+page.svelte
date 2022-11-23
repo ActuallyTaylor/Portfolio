@@ -172,7 +172,7 @@ Work Stack
             <a href="https://www.linkedin.com/in/zacharylineman/">
                 <img src="assets/design/headerLinks/linkedin.svg" style="height: 24px; width: 24px;" alt="LinkedIn Logo" title="My LinkedIn">
             </a>
-            <a href="/files/Zachary Lineman Resume 2022.pdf">
+            <a href="/files/ZacharyLineman2022.pdf">
                 <img src="assets/design/headerLinks/doc.svg" style="height: 24px; width: 24px;" alt="Resume Logo" title="My Resume">
             </a>
             <a href="mailto://zachary.lineman@gmail.com">
