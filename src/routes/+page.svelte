@@ -41,6 +41,7 @@
 </script>
 
 <svelte:head>
+    <html lang="en"/>
     <link rel="stylesheet" href="/css/cssLibrary.css" />
     <link rel="stylesheet" href="/css/index.css" />
 </svelte:head>
@@ -49,7 +50,6 @@
 /*
     Header
 */
-
 header {
     display: flex;
     justify-content: center;
