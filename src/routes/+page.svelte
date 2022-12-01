@@ -160,7 +160,7 @@ Work Stack
 </style>
 
 <header>
-    <img src="/assets/icon.png" alt="User Icon" />
+    <img src="/favicon.png" alt="User Icon" />
     <div class="headerTitle">
         <h1 class="headerTitle">Zachary Lineman</h1>
         <h2 class="headerTitle">Freelance iOS Development</h2>
