@@ -44,6 +44,8 @@
     <html lang="en"/>
     <link rel="stylesheet" href="/css/cssLibrary.css" />
     <link rel="stylesheet" href="/css/index.css" />
+    <title>Zachary Lineman</title>
+    <meta name="description" content="Zachary Lineman's Personal Website">  
 </svelte:head>
 
 <style>
