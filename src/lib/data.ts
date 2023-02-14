@@ -5,6 +5,7 @@ export class Data {
     static works: Project[] = [
         new Project("Jellycuts", "iOS App", "jellycuts", "ios"),
         new Project("SCUM Map", "iOS App", "scum", "ios"),
+        new Project("Manny", "iOS App", "manny", "ios"),
         new Project("Firefly", "iOS Framework", "firefly", "ios"),
         new Project("Hephaestus", "Game Engine", "hephaestus", "software"),
         new Project("Solar Explorer", "Simulation", "solarexplorer", "simulations"),
