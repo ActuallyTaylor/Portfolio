@@ -1,11 +1,11 @@
 <script lang="ts">
-    import { Project } from "$lib/models/Project";
     import ProjectCard from "$lib/components/ProjectCard.svelte";
     import BlogCard from "$lib/components/BlogCard.svelte";
-    import { BlogEntry } from "$lib/models/BlogEntry";
     import { Data } from "$lib/data";
-    import { dataset_dev } from "svelte/internal";
 
+    export let data;
+    export const blogs = data.blogs;
+    console.log(blogs)
     // MARK: My Work
     let selectedWork = "allWork"
 
@@ -48,7 +48,7 @@
     <meta name="description" content="Zachary Lineman's Personal Website">  
 </svelte:head>
 
-<style>
+<style global>
 /*
     Header
 */
@@ -148,6 +148,11 @@ Work Stack
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
+}
+
+.BlogCards {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 600px) {
@@ -352,7 +357,7 @@ Work Stack
         <h1>Blog</h1>
     </div>
     <div class="BlogCards" id="blogArray">
-        {#each Data.blogs as blog}
+        {#each blogs as blog}
             <BlogCard blog={blog}/>
         {/each}
     </div>

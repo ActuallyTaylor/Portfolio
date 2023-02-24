@@ -17,7 +17,8 @@
 
     border-radius: 7px;
     padding: 10px;
-    margin-right: 5e0px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .BlogCard h3 {
@@ -53,11 +54,11 @@
 }
 </style>
 
-<a href="./blog/{blog.id}" class="nodec">
+<a href="./blog/{blog.slug}" class="nodec">
     <div class="BlogCard">
-        <h3>{blog.name}</h3>
-        <h5>{blog.date}</h5>
+        <h3>{blog.title}</h3>
+        <h5>{blog.date.toLocaleString()}</h5>
         <img src="/assets/element/HorizontalDivider.svg" alt="" width="75px"/>
-        <p>{@html blog.content}</p>
+        <p>{blog.description}</p>
     </div>    
 </a>

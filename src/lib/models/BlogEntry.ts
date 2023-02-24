@@ -1,13 +1,19 @@
 export class BlogEntry {
-    id: string
-    name: string
-    date: string
+    title: string
+    slug: string
+    description: string
+    author: string
+    date: Date
+    hex: string
     content: string
 
-    constructor(id: string, name: string, date: string, content: string) {
-        this.id = id;
-        this.name = name;
+    constructor(title: string, slug: string, description: string, author: string, date: Date, hex: string, content: string) {
+        this.title = title;
+        this.slug = slug;
+        this.description = description;
+        this.author = author;
         this.date = date;
-        this.content = content;
+        this.hex = hex
+        this.content = content
       }  
 }
