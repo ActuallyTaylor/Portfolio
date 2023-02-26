@@ -5,7 +5,7 @@ import type { BlogEntry } from './models/BlogEntry';
 export function readPosts(): BlogEntry[] {
     let blogs: BlogEntry[] = []
 
-    readdirSync("$lib/assets/posts").forEach((file) => {
+    readdirSync("/posts").forEach((file) => {
         let readFile = readFileSync(`./static/posts/${file}`)
         let frontmatter = fm(readFile.toString());
         let attributes = frontmatter.attributes
