@@ -6,7 +6,6 @@ export function readPosts(): BlogEntry[] {
     let blogs: BlogEntry[] = []
 
     readdirSync("./static/posts/").forEach((file) => {
-        console.log(file)
         let readFile = readFileSync(`./static/posts/${file}`)
         let frontmatter = fm(readFile.toString());
         let attributes = frontmatter.attributes
