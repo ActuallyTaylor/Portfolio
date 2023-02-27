@@ -42,13 +42,11 @@
 
 <svelte:head>
     <html lang="en"/>
-    <link rel="stylesheet" href="/css/cssLibrary.css" />
-    <link rel="stylesheet" href="/css/index.css" />
     <title>Zachary Lineman</title>
     <meta name="description" content="Zachary Lineman's Personal Website">  
 </svelte:head>
 
-<style global>
+<style>
 /*
     Header
 */
@@ -215,7 +213,7 @@ Work Stack
 <section>
     <div class="WorkStack">
         <h1>My Work</h1>
-        <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
+        <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" width="5px" />
         <div class="FilterStack">
             <button on:click={handleAllWorkClick} id="allWork" class:underlinedHeader="{selectedWork == "allWork"}">
                 <h4>

@@ -1,8 +1,3 @@
-<svelte:head>
-    <link rel="stylesheet" href="/css/cssLibrary.css" />
-    <link rel="stylesheet" href="/css/index.css" />
-</svelte:head>
-
 <style>
     .smallerBody {
         max-width: 85%;

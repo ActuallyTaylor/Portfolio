@@ -8,19 +8,13 @@
     const source = blog.content
 </script>
 
-<style global>
-    img {
-        width: 75%;
-        border-radius: 7px;
-    }
-</style>
 <svelte:head>
   <title>{blog.title} - Blog</title>
   <meta name="description" content="{blog.description}">
 </svelte:head>
 
-<span>
+<div class="blogBody">
     <PageNavigation id={`blog/${blog.slug}`} name={blog.title}/>
     <BlogPageHeader name={blog.title} subtitle={blog.description} headerColor={blog.hex}/>
     <SvelteMarkdown {source}/>
-</span>
+</div>
