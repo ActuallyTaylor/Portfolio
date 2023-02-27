@@ -356,9 +356,9 @@ Work Stack
     <div class="WorkStack HorizontalStack VerticallyCentered">
         <h1>Blog</h1>
         <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
-        <a href="https://actualyzach.com/blog/rss">
+        <a href="https://actuallyzach.com/blog/rss">
             <h4>
-                https://actualyzach.com/blog/rss
+                https://actuallyzach.com/blog/rss
             </h4>    
         </a>
     </div>
