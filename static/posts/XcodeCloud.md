@@ -3,7 +3,7 @@ title: Xcode Cloud Workflow
 slug: xcodeCloudWorkflow
 description: How I use Xcode Cloud
 author: Zachary Lineman
-date: 2023-25-04T00:00:00.000Z
+date: 2023-02-27T00:00:00.000Z
 hex: f48d55
 ---
 ## Opening
