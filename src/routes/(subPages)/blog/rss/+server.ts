@@ -1,4 +1,5 @@
 import { createRSSFeed } from "$lib/posts";
+export const prerender = true;
 
 export const GET = async () => {
     const body = createRSSFeed();

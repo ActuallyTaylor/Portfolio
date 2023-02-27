@@ -353,8 +353,14 @@ Work Stack
 
 <!-- Blog -->
 <section>
-    <div class="HorizontalStack VerticallyCentered">
+    <div class="WorkStack HorizontalStack VerticallyCentered">
         <h1>Blog</h1>
+        <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
+        <a href="https://actualyzach.com/blog/rss">
+            <h4>
+                https://actualyzach.com/blog/rss
+            </h4>    
+        </a>
     </div>
     <div class="BlogCards" id="blogArray">
         {#each blogs as blog}
