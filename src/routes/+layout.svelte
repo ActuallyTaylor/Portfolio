@@ -35,31 +35,6 @@
         height: 32px;
     }
 
-    :root {
-        --primaryFontColor: #000000;
-        --secondaryFontColor: #505050;
-        --backgroundColor: #f8fbff;
-        --blogBackgroundColor: #fff;
-
-        --navBarBackgroundColor: #fff;
-
-        --shapePrimaryFontColor: #000000;
-        --shapeSecondaryFontColor: #393939;
-
-        --visitedLink: #85beef;
-        --link: #85efca;
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --primaryFontColor: #eeeeee;
-            --secondaryFontColor: #c3c3c3;
-            --backgroundColor: #1e1e1e;
-            --blogBackgroundColor: #2b2b2b;
-            --navBarBackgroundColor: #2b2b2b;
-        }
-    }
-
     body {
         background-color: var(--backgroundColor);
         color: var(--primaryFontColor);
