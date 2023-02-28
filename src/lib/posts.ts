@@ -20,6 +20,10 @@ export function readPosts(): BlogEntry[] {
         blogs.push({title, slug, description, author, date, hex, content})
     });      
 
+    blogs.sort(function(a,b): any{
+            return (b.date.getTime() - a.date.getTime());
+    });
+
     return blogs
 }
 
