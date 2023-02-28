@@ -39,3 +39,5 @@ Xcode cloud does make up a large part of my testing and distribution pipeline, h
 
 <img src="/assets/blogs/GitHubBranches.png" alt="GitHub Branches" style="width:70%; border-radius: 7px;"/>
 
+## Overall How is it?
+Overall, Xcode Cloud is super nice to work with. I really enjoy working with it and the process that it affords me. However, there are a few issues that I have with it. Because of my protected branch models on GitHub it makes changes for App Store connect difficult to complete. I need to make an entirely new PR request to change very small things. I am not sure if there is really a way around this, but I really like the PR requests otherwise so my Main branch is gonna stay protected for now.
