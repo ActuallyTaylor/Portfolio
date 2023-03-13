@@ -44,6 +44,27 @@
         padding: 0px;
         margin: 0px;
     }
+
+    @media screen and (max-width: 600px) {
+        header {
+            height: 100px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .headerContainer {
+            width: 100%;
+            height: 100%;
+        }
+
+        .headerContainer h1 {
+            text-align: center;
+        }
+
+        .headerContainer h2 {
+            text-align: center;
+        }
+    }
 </style>
 
 <header>

@@ -46,7 +46,7 @@
 
     @media screen and (max-width: 600px) {
         body {
-            margin: 10px 10px;
+            margin: 0px;
         }
     }
 

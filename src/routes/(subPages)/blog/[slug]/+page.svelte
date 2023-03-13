@@ -11,6 +11,7 @@
 <svelte:head>
   <title>{blog.title} - Blog</title>
   <meta name="description" content="{blog.description}">
+  <link rel="stylesheet" href="/assets/css/blog.css" />
 </svelte:head>
 
 <div class="blogBody">

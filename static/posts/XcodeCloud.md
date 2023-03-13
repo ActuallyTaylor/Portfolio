@@ -21,7 +21,7 @@ Getting started was not too bad, overall it was pretty simple to add actions and
 ### Workflows
 So to start off, here are all of my Xcode Cloud Workflows. I have three workflows that make up my entire workflow of publishing and checking builds.
 
-<img src="/assets/blogs/Workflows.png" alt="Workflows" style="width:70%; border-radius: 7px;"/>
+![Github Branches](/assets/blogs/Workflows.png)
 
 #### Check Development
 The check development workflow is a catch all workflow. It will check any branch that is tagged as development. This ensures that all of my commits to my repository in development branches are caught by an Xcode Cloud workflow and are built in the cloud.
@@ -37,7 +37,7 @@ If you are a beta tester for Manny this Workflow is your best friend. This relea
 ### Branches
 Xcode cloud does make up a large part of my testing and distribution pipeline, however the branches that I organize my code into also plays a large part in it. For the most part my development is all done on the `development`  branch. Whenever I finalize what I am currently working on, I make a pull request into the `main` branch. This allows me to review all of the changes I made throughout a development cycle and confirm that I didn't leave any leftover test code or anything that shouldn't be in a release version. Once the pull requests are completed the `Nightly Release` workflow runs and builds are sent out to iOS and macOS testers both external and internal
 
-<img src="/assets/blogs/GitHubBranches.png" alt="GitHub Branches" style="width:70%; border-radius: 7px;"/>
+![Github Branches](/assets/blogs/GitHubBranches.png)
 
 ## Overall How is it?
 Overall, Xcode Cloud is super nice to work with. I really enjoy working with it and the process that it affords me. However, there are a few issues that I have with it. Because of my protected branch models on GitHub it makes changes for App Store connect difficult to complete. I need to make an entirely new PR request to change very small things. I am not sure if there is really a way around this, but I really like the PR requests otherwise so my Main branch is gonna stay protected for now.
