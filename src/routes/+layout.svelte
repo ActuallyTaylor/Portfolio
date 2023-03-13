@@ -1,10 +1,5 @@
 <svelte:head>
     <link rel="icon" href="/favicon.png" />
-    <title>Zachary Lineman</title>
-    <meta
-        name="description"
-        content="My personal website, showcasing my interests, projects and blog."
-    />
 </svelte:head>
 
 <slot />
@@ -46,7 +41,7 @@
 
     @media screen and (max-width: 600px) {
         body {
-            margin: 0px;
+            margin: 20px 20px;
         }
     }
 
@@ -55,19 +50,32 @@
     }
 
     h1 {
-        color: var(--primaryFontColor);
+        color: var(--red);
         margin-bottom: 5px;
+
     }
 
     h2 {
-        color: var(--secondaryFontColor);
+        color: var(--lily);
         margin-bottom: 5px;
     }
 
+    h3 {
+        color: var(--sea);
+    }
+
     h4 {
-        color: var(--secondaryFontColor);
-        font-weight: 500;
+        color: var(--blue);
         margin-bottom: 5px;
+        font-weight: 500;
+    }
+
+    h5 {
+        color: var(--violet);
+    }
+
+    h6 {
+        color: var(--green);
     }
 
     p {

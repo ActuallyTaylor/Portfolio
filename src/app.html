@@ -4,35 +4,83 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+      
         <style>
         :root {
-            --primaryFontColor: #000000;
-            --secondaryFontColor: #505050;
-            --backgroundColor: #f8fbff;
-            --blogBackgroundColor: #fff;
+            --lily: rgb(222,149,132);
+            --red: rgb(240,68,114);
+            --rose: rgb(215,125,146);
+            --violet: rgb(176,110,201);
+            --blue: rgb(71,143,238);
+            --sea: rgb(23,146,153);
+            --cyan: rgb(37,189,209);
+            --turquoise: rgb(58,161,182);
+            --green: rgb(64,155,40);
+            --yellow: rgb(228,147,32);
+            --lemon: rgb(195,173,87);
+            --orange: rgb(249,102,50);
+            --text: rgb(76,79,105);
+            --subtext1: rgb(92,95,119);
+            --subtext0: rgb(108,111,133);
+            --base: rgb(252,252,252);
+            --secondaryBase: rgb(243,236,243);
 
-            --navBarBackgroundColor: #fff;
+            --primaryFontColor: var(--text);
+            --secondaryFontColor: var(--subtext0);
+            --backgroundColor: var(--base);
+            --blogBackgroundColor: var(--secondaryBase);
+            --navBarBackgroundColor: var(--secondaryBase);
 
             --shapePrimaryFontColor: #000000;
             --shapeSecondaryFontColor: #393939;
 
-            --visitedLink: #85beef;
-            --link: #85efca;
-        }
+            --visitedLink: var(--lemon);
+            --link: var(--yellow);
+        }    
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --primaryFontColor: #eeeeee;
-                --secondaryFontColor: #c3c3c3;
-                --backgroundColor: #1e1e1e;
-                --blogBackgroundColor: #2b2b2b;
-                --navBarBackgroundColor: #2b2b2b;
+                --lily: rgb(235,188,186);
+                --red: rgb(255,98,107);
+                --rose: rgb(243,137,143);
+                --violet: rgb(196,167,231);
+                --blue: rgb(147,183,245);
+                --sea: rgb(104,188,204);
+                --cyan: rgb(137,199,223);
+                --turquoise: rgb(128,216,220);
+                --green: rgb(56,198,141);
+                --yellow: rgb(249,226,175);
+                --lemon: rgb(246,193,119);
+                --orange: rgb(247,157,124);
+                --text: rgb(198,206,239);
+                --subtext1: rgb(181,189,220);
+                --subtext0: rgb(165,172,201);
+                --base: rgb(42,45,61);
+                --secondaryBase: rgb(48, 52, 71);
+
+                --primaryFontColor: var(--text);
+                --secondaryFontColor: var(--subtext0);
+                --backgroundColor: var(--base);
+                --blogBackgroundColor: var(--secondaryBase);
+                --navBarBackgroundColor: var(--secondaryBase);
             }
         }
 
         body {
             background-color: var(--backgroundColor);
-        }        
+        }
+
+        code {
+            white-space: pre-wrap;
+            background-color: var(--secondaryBase);
+            padding: 2px;
+            border-radius: 4px;
+            margin: 2px;
+        }
+
+        pre code {
+            border-radius: 7px;
+        }
         </style>
 		%sveltekit.head%
 	</head>

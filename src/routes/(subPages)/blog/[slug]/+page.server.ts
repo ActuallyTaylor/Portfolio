@@ -4,7 +4,6 @@ import { readPosts } from '$lib/posts';
 import { error, type RequestEvent } from '@sveltejs/kit';
 export const prerender = true;
 
-
 export async function load(event: RequestEvent) {
     if (typeof event.params.slug !== 'string') {
         throw error(400, "Blog not found")
