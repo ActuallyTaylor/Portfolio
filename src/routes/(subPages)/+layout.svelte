@@ -6,6 +6,12 @@
         margin-top: 0px;
         margin-bottom: 0px;
     }
+
+    @media screen and (max-width: 600px) {
+        .smallerBody {
+            max-width: 100%;
+        }
+    }
 </style>
 
 <div class="smallerBody">

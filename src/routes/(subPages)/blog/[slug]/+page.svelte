@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import PageNavigation from "$lib/components/ProjectPage/ProjectPageNav.svelte"
-    import BlogPageHeader from "$lib/components/ProjectPage/BlogPageHeader.svelte"
     import SvelteMarkdown from 'svelte-markdown'
 
     export let data;
@@ -26,8 +25,10 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 </svelte:head>
 
-<div class="blogBody">  
+<div>  
     <PageNavigation id={`blog/${blog.slug}`} name={blog.title}/>
-    <BlogPageHeader name={blog.title} subtitle={blog.description} headerColor={blog.hex}/>
+    <h1 class="headerTitle">{blog.title}</h1>
+    <h2 class="headerTitle">{blog.description}</h2>
+
     <SvelteMarkdown {source}/>
 </div>
