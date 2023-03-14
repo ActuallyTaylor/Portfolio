@@ -25,10 +25,21 @@
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 </svelte:head>
 
+<style>
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+
 <div>  
     <PageNavigation id={`blog/${blog.slug}`} name={blog.title}/>
-    <h1 class="headerTitle">{blog.title}</h1>
-    <h2 class="headerTitle">{blog.description}</h2>
+    <div class="header">
+        <h1 class="headerTitle">{blog.title}</h1>
+        <h2 class="headerTitle">{blog.description}</h2>    
+    </div>
 
     <SvelteMarkdown {source}/>
 </div>

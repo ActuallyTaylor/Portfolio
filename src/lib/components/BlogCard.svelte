@@ -8,10 +8,6 @@
 .BlogCard {
     display: flex;
     flex-direction: column;
-    min-width: 350px;
-    min-height: 125px;
-    max-width: 350px;
-    max-height: 125px;
 
     background-color: var(--blogBackgroundColor);
 
