@@ -169,19 +169,19 @@ Work Stack
         <h1 class="headerTitle">Taylor Lineman</h1>
         <h2 class="headerTitle">Freelance iOS Development</h2>
         <div>
-            <a href="https://twitter.com/LinemanZachary">
+            <a href="https://twitter.com/TaylorLineman">
                 <img src="assets/design/headerLinks/twitter.svg" style="height: 24px; width: 24px;" alt="Twitter Logo" title="My Twitter">
             </a>
-            <a href="https://github.com/ActuallyZach">
+            <a href="https://github.com/ActuallyTaylor">
                 <img src="assets/design/headerLinks/github.svg" style="height: 24px; width: 24px;" alt="GitHub Logo" title="My GitHub">
             </a>
-            <a href="https://www.linkedin.com/in/zacharylineman/">
+            <a href="https://www.linkedin.com/in/taylorlineman/">
                 <img src="assets/design/headerLinks/linkedin.svg" style="height: 24px; width: 24px;" alt="LinkedIn Logo" title="My LinkedIn">
             </a>
-            <a href="/files/ZacharyLinemanResume.pdf">
+            <a href="/files/TaylorLinemanResume.pdf">
                 <img src="assets/design/headerLinks/doc.svg" style="height: 24px; width: 24px;" alt="Resume Logo" title="My Resume">
             </a>
-            <a href="mailto://zachary.lineman@gmail.com">
+            <a href="mailto://taylor.lineman@gmail.com">
                 <img src="assets/design/headerLinks/mail.svg" style="height: 24px; width: 24px;" alt="Mail Logo" title="My Email">
             </a>
         </div>
