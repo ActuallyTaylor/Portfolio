@@ -6,8 +6,49 @@ img {
     border-radius: 7px;
 }
 
+video {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+    border-radius: 7px;
+}
+
+blockquote {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    border-left: 5px solid var(--orange);
+    padding-left: 30px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-left: 0px;
+    background-color: var(--secondaryBase);
+}
+
+table, th, td {
+    border: 2px solid var(--secondaryBase);
+    border-collapse: collapse;
+}
+
+th {
+    padding: 5px;
+}
+
+td {
+    text-align: start;
+    padding: 5px;
+}
+
+blockquote p {
+    color: var(--subtext0);
+}
+
 @media screen and (max-width: 600px) {
     img {
+        width: 100%;
+    }
+
+    video {
         width: 100%;
     }
 
