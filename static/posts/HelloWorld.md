@@ -2,7 +2,7 @@
 title: Hello World
 slug: helloWorld
 description: My First Blog Post
-author: Zachary Lineman
+author: Taylor Lineman
 date: 2022-04-23T00:00:00.000Z
 hex: ea7ca4
 ---

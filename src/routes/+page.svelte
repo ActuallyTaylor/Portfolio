@@ -42,8 +42,8 @@
 
 <svelte:head>
     <html lang="en"/>
-    <title>Zachary Lineman</title>
-    <meta name="description" content="Zachary Lineman's Personal Website">  
+    <title>Taylor Lineman</title>
+    <meta name="description" content="Taylor Lineman's Personal Website">  
 </svelte:head>
 
 <style>
@@ -151,6 +151,7 @@ Work Stack
 .BlogCards {
     display: flex;
     flex-wrap: wrap;
+    /* flex-direction: columns: ;; */
 }
 
 @media screen and (max-width: 600px) {
@@ -165,7 +166,7 @@ Work Stack
 <header>
     <img src="/favicon.png" alt="User Icon" />
     <div class="headerTitle">
-        <h1 class="headerTitle">Zachary Lineman</h1>
+        <h1 class="headerTitle">Taylor Lineman</h1>
         <h2 class="headerTitle">Freelance iOS Development</h2>
         <div>
             <a href="https://twitter.com/LinemanZachary">
