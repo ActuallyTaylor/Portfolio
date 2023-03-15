@@ -30,7 +30,7 @@ export function readPosts(): BlogEntry[] {
 export function createRSSFeed(): string {
     const title = escapeXml("Taylor Lineman");
     const description = escapeXml("Taylor Lineman's Blog");
-    const siteURL = escapeXml("https://actuallyzach.com");
+    const siteURL = escapeXml("https://actuallytaylor.com");
 
     let feedItems = "";
 
