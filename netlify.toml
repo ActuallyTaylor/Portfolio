@@ -1,3 +1,13 @@
 [build]
   command = "vite build"
   publish = "build"
+[[redirects]]
+  from = "/schoolid"
+  to = "https://serene-sopapillas-7e6cff.netlify.app/schoolid.html"
+  status = "302"
+  force = "true"
+[[redirects]]
+  from = "http://actuallyzach.com.com/*"
+  to = "https://actuallytaylor.com/:splat"
+  status = "301"
+  force = "true"
