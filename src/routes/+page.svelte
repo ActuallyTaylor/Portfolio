@@ -191,23 +191,12 @@ Work Stack
 <section>
     <h1>About Me</h1>
     <p>
-        Hey 👋 I am a New York based independent Developer. I have been working
-        on iOS Apps since 2018. I started my journey of making iOS apps with
-        simple one use apps for Journaling, To-Do and Financial tracking. From
-        there I began to branch out into other areas. The <a href="./scum">first app</a> that I
-        released on the app store was in partnership with a business partner. After releasing SCUM Map, 
-        I started to working on <a href="./jellycuts">Jellycuts</a>. After almost a year of developing Jellycuts
-        and growing the community, I released it onto the App Store. I am still supporting both
-        Jellycuts and SCUM Map.
-    </p>
-    
-    <p>
-        In between working on Jellycuts and SCUM Map, I also work on contracting jobs. I have developed multiple iOS apps for an array
-        of companies. I have worked on purely iOS apps as well as full stack apps. Most recently, I have worked on a full stack app. 
-        This app used SwiftUI, UIKit, Firebase, NodeJS and a Python Server. Most work for this app was upgrading from UIKit to SwiftUI
-        and then developing Widgets and Live Activities.
+        Hey all 👋 My name is Taylor, I am an independent Developer based in New York! I mostly work in the world of iOS, but I have been venturing out into the other worlds of programming. Most recently my venture has taken me down the path of C++ and firmware development. Something that I have grown to love. 
     </p>
 
+    <p>
+        I started my journey into the world of iOS in 2018, with a simple trial and error apps for Journaling, To-Do and Financial tracking. From there I began to branch out into other areas. The <a href="./scum">first app</a> that I released on the app store was with a business partner, Ed Sarkissian. After releasing SCUM Map, I started to working on <a href="./jellycuts">Jellycuts</a>. After almost a year of developing Jellycuts and growing the community, I released it onto the App Store. As of late, I have been working hard on bring <a href="./manny">Manny for Mastodon</a> to life! Manny is a Mastodon client for iOS and macOS and has been a ton of fun to work on. On top of new development, I continue to support Jellycuts and SCUM Map.
+    </p>
 </section>
 
 <!-- My Work -->
