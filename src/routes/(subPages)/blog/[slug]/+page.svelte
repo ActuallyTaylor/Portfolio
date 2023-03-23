@@ -1,11 +1,15 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import PageNavigation from "$lib/components/ProjectPage/ProjectPageNav.svelte"
-    import SvelteMarkdown from 'svelte-markdown'
+    import SvelteMarkdown, { type Renderers } from 'svelte-markdown'
+    import ListItem from '$lib/components/MarkdownRenderers/ListItem.svelte';
 
     export let data;
     let blog = data.blog;
     const source = blog.content
+    const renderers: Renderers = {
+        "listitem": ListItem
+    }
 
     onMount(() => {
         let hljsScript = document.createElement('script');
@@ -41,5 +45,5 @@
         <h2 class="headerTitle">{blog.description}</h2>    
     </div>
 
-    <SvelteMarkdown {source}/>
+    <SvelteMarkdown {source} renderers={renderers}/>
 </div>
