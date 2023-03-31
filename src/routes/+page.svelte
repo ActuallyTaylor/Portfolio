@@ -199,6 +199,9 @@ Work Stack
         <h1 class="headerTitle">Taylor Lineman</h1>
         <h2 class="headerTitle">Freelance iOS Development</h2>
         <div>
+            <a href="https://mastodon.social/@TaylorLineman">
+                <img src="assets/design/headerLinks/mastodon.svg" style="height: 24px; width: 24px;" alt="Mastodon Logo" title="My Mastodon Account!">
+            </a>
             <a href="https://twitter.com/TaylorLineman">
                 <img src="assets/design/headerLinks/twitter.svg" style="height: 24px; width: 24px;" alt="Twitter Logo" title="My Twitter">
             </a>
