@@ -15,20 +15,21 @@
 </script>
 <svelte:head>
   <title>{project.name} - Project</title>
-  <meta name="description" content="The cutest Mastodon Client!">
+  <meta name="description" content="Simplicity is back!">
 </svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name}/>
     <ProjectPageHeader projectID={id} name={project.name} subtitle="The cutest Mastodon Client!" headerColor="#F0DAFD"/>
 
-    <DescriptionSection title="What is Manny?">
+    <LeftAlignedDescriptionSection title="What is Manny" path="/assets/images/manny/manny.png">
         <span slot="description">
-            Manny is a brand new Mastodon Client focused on making experiences the largest decentralized social network easy and fun! 
+            Manny is a brand new Mastodon Client focused on making experiences the largest decentralized social network easy and fun!
+            Manny allows you to access any Mastodon server, you can create statuses, view your lists and tons of other features!
         </span>
         <span slot="extras">
             <a href="https://apps.apple.com/us/app/manny-for-mastodon/id1668409667" target="_blank">
-                <img alt="iOS AppStore Badge" srcset="/assets/badges/appBadge.png 1x, /assets/badges/appBadge@2x.png 2x" class="appstoreButton" />
+                <img alt="Scum AppStore Badge" srcset="/assets/badges/appBadge.png 1x, /assets/badges/appBadge@2x.png 2x" class="appstoreButton" />
             </a>
         </span>
-    </DescriptionSection>
+    </LeftAlignedDescriptionSection>
 </span>
