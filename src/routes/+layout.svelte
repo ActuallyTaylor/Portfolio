@@ -11,6 +11,10 @@
         justify-content: left;
     }
 
+    .VerticalStack {
+        display: block;
+    }
+
     .HorizontallyCentered {
         display: flex;
         justify-content: center;

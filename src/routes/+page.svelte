@@ -154,11 +154,41 @@ Work Stack
     /* flex-direction: columns: ;; */
 }
 
+.walletPasses {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.walletImage {
+    width: 300px;
+    margin: 10px;
+}
+
+.walletLink {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--primary);
+
+    background-color: var(--blogBackgroundColor);
+
+    border-radius: 7px;
+    padding: 10px;
+    margin: 20px;
+}
+
 @media screen and (max-width: 600px) {
     .WorkCards {
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+    }
+    
+    .walletImage {
+        width: 100%;
+        margin: 20px;
+
     }
 }
 </style>
@@ -356,3 +386,19 @@ Work Stack
         {/each}
     </div>
 </section>
+
+<!-- Wallet Passes -->
+<section>
+    <h1>Wallet Passes</h1>
+    <div class="walletPasses">
+        <a href="/wallet/wwdc22" class="walletLink">
+            <h3>WWDC22 Wallet Pass Maker</h3>
+            <img alt="WWDC22 Wallet Pass" src="/assets/images/wallet/wwdc22.png" class="walletImage"/>
+        </a>
+        <a href="/wallet/wwdc23" class="walletLink">
+            <h3>WWDC23 Wallet Pass Maker</h3>
+            <img alt="WWDC23 Wallet Pass" src="/assets/images/wallet/wwdc23.png" class="walletImage"/>
+        </a>    
+    </div>
+</section>
+
