@@ -50,6 +50,13 @@
         margin-left: auto;
         margin-right: auto;
     }
+
+    @media screen and (max-width: 600px) {
+        img {
+            width: 90%;
+            margin: 20px;
+        }        
+    }
 </style>
 
 <svelte:head>
