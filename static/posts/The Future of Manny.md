@@ -19,7 +19,7 @@ The status composer will support the following:
 - [ ] Poll end dates
 - [ ] Post Gifs
 - [ ] Paste Support for videos, gifs, audio in statuses
-- [ ] Count URLs as 23 characters
+- [x] Count URLs as 23 characters
 - [ ] Don’t count user instance after @ in character count
 
 ### Timelines
@@ -43,10 +43,10 @@ The account page should support the following account details:
 ### Statuses
 The status cells should allow for the following interactions:
 - [ ] Translate Status
-- [ ] Select status text
+- [x] Select status text
 - [ ] Edit Status
 - [ ] View status edit history
-- [ ] Add accounts to lists directly from statuses
+- [x] Add accounts to lists directly from statuses
 
 ### Notifications
 The notifications view should support the following:
@@ -87,7 +87,7 @@ The following items are all different UI redesigns and alterations that will be 
 - [ ] Add loading bars at the bottom of the feed
 - [ ] Allow scrolling upwards into the new posts
 - [ ] Timeline should not jump while loading photos, cards and more
-- [ ]  A better media viewer that allows for a lot more useful actions.
+- [ ] A better media viewer that allows for a lot more useful actions.
 - [ ] Notifications Page
 	- [ ] Notifications grouping is needed
 	- [ ] Allow for toggling of grouping
