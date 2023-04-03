@@ -16,7 +16,7 @@ Below are all of the features that I see as absolutely necessary for Manny in th
 The status composer will support the following:
 - [ ] Post videos
 - [ ] Post Audio
-- [ ] Poll end dates
+- [x] Poll end dates
 - [ ] Post Gifs
 - [ ] Paste Support for videos, gifs, audio in statuses
 - [x] Count URLs as 23 characters
@@ -25,7 +25,7 @@ The status composer will support the following:
 ### Timelines
 The timelines view should support the following features:
 - [ ] Mastodon Marker API
-- [ ] Direct Messages
+- [x] Direct Messages
 - [ ] Threaded statuses
 	- [ ] When a status has context it should appear in a threaded nature so the context is visible inline
 - [ ] Read access to other public instances
@@ -87,7 +87,7 @@ The following items are all different UI redesigns and alterations that will be 
 - [ ] Add loading bars at the bottom of the feed
 - [ ] Allow scrolling upwards into the new posts
 - [ ] Timeline should not jump while loading photos, cards and more
-- [ ] A better media viewer that allows for a lot more useful actions.
+- [x] A better media viewer that allows for a lot more useful actions.
 - [ ] Notifications Page
 	- [ ] Notifications grouping is needed
 	- [ ] Allow for toggling of grouping
