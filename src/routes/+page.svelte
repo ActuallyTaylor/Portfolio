@@ -342,7 +342,7 @@ Work Stack
             </button>
             <button id="infraredPhotography" on:click={handleinfrared}  class:underlinedHeader="{selectedInterest == "infraredPhotography"}">
                 <h4>
-                    infrared Photography
+                    Infrared Photography
                     <img
                         src="/assets/design/headerShapes/hexagon.svg"
                         alt="infrared Hexagon"
