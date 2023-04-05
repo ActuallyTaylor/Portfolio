@@ -1,5 +1,3 @@
-import type { WebPage } from "./WebPage/WebPage"
-
 export class Project {
     name: string
     subtitle: string
