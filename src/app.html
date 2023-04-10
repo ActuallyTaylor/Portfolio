@@ -11,62 +11,70 @@
         https://github.com/faroukx/Obsidian-shiba-inu-theme
         */
         :root {
-            --lily: rgb(222,149,132);
-            --red: rgb(240,68,114);
-            --rose: rgb(215,125,146);
-            --violet: rgb(176,110,201);
-            --blue: rgb(71,143,238);
-            --sea: rgb(23,146,153);
-            --cyan: rgb(37,189,209);
-            --turquoise: rgb(58,161,182);
-            --green: rgb(64,155,40);
-            --yellow: rgb(228,147,32);
-            --lemon: rgb(195,173,87);
-            --orange: rgb(249,102,50);
-            --text: rgb(76,79,105);
-            --subtext1: rgb(92,95,119);
-            --subtext0: rgb(108,111,133);
-            --base: rgb(252,252,252);
-            --secondaryBase: rgb(243,236,243);
+            /* Base Colors */
+            --base: rgb(242, 235, 242);
+            --mantel: rgb(254, 243, 254);
+            --crust: rgb(255, 248, 255);
+
+            /* Text Colors */
+            --text: rgb(76, 79, 105);
+            --subtext1: rgb(102, 104, 123);
+            --subtext2: rgb(133, 135, 153);
+
+            /* Colors */
+            --red: rgb(240, 68, 114);
+            --rosewater: rgb(250, 175, 166);
+            --pink: rgb(252, 184, 200);
+            --blue: rgb(83, 148, 233);
+            --sky: rgb(54, 164, 246);
+            --teal: rgb(47, 201, 201);
+            --mint: rgb(108, 222, 181);
+            --green: rgb(147, 217, 128);
+            --orange: rgb(255, 117, 37,);
+            --peach: rgb(255, 148, 111);
+            --lemon: rgb(250, 226, 132);
+            --brown: rgb(204, 170, 127);
+            --black: rgb(58, 59, 69);
 
             --primaryFontColor: var(--text);
-            --secondaryFontColor: var(--subtext0);
+            --secondaryFontColor: var(--subtext1);
             --backgroundColor: var(--base);
-            --blogBackgroundColor: var(--secondaryBase);
-            --navBarBackgroundColor: var(--secondaryBase);
+            --blogBackgroundColor: var(--mantel);
+            --navBarBackgroundColor: var(--mantel);
 
             --shapePrimaryFontColor: #000000;
             --shapeSecondaryFontColor: #393939;
 
             --visitedLink: var(--lemon);
-            --link: var(--yellow);
+            --link: var(--sky);
         }    
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --lily: rgb(235,188,186);
-                --red: rgb(255,98,107);
-                --rose: rgb(243,137,143);
-                --violet: rgb(196,167,231);
-                --blue: rgb(147,183,245);
-                --sea: rgb(104,188,204);
-                --cyan: rgb(137,199,223);
-                --turquoise: rgb(128,216,220);
-                --green: rgb(56,198,141);
-                --yellow: rgb(249,226,175);
-                --lemon: rgb(246,193,119);
-                --orange: rgb(247,157,124);
-                --text: rgb(198,206,239);
-                --subtext1: rgb(181,189,220);
-                --subtext0: rgb(165,172,201);
-                --base: rgb(42,45,61);
-                --secondaryBase: rgb(48, 52, 71);
+                /* Base Colors */
+                --base: rgb(42, 45, 61);
+                --mantel: rgb(48, 52, 71);
+                --crust: rgb(72, 77, 100);
 
-                --primaryFontColor: var(--text);
-                --secondaryFontColor: var(--subtext0);
-                --backgroundColor: var(--base);
-                --blogBackgroundColor: var(--secondaryBase);
-                --navBarBackgroundColor: var(--secondaryBase);
+                /* Text Colors */
+                --text: rgb(198, 206, 239);
+                --subtext1: rgb(164, 176, 220);
+                --subtext2: rgb(132, 141, 173);
+
+                /* Colors */
+                --red: rgb(240, 68, 114);
+                --rosewater: rgb(250, 175, 166);
+                --pink: rgb(252, 184, 200);
+                --blue: rgb(83, 148, 233);
+                --sky: rgb(54, 164, 246);
+                --teal: rgb(47, 201, 201);
+                --mint: rgb(108, 222, 181);
+                --green: rgb(147, 217, 128);
+                --orange: rgb(255, 117, 37,);
+                --peach: rgb(255, 148, 111);
+                --lemon: rgb(250, 226, 132);
+                --brown: rgb(204, 170, 127);
+                --black: rgb(58, 59, 69);
             }
         }
 
