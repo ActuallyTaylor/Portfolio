@@ -60,12 +60,12 @@
     }
 
     h2 {
-        color: var(--lily);
+        color: var(--rosewater);
         margin-bottom: 5px;
     }
 
     h3 {
-        color: var(--sea);
+        color: var(--sky);
     }
 
     h4 {
@@ -75,7 +75,7 @@
     }
 
     h5 {
-        color: var(--violet);
+        color: var(--lavender);
     }
 
     h6 {
