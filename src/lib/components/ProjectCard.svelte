@@ -54,11 +54,24 @@
     z-index: 2;
 }
 
+.nodec {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+}
 </style>
 
-<div style='background: url("assets/design/{project.id}/background.png"); background-size: contain; background-repeat: no-repeat; background-position: center;' class="card" >
-    <div style='background: url("assets/design/{project.id}/shape.svg"); background-size: contain; background-repeat: no-repeat; background-position: center;' class="shape" >
-        <h5>{@html project.name}</h5>
-        <h6>{project.subtitle}</h6>
+<a href="./{project.id}" class="nodec">
+    <div style='background: url("/assets/design/{project.id}/background.png"); background-size: contain; background-repeat: no-repeat; background-position: center;' class="card" >
+        <div style='background: url("/assets/design/{project.id}/shape.svg"); background-size: contain; background-repeat: no-repeat; background-position: center;' class="shape" >
+            <h5>{@html project.name}</h5>
+            <h6>{project.subtitle}</h6>
+        </div>
     </div>
-</div>
+</a>
+

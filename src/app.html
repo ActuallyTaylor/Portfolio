@@ -4,6 +4,98 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width" />
+      
+        <style>
+        /**
+        The style on this site was inspired by the Shiba Inu theme for Obsidian
+        https://github.com/faroukx/Obsidian-shiba-inu-theme
+        */
+        :root {
+            /* Base Colors */
+            --base: rgb(245,240,245);
+            --mantel: rgb(254, 243, 254);
+            --crust: rgb(255, 248, 255);
+
+            /* Text Colors */
+            --text: rgb(76, 79, 105);
+            --subtext1: rgb(102, 104, 123);
+            --subtext2: rgb(133, 135, 153);
+
+            /* Colors */
+            --red: rgb(240, 68, 114);
+            --rosewater: rgb(250, 175, 166);
+            --pink: rgb(252, 184, 200);
+            --blue: rgb(83, 148, 233);
+            --sky: rgb(54, 164, 246);
+            --teal: rgb(47, 201, 201);
+            --mint: rgb(108, 222, 181);
+            --green: rgb(147, 217, 128);
+            --orange: rgb(255, 117, 37,);
+            --peach: rgb(255, 148, 111);
+            --lemon: rgb(250, 226, 132);
+            --brown: rgb(204, 170, 127);
+            --lavender: rgb(196, 167, 231);
+            --black: rgb(58, 59, 69);
+            --white: rgb(255, 248, 255);
+
+            --primaryFontColor: var(--text);
+            --secondaryFontColor: var(--subtext1);
+            --backgroundColor: var(--base);
+            --blogBackgroundColor: var(--mantel);
+            --navBarBackgroundColor: var(--mantel);
+
+            --shapePrimaryFontColor: #000000;
+            --shapeSecondaryFontColor: #393939;
+
+            --visitedLink: var(--peach);
+            --link: var(--sky);
+        }    
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* Base Colors */
+                --base: rgb(42, 45, 61);
+                --mantel: rgb(48, 52, 71);
+                --crust: rgb(72, 77, 100);
+
+                /* Text Colors */
+                --text: rgb(198, 206, 239);
+                --subtext1: rgb(164, 176, 220);
+                --subtext2: rgb(132, 141, 173);
+
+                /* Colors */
+                --red: rgb(240, 68, 114);
+                --rosewater: rgb(250, 175, 166);
+                --pink: rgb(252, 184, 200);
+                --blue: rgb(83, 148, 233);
+                --sky: rgb(54, 164, 246);
+                --teal: rgb(47, 201, 201);
+                --mint: rgb(108, 222, 181);
+                --green: rgb(147, 217, 128);
+                --orange: rgb(255, 117, 37,);
+                --peach: rgb(255, 148, 111);
+                --lemon: rgb(250, 226, 132);
+                --brown: rgb(204, 170, 127);
+                --black: rgb(58, 59, 69);
+            }
+        }
+
+        body {
+            background-color: var(--base);
+        }
+
+        code {
+            white-space: pre-wrap;
+            background-color: var(--base);
+            padding: 2px;
+            border-radius: 4px;
+            margin: 2px;
+        }
+
+        pre code {
+            border-radius: 7px;
+        }
+        </style>
 		%sveltekit.head%
 	</head>
 	<body>
