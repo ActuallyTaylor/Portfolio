@@ -1,17 +1,62 @@
-<script>
-    import AboutContainer from "$lib/components/PortOS/About/AboutContainer.svelte";
-    import AboutImageButtonStack from "$lib/components/PortOS/About/AboutImageButtonStack.svelte";
-    import Window from "$lib/components/PortOS/Window.svelte";
+<script lang="ts">
+    import Window from "$lib/components/TAY_OS/Window.svelte"
+    import File from "$lib/components/TAY_OS/files/File.svelte";
+    import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte";
+    import { Screen } from "$lib/models/TAY_OS/Screen";
+    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
+    import { WindowReference } from "$lib/models/TAY_OS/WindowReference";
 
-    let innerWidth = 0
-    let innerHeight = 0
+    export let screen: Screen = new Screen();
+    export let innerWidth: number;
+    export let innerHeight: number;
 
-    function openMyWorkWindow() {
+    export let selectedName: string = "Taylor OS"
+    export let selectedDescription: string = "A new way to look through my projects!"
 
+    function openWindow(event: CustomEvent) {
+        screen.openWindows.push(new WindowReference(event.detail.name, screen.id))
+        screen.focusedWindow = screen.openWindows[screen.openWindows.length - 1]
+        screen.id += 1;
+        screen.openWindows = screen.openWindows
+    }
+
+    function closeWindow(event: CustomEvent) {
+        let window = event.detail.reference
+
+        const index = screen.openWindows.findIndex(wind => {
+            return wind.id == window.id
+        })
+
+        if (index > -1) {
+            screen.openWindows.splice(index, 1);
+        }
+        screen.openWindows = screen.openWindows;
+    }
+
+    function selectFile(event: CustomEvent) {
+        selectedName = event.detail.name
+        selectedDescription = event.detail.description
+    }
+
+    function deselectFile(event: CustomEvent) {
+        if (event.detail.name == selectedName) {
+            selectedName = "Taylor OS"
+            selectedDescription = "A new way to look through my projects"
+        }
+    }
+
+    function focusWindow(event: CustomEvent) {
+        let window = event.detail.reference
+
+        const index = screen.openWindows.findIndex(wind => {
+            return wind.id == window.id
+        })
+
+        screen.focusedWindow = screen.openWindows[index]
     }
 </script>
 
-<svelte:window bind:innerWidth bind:innerHeight />
+<svelte:window bind:innerWidth bind:innerHeight/>
 
 <svelte:head>
     <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
@@ -21,68 +66,56 @@
 </svelte:head>
 
 <div class="AppWrapper">
-    <Window windowName="ABOUT_ME" top={innerHeight/2} left={innerWidth/2} isDraggable={false} centerAnchor={true} >
-        <div class="AboutContainer HorizontalStack">
-            <div>
-                <AboutContainer width={"fit-content"} height={"fit-content"}>
-                    <div class="MeOuterStack">
-                        <div class=" HorizontalStack VerticallyCentered">
-                            <img src="/assets/images/me.png" alt="Zachary Lineman" height="200" width="200"/>
-                            <div class="MeStack">
-                                <h1>Zachary Lineman</h1>
-                                <h3>Freelance Development</h3>
-                                <div class="MeInfoStack">
-                                    <h3>🗺 Rochester New York</h3>
-                                    <h3>🐦 @LinemanZachary</h3>
-                                    <h3><img src="/assets/images/linkedin.svg" alt="Linkedin Logo" width="20" height="20"/>Rochester New York</h3>
-                                </div>    
-                            </div>
-                        </div>    
-                    </div>
-                </AboutContainer>
-                <AboutContainer width={"fit-content"} height={"fit-content"}>
-                    <h1>About Me</h1>
-                </AboutContainer>    
-            </div>
-            <div>
-                <div class="HorizontalStack">
-                    <AboutImageButtonStack name={"My Work"} buttonName={"View"} imagePath={"/assets/images/porty.png"} buttonCallback={openMyWorkWindow}></AboutImageButtonStack>
-                    <AboutImageButtonStack name={"Contact"} buttonName={"Contact"} imagePath={"/assets/images/info.png"} buttonCallback={openMyWorkWindow}></AboutImageButtonStack>        
-                </div>
-                <div class="HorizontalStack">
-                    <AboutImageButtonStack name={"Interests"} buttonName={"View"} imagePath={"/assets/images/porty.png"} buttonCallback={openMyWorkWindow}></AboutImageButtonStack>
-                    <AboutImageButtonStack name={"Resume"} buttonName={"View"} imagePath={"/assets/images/info.png"} buttonCallback={openMyWorkWindow}></AboutImageButtonStack>        
-                </div>
-                <div class="HorizontalStack">
-                    <AboutImageButtonStack name={"Blog"} buttonName={"Read"} imagePath={"/assets/images/porty.png"} buttonCallback={openMyWorkWindow}></AboutImageButtonStack>
-                    <AboutImageButtonStack name={"Games"} buttonName={"Play"} imagePath={"/assets/images/info.png"} buttonCallback={openMyWorkWindow}></AboutImageButtonStack>        
-                </div>
+    <FileArea>
+        <File name={"TAY_OS"} description="A new way to look through my projects" windowToOpen="TAY_OS" on:openWindow={openWindow}/>
+    </FileArea>
 
+    {#each screen.openWindows as window}
+        {console.log("Loop ", window)}
+        {#if window.name == "TAY_OS"}
+            <Window on:focusWindow={focusWindow} on:openWindow={openWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
+                new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false)}
+                isFocused={screen.focusedWindow == window}
+            >
+                <div class="HorizontalStack">
+                    <div class="FileSideBar VerticalStack">
+                        <h1>{selectedName}</h1>
+                        <hr>
+                        <p>{selectedDescription}</p>
+                    </div>
+                    <FileArea>
+                        <File name="My Projects" description="View all of my different projects!" windowToOpen="MY_PROJECTS" on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
+                        <File name="Photography" description="See my photography in action!" windowToOpen="PHOTOGRAPHY" on:openWindow={openWindow} on:selectFile={selectFile}/>
+                        <File name="Blogs" description="Read my blog!" windowToOpen="BLOG" on:openWindow={openWindow} on:selectFile={selectFile}/>
+                        <File name="Passes" description="Grab some of my WWDC wallet passes!" windowToOpen="WALLET" on:openWindow={openWindow} on:selectFile={selectFile}/>
+                    </FileArea>        
+                </div>
+            </Window>
+        {/if}
+        {#if window.name == "PHOTOGRAPHY"}
+        <Window on:focusWindow={focusWindow} on:openWindow={openWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
+            new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false)}
+            isFocused={screen.focusedWindow == window}
+            >
+            <div class="HorizontalStack">
+                <div class="FileSideBar VerticalStack">
+                    <h1>{selectedName}</h1>
+                    <hr>
+                    <p>{selectedDescription}</p>
+                </div>
+                <FileArea>
+                    
+                </FileArea>
             </div>
-        </div>
-    </Window>
+        </Window>
+    {/if}
+
+    {/each}
+
 </div>
 
 
 <style>
-:global().HorizontalStack {
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-}
-
-:global().VerticallyCentered {
-    display: flex;
-    align-items: center;
-}
-
-:global(body) {
-    background-image: url("/assets/images/backgrounds/bg_1.jpg");
-    /* background-size:cover; */
-    background-repeat: repeat;
-    /* background-position: center; */
-}
-
 .AppWrapper {
     width: 100vw;
     height: 100vh;
@@ -92,49 +125,8 @@
     /* background-position: center; */
 }
 
-
-.AboutContainer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-
-    margin-left: 10px;
+.FileSideBar {
+    min-width: 30%;
+    max-width: 30%;
 }
-
-.MeOuterStack {
-    margin-left: 30px;
-    margin-right: 30px;
-}
-
-.MeStack {
-    margin-left: 30px;
-}
-
-.MeStack h1 {
-    padding: 0px;
-    margin: 0px;
-    font-weight: 400;
-}
-
-.MeStack h3 {
-    padding: 0px;
-    margin: 0px;
-    font-weight: 400;
-}
-
-.MeInfoStack h3 {
-    padding: 0px;
-    margin-top: 10px;
-
-    display: flex;
-    align-items: center;
-
-    font-weight: 400;
-}
-
-
-.MeInfoStack h3 img {
-    padding-right: 5px;
-}
-
 </style>

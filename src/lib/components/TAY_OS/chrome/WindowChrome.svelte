@@ -1,15 +1,18 @@
 <script lang="ts">
     import WindowButton from "./WindowButton.svelte";
     import WindowChromeLines from "./WindowChromeLines.svelte";
+    import { createEventDispatcher } from 'svelte';
 
     export let windowName: string;
 
-    function closeWindoow() {
-        console.log("Close Window")
+    const dispatch = createEventDispatcher();
+
+    function closeWindow() {
+        dispatch('closeWindow');
     }
 
     function expandWindow() {
-        console.log("Expand Window")
+        dispatch('expandWindow');
     }
 </script>
 
@@ -49,7 +52,7 @@
 
 <div class="WindowChrome">
     <WindowChromeLines width={"10%"}></WindowChromeLines>
-    <WindowButton callback={closeWindoow}>
+    <WindowButton callback={closeWindow}>
         X
     </WindowButton>
     <WindowChromeLines></WindowChromeLines>

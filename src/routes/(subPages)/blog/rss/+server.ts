@@ -9,7 +9,6 @@ export const GET = async () => {
     response.headers.set('Cache-Control', `max-age=0, s-max-age=${600}`);
     response.headers.set('Content-Type', `application/xml`);
 
-    console.log(body)
     return response
 };
   
