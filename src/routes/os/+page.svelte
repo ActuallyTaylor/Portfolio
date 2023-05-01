@@ -1,10 +1,12 @@
 <script lang="ts">
     import Window from "$lib/components/TAY_OS/Window.svelte"
-    import File from "$lib/components/TAY_OS/files/File.svelte";
+    import File from "$lib/components/TAY_OS/files/FileIcon.svelte";
     import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte";
     import { Screen } from "$lib/models/TAY_OS/Screen";
     import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
     import { WindowReference } from "$lib/models/TAY_OS/WindowReference";
+    import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte";
+    import { TayFile } from "$lib/models/TAY_OS/TayFile";
 
     export let screen: Screen = new Screen();
     export let innerWidth: number;
@@ -34,15 +36,11 @@
     }
 
     function selectFile(event: CustomEvent) {
-        selectedName = event.detail.name
-        selectedDescription = event.detail.description
+        screen.focusedFile = event.detail.file;
     }
 
     function deselectFile(event: CustomEvent) {
-        if (event.detail.name == selectedName) {
-            selectedName = "Taylor OS"
-            selectedDescription = "A new way to look through my projects"
-        }
+        screen.focusedFile = null;
     }
 
     function focusWindow(event: CustomEvent) {
@@ -61,13 +59,11 @@
 <svelte:head>
     <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
-
-    <link rel="stylesheet" href="/css/PortOS.css" />
 </svelte:head>
 
 <div class="AppWrapper">
     <FileArea>
-        <File name={"TAY_OS"} description="A new way to look through my projects" windowToOpen="TAY_OS" on:openWindow={openWindow}/>
+        <File screen={screen} file={new TayFile("TAY_OS", "A new way to look through my projects", "TAY_OS")} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
     </FileArea>
 
     {#each screen.openWindows as window}
@@ -79,15 +75,15 @@
             >
                 <div class="HorizontalStack">
                     <div class="FileSideBar VerticalStack">
-                        <h1>{selectedName}</h1>
+                        <h1>{screen.focusedFile?.name ?? "Taylor OS"}</h1>
                         <hr>
-                        <p>{selectedDescription}</p>
+                        <p>{screen.focusedFile?.description ?? "A new way to look through my projects!"}</p>
                     </div>
                     <FileArea>
-                        <File name="My Projects" description="View all of my different projects!" windowToOpen="MY_PROJECTS" on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
-                        <File name="Photography" description="See my photography in action!" windowToOpen="PHOTOGRAPHY" on:openWindow={openWindow} on:selectFile={selectFile}/>
-                        <File name="Blogs" description="Read my blog!" windowToOpen="BLOG" on:openWindow={openWindow} on:selectFile={selectFile}/>
-                        <File name="Passes" description="Grab some of my WWDC wallet passes!" windowToOpen="WALLET" on:openWindow={openWindow} on:selectFile={selectFile}/>
+                        <FileIcon screen={screen} file={new TayFile("My Projects", "View all of my different projects!", "MY_PROJECTS")} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
+                        <FileIcon screen={screen} file={new TayFile("Photography", "See my photography in action!", "PHOTOGRAPHY")} on:openWindow={openWindow} on:selectFile={selectFile}/>
+                        <FileIcon screen={screen} file={new TayFile("Blogs", "Read my blog!", "BLOG")} on:openWindow={openWindow} on:selectFile={selectFile}/>
+                        <FileIcon screen={screen} file={new TayFile("Passes", "Grab some of my World Wide Developer Conference wallet passes!", "WALLET")} on:openWindow={openWindow} on:selectFile={selectFile}/>
                     </FileArea>        
                 </div>
             </Window>
@@ -99,9 +95,9 @@
             >
             <div class="HorizontalStack">
                 <div class="FileSideBar VerticalStack">
-                    <h1>{selectedName}</h1>
+                    <h1>{screen.focusedFile?.name ?? "Taylor OS"}</h1>
                     <hr>
-                    <p>{selectedDescription}</p>
+                    <p>{screen.focusedFile?.description ?? "A new way to look through my projects!"}</p>
                 </div>
                 <FileArea>
                     
@@ -119,7 +115,7 @@
 .AppWrapper {
     width: 100vw;
     height: 100vh;
-    background-image: url("/assets/images/pixels.svg");
+    background-image: url("/assets/images/TayOS/pixels.svg");
     /* background-size: contain; */
     background-repeat: repeat;
     /* background-position: center; */
@@ -128,5 +124,7 @@
 .FileSideBar {
     min-width: 30%;
     max-width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 </style>

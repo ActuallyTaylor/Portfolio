@@ -22,7 +22,6 @@
         justify-content: center;
         align-items: center;
 
-
         height: 44px;
 
         background-color: #EEEEEE;
@@ -36,7 +35,6 @@
     }
 
     .WindowChrome h1 {
-        font-family: Rubik, Arial, Helvetica, sans-serif;
         text-transform: uppercase;
         white-space: nowrap;
         text-align: center;
@@ -48,18 +46,22 @@
         
         font-size: 1.3em;
     }
+
+    .WindowChrome img {
+        image-rendering: pixelated;
+    }
 </style>
 
 <div class="WindowChrome">
     <WindowChromeLines width={"10%"}></WindowChromeLines>
     <WindowButton callback={closeWindow}>
-        X
+        <img src="/assets/images/TayOS/xmark.png" alt="close window" width="20px" height="20px">
     </WindowButton>
     <WindowChromeLines></WindowChromeLines>
     <h1>{windowName}</h1>
     <WindowChromeLines></WindowChromeLines>
     <WindowButton callback={expandWindow}>
-        E
+        <img src="/assets/images/TayOS/expand.png" alt="expand window" width="20px" height="20px">
     </WindowButton>
     <WindowChromeLines width={"10%"}></WindowChromeLines>
 </div>

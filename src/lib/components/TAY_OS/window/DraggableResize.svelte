@@ -184,7 +184,7 @@
 
 <div 
 	on:mousedown={onMouseDown} 
-	style="z-index: {zIndex}; left: {windowPosition.left}px; top: {windowPosition.top}px; cursor: {windowPosition.isDraggable && !windowPosition.isExpanded ? "move" : ""}; transform: translate({translateAmount}, {translateAmount}); " class="draggable">
+	style="z-index: {zIndex}; left: {windowPosition.left}px; top: {windowPosition.top}px; transform: translate({translateAmount}, {translateAmount}); " class="draggable">
 	<slot>
 		
     </slot>

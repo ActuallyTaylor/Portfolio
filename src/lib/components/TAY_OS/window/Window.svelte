@@ -4,8 +4,6 @@
     import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
     import { createEventDispatcher } from 'svelte';
     import type { WindowReference } from "$lib/models/TAY_OS/WindowReference";
-    import FileArea from "./files/FileArea.svelte";
-    import File from "./files/File.svelte";
     const dispatch = createEventDispatcher();
 
     export let reference: WindowReference
