@@ -5,11 +5,11 @@ export class Application {
     name: string;
     description: string;
     icon: string;
-    menuBarItems: [MenuBarItem];
+    menuBarItems: MenuBarItem[];
 
     file: TayFile;
 
-    constructor(name: string, description: string, icon: string, menuBarItems: [MenuBarItem]) {
+    constructor(name: string, description: string, icon: string, menuBarItems: MenuBarItem[]) {
         this.name = name;
         this.icon = icon;
         this.description = description;

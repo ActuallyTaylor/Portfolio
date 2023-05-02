@@ -33,6 +33,15 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+        height: 100%;
+    }
+
+    .iconContainer p {
+        margin: 0px;
+        padding: 0px;
+        color: black;
     }
 
     .iconMenu {
@@ -58,13 +67,20 @@
     }
 </style>
 
-<div class="iconContainer" on:click={toggleFocus} on:focusout={defocusItem}>
-    <img src="/assets/images/TayOS/{item.icon}" alt="Tay OS" width="25px" height="25px">
+<div class="iconContainer" on:click={toggleFocus} on:focusout={defocusItem} style="{screen.focusedMenuBarItem == item ? "filter: invert(); background: white;" : ""}">
+    {#if (item.icon != null)}
+    <img src="/assets/images/TayOS/{item.icon}" alt="{item.name} Icon" width="25px" height="25px">
+    {/if}
     {#if (item.name != null)}
+    {#if item.name == screen.currentlyFocusedApp.name }
+    <p><b>{item.name}</b></p>
+    {:else}
     <p>{item.name}</p>
     {/if}
+    {/if}
+
     {#if (screen.focusedMenuBarItem == item)}
-    <div class="iconMenu">
+    <div class="iconMenu" style="{screen.focusedMenuBarItem == item ? "filter: invert(); background: white;" : ""}">
         <div class="iconMenuBackground">
             <slot>
             

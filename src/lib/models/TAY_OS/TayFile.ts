@@ -1,13 +1,17 @@
+import type { Application } from "./Application";
+
 export class TayFile {
     name: string;
     description: string;
-    windowToOpen: string;
     icon: string;
+    path: String
+    handlingApplication: Application
 
-    constructor(name: string, description: string, windowToOpen: string, icon: string = "file.png") {
+    constructor(name: string, description: string, path: string, handlingApplication: Application, icon: string = "file.png") {
         this.name = name;
-        this.windowToOpen = windowToOpen;
+        this.handlingApplication = handlingApplication;
         this.description = description;
+        this.path = path
         this.icon = icon
     }
 }

@@ -1,7 +1,3 @@
-<script lang="ts">
-    console.log(navigator.userAgent)
-</script>
-
 <style>
     .aboutMain {
         width: 100%;

@@ -10,7 +10,7 @@
 
     function openWindow() {
         dispatch("openWindow", {
-            name: file.windowToOpen
+            file: file
         })
     }
 
