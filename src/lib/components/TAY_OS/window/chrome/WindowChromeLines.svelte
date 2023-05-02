@@ -9,10 +9,10 @@
 }
 
 .LineStack hr {
-    height: 3px;
+    height: 2px;
     background-color: #777777;
     border: none;
-    margin: 3px;
+    margin: 2px;
     padding: 0px;
 }
 </style>

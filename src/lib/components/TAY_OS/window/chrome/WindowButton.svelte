@@ -10,8 +10,8 @@
 
     background: #CCCDFB;
     border: 2px solid #777777;
-    min-width: 33px;
-    min-height: 33px;
+    min-width: 23px;
+    min-height: 23px;
     padding: 0px;
 }
 </style>

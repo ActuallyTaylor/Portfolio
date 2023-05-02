@@ -1,5 +1,5 @@
 <script lang="ts">
-    import WindowChrome from "./chrome/WindowChrome.svelte";
+    import WindowChrome from "$lib/components/TAY_OS/window/chrome/WindowChrome.svelte";
     import DraggableResize from "./DraggableResize.svelte";
     import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
     import { createEventDispatcher } from 'svelte';
@@ -110,6 +110,14 @@
 
         windowPosition = windowPosition;
     }
+
+    function chromeMouseUp() {
+        windowPosition.isMoving = false;
+    }
+
+    function chromeMouseDown() {
+        windowPosition.isMoving = true;
+    }
 </script>
 
 <style>
@@ -122,6 +130,13 @@
     
     box-shadow: 6px 6px 0 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    position: relative;
+}
+
+.WindowContainer {
+    margin: 0px;
+    padding: 0px;
+    overflow: scroll;
 }
 </style>
 
@@ -129,9 +144,11 @@
 
 <DraggableResize windowPosition={windowPosition} on:resized={resized} on:focusedWindow={focusWindow} zIndex={isFocused ? 10 : 0}>
     <div class="Window" style="width:{windowPosition.width}px; height:{windowPosition.height}px;">
-        <WindowChrome windowName={reference.name} on:closeWindow={closeWindow} on:expandWindow={expandWindow}></WindowChrome>
-        <slot>
+        <WindowChrome windowName={reference.name} windowPosition={windowPosition} on:closeWindow={closeWindow} on:expandWindow={expandWindow} on:chromeMouseUp={chromeMouseUp} on:chromeMouseDown={chromeMouseDown}></WindowChrome>
+        <div class="WindowContainer" style="max-height:{windowPosition.height - 64}px;">
+            <slot>
 
-        </slot>
+            </slot>    
+        </div>
     </div>    
 </DraggableResize>

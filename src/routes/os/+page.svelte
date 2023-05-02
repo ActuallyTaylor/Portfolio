@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Window from "$lib/components/TAY_OS/Window.svelte"
+    import Window from "$lib/components/TAY_OS/window/Window.svelte"
     import File from "$lib/components/TAY_OS/files/FileIcon.svelte";
     import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte";
     import { Screen } from "$lib/models/TAY_OS/Screen";
@@ -7,13 +7,11 @@
     import { WindowReference } from "$lib/models/TAY_OS/WindowReference";
     import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte";
     import { TayFile } from "$lib/models/TAY_OS/TayFile";
+    import MenuBar from "$lib/components/TAY_OS/menubar/MenuBar.svelte";
 
     export let screen: Screen = new Screen();
     export let innerWidth: number;
     export let innerHeight: number;
-
-    export let selectedName: string = "Taylor OS"
-    export let selectedDescription: string = "A new way to look through my projects!"
 
     function openWindow(event: CustomEvent) {
         screen.openWindows.push(new WindowReference(event.detail.name, screen.id))
@@ -52,6 +50,14 @@
 
         screen.focusedWindow = screen.openWindows[index]
     }
+
+    function focusMenuItem(event: CustomEvent) {
+        screen.focusedMenuBarItem = event.detail.item
+    }
+
+    function defocusMenuItem(event: CustomEvent) {
+        screen.focusedMenuBarItem = null
+    }
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight/>
@@ -61,16 +67,16 @@
     <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
 </svelte:head>
 
-<div class="AppWrapper">
+<MenuBar screen={screen} on:focusMenuItem={focusMenuItem} on:defocusMenuItem={defocusMenuItem} on:openWindow={openWindow}/>
+<div class="AppWrapper" style="width:{innerWidth}px;height:{innerHeight - 30}px;">
     <FileArea>
-        <File screen={screen} file={new TayFile("TAY_OS", "A new way to look through my projects", "TAY_OS")} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
+        <File screen={screen} file={new TayFile("TAY_OS", "A new way to look through my projects!", "TAY_OS", "taybot.filled")} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
     </FileArea>
 
     {#each screen.openWindows as window}
-        {console.log("Loop ", window)}
         {#if window.name == "TAY_OS"}
             <Window on:focusWindow={focusWindow} on:openWindow={openWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
-                new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false)}
+                new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false, true)}
                 isFocused={screen.focusedWindow == window}
             >
                 <div class="HorizontalStack">
@@ -88,23 +94,17 @@
                 </div>
             </Window>
         {/if}
-        {#if window.name == "PHOTOGRAPHY"}
+        {#if window.name == "ABOUT"}
         <Window on:focusWindow={focusWindow} on:openWindow={openWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
-            new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false)}
+            new WindowPosition(300, 100, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false, false)}
             isFocused={screen.focusedWindow == window}
             >
-            <div class="HorizontalStack">
-                <div class="FileSideBar VerticalStack">
-                    <h1>{screen.focusedFile?.name ?? "Taylor OS"}</h1>
-                    <hr>
-                    <p>{screen.focusedFile?.description ?? "A new way to look through my projects!"}</p>
-                </div>
-                <FileArea>
-                    
-                </FileArea>
+            <div>
+                <h1>Taylor OS</h1>
+                <h2>Version 1.0</h2>
             </div>
         </Window>
-    {/if}
+        {/if}
 
     {/each}
 
@@ -113,8 +113,7 @@
 
 <style>
 .AppWrapper {
-    width: 100vw;
-    height: 100vh;
+    padding-top: 30px;
     background-image: url("/assets/images/TayOS/pixels.svg");
     /* background-size: contain; */
     background-repeat: repeat;

@@ -21,19 +21,18 @@
         translateAmount = "-50%"
     }
     
-	let moving: boolean = false
 	let resizing: boolean = false
 	let resizeMode: string = "none"
     
 	function onMouseDown() {
-        if (windowPosition.isDraggable) {
-            moving = true;
-        }
+        // if (windowPosition.isDraggable) {
+        //     windowPosition.isMoving = true;
+        // }
 		dispatch("focusedWindow")
 	}
 	
 	function onMouseMove(event: MouseEvent) {
-		if (moving && !resizing) {
+		if (windowPosition.isMoving && !resizing) {
 			windowPosition.left += event.movementX;
 			windowPosition.top += event.movementY;
 			windowPosition = windowPosition;
@@ -43,7 +42,7 @@
 	}
 	
 	function onMouseUp() {
-		moving = false;
+		windowPosition.isMoving = false;
 		resizing = false;
 	}
 
@@ -188,6 +187,7 @@
 	<slot>
 		
     </slot>
+	{#if (windowPosition.isResizable)}
 	<!-- Side based resizers -->
 	<div class="resizer topResizer" on:mousedown={onTopResizableDown} ></div>
 	<div class="resizer bottomResizer" on:mousedown={onBottomResizableDown} ></div>
@@ -206,6 +206,7 @@
 		class="resizer bottomRightResizer" 
 		on:mousedown={onBottomRightResizableDown}
 	/>
+	{/if}
 </div>
 
 <svelte:window on:mouseup={onMouseUp} on:mousemove={onMouseMove} />

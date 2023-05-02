@@ -8,6 +8,7 @@ export class WindowPosition {
     centerAnchor: boolean = false
     isExpanded: boolean = false
 
+    isMoving: boolean = false
     minWidth: number = 225;
     minHeight: number = 50;
 
@@ -18,12 +19,13 @@ export class WindowPosition {
     beforeExpandDraggable: boolean = true;
     beforeExpandCenterAnchor: boolean = false;
 
-    constructor(width: number, height: number, top: number, left: number, isDraggable: boolean, centerAnchor: boolean) {
+    constructor(width: number, height: number, top: number, left: number, isDraggable: boolean, centerAnchor: boolean, isResizable: boolean) {
         this.width = width;
         this.height = height;
         this.top = top;
         this.left = left;
         this.isDraggable = isDraggable;
         this.centerAnchor = centerAnchor;
+        this.isResizable = isResizable;
     }
 }

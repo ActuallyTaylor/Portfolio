@@ -1,9 +1,11 @@
 <script lang="ts">
+    import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
     import WindowButton from "./WindowButton.svelte";
     import WindowChromeLines from "./WindowChromeLines.svelte";
     import { createEventDispatcher } from 'svelte';
 
     export let windowName: string;
+	export let windowPosition: WindowPosition
 
     const dispatch = createEventDispatcher();
 
@@ -14,15 +16,26 @@
     function expandWindow() {
         dispatch('expandWindow');
     }
+
+    function mouseDown() {
+        dispatch('chromeMouseDown');
+    }
+
+    function mouseUp() {
+        dispatch('chromeMouseUp');
+    }
 </script>
 
 <style>
-    .WindowChrome {        
+    .WindowChrome { 
+        position: sticky;
+        top: 0px;
+
         display: flex;
         justify-content: center;
         align-items: center;
 
-        height: 44px;
+        height: 34px;
 
         background-color: #EEEEEE;
 
@@ -30,21 +43,19 @@
 
         margin: 10px;
         margin-top: 0px;
-
-
     }
 
     .WindowChrome h1 {
         text-transform: uppercase;
         white-space: nowrap;
         text-align: center;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         margin: 0px;
         margin-top: auto;
         margin-bottom: auto;
         
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 
     .WindowChrome img {
@@ -52,16 +63,17 @@
     }
 </style>
 
-<div class="WindowChrome">
+
+<div class="WindowChrome" style="{windowPosition.isDraggable ? `cursor: ${windowPosition.isMoving ? "grabbing" : "grab"}` : ""}" on:mouseup={mouseUp} on:mousedown={mouseDown}>
     <WindowChromeLines width={"10%"}></WindowChromeLines>
     <WindowButton callback={closeWindow}>
-        <img src="/assets/images/TayOS/xmark.png" alt="close window" width="20px" height="20px">
+        <img src="/assets/images/TayOS/xmark.png" alt="close window" width="15px" height="15px">
     </WindowButton>
     <WindowChromeLines></WindowChromeLines>
     <h1>{windowName}</h1>
     <WindowChromeLines></WindowChromeLines>
     <WindowButton callback={expandWindow}>
-        <img src="/assets/images/TayOS/expand.png" alt="expand window" width="20px" height="20px">
+        <img src="/assets/images/TayOS/expand.png" alt="expand window" width="15px" height="15px">
     </WindowButton>
     <WindowChromeLines width={"10%"}></WindowChromeLines>
 </div>
