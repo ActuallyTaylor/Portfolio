@@ -11,6 +11,7 @@
 
     export let reference: WindowReference;
     export let screen: TaylorOS;
+    console.log(reference)
 
     function closeWindow(event: CustomEvent) {
         dispatch("closeWindow", {
@@ -25,7 +26,7 @@
     }
 </script>
 
-{#if window.name == "About TaylorOS"}
+{#if reference.name == "About TaylorOS"}
 <Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={reference} windowPosition={
     new WindowPosition(375, 225, innerHeight / 2 - 112.5, innerWidth / 2 - 187.5, true, false, false)}
     isFocused={screen.focusedWindow == reference}>
@@ -35,7 +36,7 @@
 <Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={reference} windowPosition={
     new WindowPosition(475, 250, innerHeight / 2 - 125, innerWidth / 2 - 225, true, false, false)}
     isFocused={screen.focusedWindow == reference}>
-    <AboutBuilder application={screen.getApplicationByName(window.name.replace("About ", ""))}/>
+    <AboutBuilder application={screen.getApplicationByName(reference.name.replace("About ", ""))}/>
 </Window>
 {/if}
 

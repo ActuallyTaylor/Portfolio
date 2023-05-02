@@ -18,6 +18,7 @@
         if (event.detail.file != null) {
             screen.openWindows.push(new WindowReference(event.detail.file.name, screen.id, event.detail.file.handlingApplication, event.detail.file))
         } else {
+            console.log(event.detail.name)
             screen.openWindows.push(new WindowReference(event.detail.name, screen.id, ApplicationDatabase.about, null))
         }
         screen.focusedWindow = screen.openWindows[screen.openWindows.length - 1]

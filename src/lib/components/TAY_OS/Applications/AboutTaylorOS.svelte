@@ -18,7 +18,7 @@
     <img class="taybotImage" src="/assets/images/TayOS/taybot.svg" height=150 alt="taybot">
     <div class="VerticalStack">
         <p><b>System:</b> TaylorOS 1.0</p>
-        <p><b>Applications:</b> 1</p>
+        <p><b>Applications:</b> 2</p>
 
         <p><b>Created By:</b> Taylor Lineman</p>
     </div>
