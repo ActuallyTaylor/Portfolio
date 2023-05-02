@@ -1,9 +1,9 @@
 <script lang="ts">
-    import type { TayFile } from '$lib/models/TAY_OS/FileSystem'
+    import type { TayFS_Unit } from '$lib/models/TAY_OS/FileSystem'
     import { createEventDispatcher } from 'svelte'
 
-    export let file: TayFile
-    export let focusedFile: (TayFile | null)
+    export let file: TayFS_Unit
+    export let focusedFile: (TayFS_Unit | null)
 
     const dispatch = createEventDispatcher()
 

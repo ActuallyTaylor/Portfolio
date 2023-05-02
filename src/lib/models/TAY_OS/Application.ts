@@ -1,5 +1,5 @@
 import type { MenuBarItem } from "./MenuBarItem"
-import { TayFile } from "./FileSystem"
+import { TayFS_File } from "./FileSystem"
 
 export class Application {
     name: string
@@ -7,7 +7,7 @@ export class Application {
     icon: string
     menuBarItems: MenuBarItem[]
 
-    file: TayFile
+    file: TayFS_File
 
     constructor(name: string, description: string, icon: string, menuBarItems: MenuBarItem[]) {
         this.name = name
@@ -15,6 +15,6 @@ export class Application {
         this.description = description
         this.menuBarItems = menuBarItems
         
-        this.file = new TayFile(name, description, name, this, icon)
+        this.file = new TayFS_File(name, description, icon, this)
     }
 }

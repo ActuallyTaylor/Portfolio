@@ -10,7 +10,7 @@
     const dispatch = createEventDispatcher()
 
     export let reference: WindowReference
-    export let screen: TaylorOS
+    export let os: TaylorOS
     console.log(reference)
 
     function closeWindow(event: CustomEvent) {
@@ -29,14 +29,14 @@
 {#if reference.name == "About TaylorOS"}
 <Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={reference} windowPosition={
     new WindowPosition(375, 225, innerHeight / 2 - 112.5, innerWidth / 2 - 187.5, true, false, false)}
-    isFocused={screen.focusedWindow == reference}>
+    isFocused={os.focusedWindow == reference}>
     <AboutTaylorOS/>
 </Window>
 {:else}
 <Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={reference} windowPosition={
     new WindowPosition(475, 250, innerHeight / 2 - 125, innerWidth / 2 - 225, true, false, false)}
-    isFocused={screen.focusedWindow == reference}>
-    <AboutBuilder application={screen.getApplicationByName(reference.name.replace("About ", ""))}/>
+    isFocused={os.focusedWindow == reference}>
+    <AboutBuilder application={os.getApplicationByName(reference.name.replace("About ", ""))}/>
 </Window>
 {/if}
 

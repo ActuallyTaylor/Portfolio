@@ -3,7 +3,7 @@
     import type { TaylorOS } from '$lib/models/TAY_OS/TaylorOS'
     import { createEventDispatcher } from 'svelte'
 
-    export let screen: TaylorOS
+    export let os: TaylorOS
     export let item: MenuBarItem
 
     export let focusedMenuBarItem: (MenuBarItem | null)
@@ -49,6 +49,7 @@
     .iconMenu {
         position: absolute;
         top: 28px;
+        left: 0px;
     }
 
     .iconMenuBackground {
@@ -74,7 +75,7 @@
     <img src="/assets/images/TayOS/{item.icon}" alt="{item.name} Icon" width="25px" height="25px">
     {/if}
     {#if (item.name != null)}
-    {#if item.name == screen.currentlyFocusedApp.name }
+    {#if item.name == os.currentlyFocusedApp.name }
     <p><b>{item.name}</b></p>
     {:else}
     <p>{item.name}</p>

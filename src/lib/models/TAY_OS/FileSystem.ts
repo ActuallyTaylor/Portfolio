@@ -1,50 +1,82 @@
 import type { Application } from "./Application";
+import { ApplicationDatabase } from "./ApplicationDatabase";
 
 export class TayFS {
-    files: TayFS_Unit[]
+    static idCounter: number = 0;
+    units: TayFS_Unit[] = []
+
+    constructor() { }
+
+    public addUnit(unit: TayFS_Unit) {
+        unit.path = "/" + unit.name
+        unit.id = TayFS.idCounter
+        TayFS.idCounter += 1
+        this.units.push(unit)        
+    }
+
+    public deleteUnit(unit: TayFS_Unit): boolean {
+        let index = this.units.indexOf(unit)
+        if (index == -1) {
+            return false
+        }
+
+        this.units.splice(index, 1)
+        return true
+    }
 }
 
-class TayFS_Unit {
+export enum TayFS_Filetype {
+    directory,
+    file
+}
+
+export class TayFS_Unit {
     id: number
     name: string
+    description: string | null
     icon: string
-    path: string
-    
-    constructor(id: number, name: string, icon: string, path: string) {
+    path!: string
+    fileType: TayFS_Filetype
+    handlingApplication: Application
+
+    constructor(id: number, name: string, description: string | null, icon: string, type: TayFS_Filetype, handlingApplication: Application) {
         this.id = id
-        this.name = name
-        this.icon = icon
-        this.path = path
-    }
-}
-
-class TayFS_File extends TayFS_Unit {
-    handlingApplication: Application
-
-    constructor(id: number, name: string, icon: string, path: string, handlingApplication: Application) {
-        super(id, name, icon, path)
-        this.handlingApplication = handlingApplication
-    }
-
-}
-
-class TayFS_Folder extends TayFS_Unit {
-
-}
-
-
-export class TayFile {
-    name: string
-    description: string
-    icon: string
-    path: String
-    handlingApplication: Application
-
-    constructor(name: string, description: string, path: string, handlingApplication: Application, icon: string = "file.png") {
-        this.name = name
-        this.handlingApplication = handlingApplication
         this.description = description
-        this.path = path
+        this.name = name
         this.icon = icon
+        this.fileType = type
+        this.handlingApplication = handlingApplication
+    }
+}
+
+export class TayFS_File extends TayFS_Unit {
+    constructor(name: string, description: string | null, icon: string, handlingApplication: Application) {
+        super(0, name, description, icon, TayFS_Filetype.file, handlingApplication)
+    }
+
+}
+
+export class TayFS_Directory extends TayFS_Unit {
+    units: TayFS_Unit[] = []
+
+    constructor(name: string, description: string | null, icon: string) {
+        super(0, name, description, icon, TayFS_Filetype.directory, ApplicationDatabase.babel)
+    }
+
+    public addUnit(unit: TayFS_Unit) {
+        unit.id = TayFS.idCounter
+        unit.path = this.path + "/" + unit.name
+        TayFS.idCounter += 1
+        this.units.push(unit)        
+    }
+
+    public deleteUnit(unit: TayFS_File): boolean {
+        let index = this.units.indexOf(unit)
+        if (index == -1) {
+            return false
+        }
+
+        this.units.splice(index, 1)
+        return true
     }
 }

@@ -7,62 +7,61 @@
     import About from "$lib/components/TAY_OS/Applications/About.svelte"
     import BabelDesktop from "$lib/components/TAY_OS/Applications/BabelDesktop.svelte"
 
-    export let screen: TaylorOS = new TaylorOS()
+    export let os: TaylorOS = new TaylorOS()
     export let innerWidth: number = 0
     export let innerHeight: number = 0
 
     function openWindow(event: CustomEvent) {
         if (event.detail.file != null) {
-            screen.openWindows.push(new WindowReference(event.detail.file.name, screen.id, event.detail.file.handlingApplication, event.detail.file))
+            os.openWindows.push(new WindowReference(event.detail.file.name, os.id, event.detail.file.handlingApplication, event.detail.file))
         } else {
-            console.log(event.detail.name)
-            screen.openWindows.push(new WindowReference(event.detail.name, screen.id, ApplicationDatabase.about, null))
+            os.openWindows.push(new WindowReference(event.detail.name, os.id, ApplicationDatabase.about, null))
         }
-        screen.focusedWindow = screen.openWindows[screen.openWindows.length - 1]
-        screen.id += 1
-        screen.openWindows = screen.openWindows
+        os.focusedWindow = os.openWindows[os.openWindows.length - 1]
+        os.id += 1
+        os.openWindows = os.openWindows
     }
 
     function closeWindow(event: CustomEvent) {
         let window = event.detail.reference
 
-        const index = screen.openWindows.findIndex(wind => {
+        const index = os.openWindows.findIndex(wind => {
             return wind.id == window.id
         })
 
-        if (index > -1) {
-            screen.openWindows.splice(index, 1)
+        if (index != -1) {
+            os.openWindows.splice(index, 1)
+            os.openWindows = os.openWindows
         }
-        screen.openWindows = screen.openWindows
     }
 
     function focusWindow(event: CustomEvent) {
         let window = event.detail.reference
 
-        const index = screen.openWindows.findIndex(wind => {
+        const index = os.openWindows.findIndex(wind => {
             return wind.id == window.id
         })
 
-        screen.focusedWindow = screen.openWindows[index]
+        os.focusedWindow = os.openWindows[index]
     }
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight/>
 
-<MenuBar screen={screen} on:openWindow={openWindow}/>
+<MenuBar os={os} on:openWindow={openWindow}/>
 <div class="AppWrapper" style="width:{innerWidth}px;height:{innerHeight - 30}px;">    
-    <BabelDesktop screen={screen} on:openWindow={openWindow}/>
+    <BabelDesktop os={os} on:openWindow={openWindow}/>
 
     <!-- Route all of the open windows to their respective applications -->
-    {#each screen.openWindows as window}
+    {#each os.openWindows as window}
         <!-- Route Babel Pages -->
         {#if window.application == ApplicationDatabase.babel }
-            <Babel reference={window} screen={screen} on:closeWindow={closeWindow} on:focusWindow={focusWindow} on:openWindow={openWindow}/>
+            <Babel reference={window} os={os} on:closeWindow={closeWindow} on:focusWindow={focusWindow} on:openWindow={openWindow}/>
         {/if}
 
         <!-- Route About Pages -->
         {#if window.application == ApplicationDatabase.about }
-            <About reference={window} screen={screen} on:closeWindow={closeWindow} on:focusWindow={focusWindow}/>
+            <About reference={window} os={os} on:closeWindow={closeWindow} on:focusWindow={focusWindow}/>
         {/if}
     {/each}
 

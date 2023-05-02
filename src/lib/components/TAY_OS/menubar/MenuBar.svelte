@@ -4,11 +4,11 @@
     import { MenuBarItem } from "$lib/models/TAY_OS/MenuBarItem";
     import { createEventDispatcher } from "svelte";
     
-    export let screen: TaylorOS
+    export let os: TaylorOS
     export let focusedMenuBarItem: (MenuBarItem | null) = null;
 
     function currentApp(): string {
-        return screen.currentlyFocusedApp.name
+        return os.currentlyFocusedApp.name
     }
 
     const dispatch = createEventDispatcher();
@@ -49,6 +49,8 @@
     flex-direction: row;
     align-items: center;
     
+    padding-left: 5px;
+    
     z-index: 1000;
 }
 
@@ -70,7 +72,7 @@
 </style>
 
 <div class="menuBar">
-    <MenuBarIcon screen={screen} item={new MenuBarItem(null, "taybot.svg")} focusedMenuBarItem={focusedMenuBarItem} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
+    <MenuBarIcon os={os} item={new MenuBarItem(null, "taybot.svg")} focusedMenuBarItem={focusedMenuBarItem} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
         <button on:click={openAbout}>
             About TaylorOS
         </button>  
@@ -78,13 +80,13 @@
             Shutdown
         </button>  
     </MenuBarIcon>
-    <MenuBarIcon screen={screen} item={new MenuBarItem(currentApp(), null)} focusedMenuBarItem={focusedMenuBarItem} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
+    <MenuBarIcon os={os} item={new MenuBarItem(currentApp(), null)} focusedMenuBarItem={focusedMenuBarItem} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
         <button on:click={openCurrentAppAbout}>
             About {currentApp()}
         </button>  
     </MenuBarIcon>
-    {#each screen.currentlyFocusedApp.menuBarItems as item }
-        <MenuBarIcon screen={screen} item={item} on:focusMenuItem={focusItem} focusedMenuBarItem={focusedMenuBarItem} on:defocusMenuItem={defocusItem}>
+    {#each os.currentlyFocusedApp.menuBarItems as item }
+        <MenuBarIcon os={os} item={item} on:focusMenuItem={focusItem} focusedMenuBarItem={focusedMenuBarItem} on:defocusMenuItem={defocusItem}>
 
         </MenuBarIcon>
     {/each}
