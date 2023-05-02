@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
-    import { createEventDispatcher } from 'svelte';
-    const dispatch = createEventDispatcher();
+    import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition"
+    import { createEventDispatcher } from 'svelte'
+    const dispatch = createEventDispatcher()
 
 	function resized(width: number, height: number, movementY: number, movementX: number, resizeMode: string) {
         dispatch('resized', {
@@ -10,7 +10,7 @@
 			movementY: movementY,
 			movementX: movementX,
 			mode: resizeMode
-		});
+		})
     }
 
 	export let windowPosition: WindowPosition
@@ -25,80 +25,77 @@
 	let resizeMode: string = "none"
     
 	function onMouseDown() {
-        // if (windowPosition.isDraggable) {
-        //     windowPosition.isMoving = true;
-        // }
 		dispatch("focusedWindow")
 	}
 	
 	function onMouseMove(event: MouseEvent) {
 		if (windowPosition.isMoving && !resizing) {
-			windowPosition.left += event.movementX;
-			windowPosition.top += event.movementY;
-			windowPosition = windowPosition;
+			windowPosition.left += event.movementX
+			windowPosition.top += event.movementY
+			windowPosition = windowPosition
 		} else if (resizing) {
 			resized(event.pageX, event.pageY, event.movementY, event.movementX, resizeMode)
 		}
 	}
 	
 	function onMouseUp() {
-		windowPosition.isMoving = false;
-		resizing = false;
+		windowPosition.isMoving = false
+		resizing = false
 	}
 
 	function onBottomLeftResizableDown() {
 		if (windowPosition.isResizable) {
-			resizeMode = "bottomLeft";
-            resizing = true;
+			resizeMode = "bottomLeft"
+            resizing = true
         }
 	}
 
 	function onBottomRightResizableDown() {
         if (windowPosition.isResizable) {
-			resizeMode = "bottomRight";
-            resizing = true;
+			resizeMode = "bottomRight"
+            resizing = true
         }
 	}
 
 	function onTopLeftResizableDown() {
 		if (windowPosition.isResizable) {
-			resizeMode = "topLeft";
-            resizing = true;
+			resizeMode = "topLeft"
+            resizing = true
         }
 	}
 
 	function onTopRightResizableDown() {
         if (windowPosition.isResizable) {
-			resizeMode = "topRight";
-            resizing = true;
+			resizeMode = "topRight"
+            resizing = true
         }
 	}
 
 	function onTopResizableDown() {
         if (windowPosition.isResizable) {
-			resizeMode = "top";
-            resizing = true;
+			resizeMode = "top"
+            resizing = true
         }
 	}
 
 	function onBottomResizableDown() {
 		if (windowPosition.isResizable) {
-			resizeMode = "bottom";
-            resizing = true;
+			resizeMode = "bottom"
+            resizing = true
         }
 	}
 
 	function onLeftResizableDown() {
 		if (windowPosition.isResizable) {
-			resizeMode = "left";
-            resizing = true;
+			resizeMode = "left"
+            resizing = true
         }
 	}
 
 	function onRightResizableDown() {
 		if (windowPosition.isResizable) {
-			resizeMode = "right";
-            resizing = true;
+			resizeMode = "right"
+            resizing = true
         }
 	}
 

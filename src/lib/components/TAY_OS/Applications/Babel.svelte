@@ -1,15 +1,15 @@
 <script lang="ts">
-    import type { WindowReference } from "$lib/models/TAY_OS/WindowReference";
+    import type { WindowReference } from "$lib/models/TAY_OS/WindowReference"
     import Window from "$lib/components/TAY_OS/window/Window.svelte"
-    import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte";
-    import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte";
-    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS";
-    import { TayFile } from "$lib/models/TAY_OS/TayFile";
-    import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase";
-    import { createEventDispatcher } from 'svelte';
-    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
+    import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte"
+    import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte"
+    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS"
+    import { TayFile } from "$lib/models/TAY_OS/FileSystem"
+    import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase"
+    import { createEventDispatcher } from 'svelte'
+    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition"
 
-    const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 
     export let reference: WindowReference
     export let screen: TaylorOS
@@ -29,7 +29,7 @@
     }
 
     function openWindow(event: CustomEvent) {
-        focusedFile = null;
+        focusedFile = null
         dispatch("openWindow", {
             file: event.detail.file
         })

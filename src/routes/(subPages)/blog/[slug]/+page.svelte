@@ -1,23 +1,23 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount } from 'svelte'
     import PageNavigation from "$lib/components/ProjectPage/ProjectPageNav.svelte"
     import SvelteMarkdown, { type Renderers } from 'svelte-markdown'
-    import ListItem from '$lib/components/MarkdownRenderers/ListItem.svelte';
+    import ListItem from '$lib/components/MarkdownRenderers/ListItem.svelte'
 
-    export let data;
-    let blog = data.blog;
+    export let data
+    let blog = data.blog
     const source = blog.content
     const renderers: Renderers = {
         "listitem": ListItem
     }
 
     onMount(() => {
-        let hljsScript = document.createElement('script');
+        let hljsScript = document.createElement('script')
         hljsScript.src = "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"
-        document.head.append(hljsScript);
+        document.head.append(hljsScript)
 
         hljsScript.onload = function() {
-            hljs.highlightAll();
+            hljs.highlightAll()
         }
     })
 </script>

@@ -1,18 +1,15 @@
 <script lang="ts">
-    import File from "$lib/components/TAY_OS/files/FileIcon.svelte";
-    import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte";
-    import { TaylorOS } from "$lib/models/TAY_OS/TaylorOS";
-    import { WindowReference } from "$lib/models/TAY_OS/WindowReference";
-    import { TayFile } from "$lib/models/TAY_OS/TayFile";
-    import MenuBar from "$lib/components/TAY_OS/menubar/MenuBar.svelte";
-    import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase";
-    import Babel from "$lib/components/TAY_OS/Applications/Babel.svelte";
-    import About from "$lib/components/TAY_OS/Applications/About.svelte";
-    import BabelDesktop from "$lib/components/TAY_OS/Applications/BabelDesktop.svelte";
+    import { TaylorOS } from "$lib/models/TAY_OS/TaylorOS"
+    import { WindowReference } from "$lib/models/TAY_OS/WindowReference"
+    import MenuBar from "$lib/components/TAY_OS/menubar/MenuBar.svelte"
+    import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase"
+    import Babel from "$lib/components/TAY_OS/Applications/Babel.svelte"
+    import About from "$lib/components/TAY_OS/Applications/About.svelte"
+    import BabelDesktop from "$lib/components/TAY_OS/Applications/BabelDesktop.svelte"
 
-    export let screen: TaylorOS = new TaylorOS();
-    export let innerWidth: number;
-    export let innerHeight: number;
+    export let screen: TaylorOS = new TaylorOS()
+    export let innerWidth: number = 0
+    export let innerHeight: number = 0
 
     function openWindow(event: CustomEvent) {
         if (event.detail.file != null) {
@@ -22,7 +19,7 @@
             screen.openWindows.push(new WindowReference(event.detail.name, screen.id, ApplicationDatabase.about, null))
         }
         screen.focusedWindow = screen.openWindows[screen.openWindows.length - 1]
-        screen.id += 1;
+        screen.id += 1
         screen.openWindows = screen.openWindows
     }
 
@@ -34,9 +31,9 @@
         })
 
         if (index > -1) {
-            screen.openWindows.splice(index, 1);
+            screen.openWindows.splice(index, 1)
         }
-        screen.openWindows = screen.openWindows;
+        screen.openWindows = screen.openWindows
     }
 
     function focusWindow(event: CustomEvent) {

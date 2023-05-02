@@ -1,28 +1,28 @@
 <script lang="ts">
-    import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
-    import WindowButton from "./WindowButton.svelte";
-    import WindowChromeLines from "./WindowChromeLines.svelte";
-    import { createEventDispatcher } from 'svelte';
+    import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition"
+    import WindowButton from "./WindowButton.svelte"
+    import WindowChromeLines from "./WindowChromeLines.svelte"
+    import { createEventDispatcher } from 'svelte'
 
-    export let windowName: string;
+    export let windowName: string
 	export let windowPosition: WindowPosition
 
-    const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 
     function closeWindow() {
-        dispatch('closeWindow');
+        dispatch('closeWindow')
     }
 
     function expandWindow() {
-        dispatch('expandWindow');
+        dispatch('expandWindow')
     }
 
     function mouseDown() {
-        dispatch('chromeMouseDown');
+        dispatch('chromeMouseDown')
     }
 
     function mouseUp() {
-        dispatch('chromeMouseUp');
+        dispatch('chromeMouseUp')
     }
 </script>
 

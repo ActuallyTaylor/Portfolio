@@ -14,14 +14,14 @@
     function nextPhoto() {
         let index = imagePaths.indexOf(selectedPhoto.replace("gallery", "compressed"))
         if (index < imagePaths.length - 1) {
-            clickedPhoto(imagePaths[index + 1]);
+            clickedPhoto(imagePaths[index + 1])
         }
     }
 
     function previousPhoto() {
         let index = imagePaths.indexOf(selectedPhoto.replace("gallery", "compressed"))
         if (index > 0) {
-            clickedPhoto(imagePaths[index - 1]);
+            clickedPhoto(imagePaths[index - 1])
         }
     }
 

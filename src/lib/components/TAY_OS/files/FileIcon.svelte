@@ -1,11 +1,11 @@
 <script lang="ts">
-    import type { TayFile } from '$lib/models/TAY_OS/TayFile';
-    import { createEventDispatcher } from 'svelte';
+    import type { TayFile } from '$lib/models/TAY_OS/FileSystem'
+    import { createEventDispatcher } from 'svelte'
 
     export let file: TayFile
     export let focusedFile: (TayFile | null)
 
-    const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 
     function openWindow() {
         dispatch("openWindow", {

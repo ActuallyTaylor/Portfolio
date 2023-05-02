@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { Project } from "$lib/models/Project";
+    import type { Project } from "$lib/models/Project"
 
-    export let project: Project;
+    export let project: Project
 </script>
 
 <style>

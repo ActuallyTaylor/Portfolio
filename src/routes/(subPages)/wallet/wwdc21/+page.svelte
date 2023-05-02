@@ -1,6 +1,6 @@
 <script lang="ts">
     import PageNavigation from "$lib/components/ProjectPage/ProjectPageNav.svelte"
-    import { goto } from "$app/navigation";
+    import { goto } from "$app/navigation"
 
     let name: string;
 

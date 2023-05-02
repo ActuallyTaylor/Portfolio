@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let callback: () => void;
+    export let callback: () => void
 </script>
 
 <style>

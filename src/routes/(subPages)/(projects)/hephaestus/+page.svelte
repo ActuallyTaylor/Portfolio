@@ -1,12 +1,12 @@
 <script lang="ts">
-    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte";
-    import LeftAlignedDescriptionSection from "$lib/components/PageSections/LeftAlignedDescriptionSection.svelte";
-    import RightAlignedDescriptionSection from "$lib/components/PageSections/RightAlignedDescriptionSection.svelte";
-    import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte";
-    import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte";
+    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
+    import LeftAlignedDescriptionSection from "$lib/components/PageSections/LeftAlignedDescriptionSection.svelte"
+    import RightAlignedDescriptionSection from "$lib/components/PageSections/RightAlignedDescriptionSection.svelte"
+    import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
+    import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 
-    import { Data } from "$lib/data";
-    import { Project } from "$lib/models/Project";
+    import { Data } from "$lib/data"
+    import { Project } from "$lib/models/Project"
 
     const id = "hephaestus"
     export let project: Project = Data.works.find((obj: Project) => {

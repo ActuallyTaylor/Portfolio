@@ -1,20 +1,20 @@
-import type { MenuBarItem } from "./MenuBarItem";
-import { TayFile } from "./TayFile";
+import type { MenuBarItem } from "./MenuBarItem"
+import { TayFile } from "./FileSystem"
 
 export class Application {
-    name: string;
-    description: string;
-    icon: string;
-    menuBarItems: MenuBarItem[];
+    name: string
+    description: string
+    icon: string
+    menuBarItems: MenuBarItem[]
 
-    file: TayFile;
+    file: TayFile
 
     constructor(name: string, description: string, icon: string, menuBarItems: MenuBarItem[]) {
-        this.name = name;
-        this.icon = icon;
-        this.description = description;
-        this.menuBarItems = menuBarItems;
+        this.name = name
+        this.icon = icon
+        this.description = description
+        this.menuBarItems = menuBarItems
         
-        this.file = new TayFile(name, description, name, icon);
+        this.file = new TayFile(name, description, name, this, icon)
     }
 }

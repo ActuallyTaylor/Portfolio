@@ -1,16 +1,16 @@
 <script lang="ts">
-    import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte";
-    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS";
-    import { TayFile } from "$lib/models/TAY_OS/TayFile";
-    import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase";
-    import { createEventDispatcher } from 'svelte';
-    import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte";
+    import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte"
+    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS"
+    import { TayFile } from "$lib/models/TAY_OS/FileSystem"
+    import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase"
+    import { createEventDispatcher } from 'svelte'
+    import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte"
 
-    const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 
     export let screen: TaylorOS
-    export let innerWidth: number = 0;
-    export let innerHeight: number = 0;
+    export let innerWidth: number = 0
+    export let innerHeight: number = 0
 
     export let focusedFile: (TayFile | null) = null
 

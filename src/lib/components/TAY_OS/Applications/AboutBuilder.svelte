@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { Application } from "$lib/models/TAY_OS/Application";
+    import type { Application } from "$lib/models/TAY_OS/Application"
 
-    export let application: Application;
+    export let application: Application
 </script>
 
 <style>

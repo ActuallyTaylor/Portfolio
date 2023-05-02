@@ -1,16 +1,16 @@
 <script lang="ts">
-    import type { WindowReference } from "$lib/models/TAY_OS/WindowReference";
+    import type { WindowReference } from "$lib/models/TAY_OS/WindowReference"
     import Window from "$lib/components/TAY_OS/window/Window.svelte"
-    import AboutTaylorOS from "$lib/components/TAY_OS/Applications/AboutTaylorOS.svelte";
-    import AboutBuilder from "$lib/components/TAY_OS/Applications/AboutBuilder.svelte";
-    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
-    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS";
-    import { createEventDispatcher } from 'svelte';
+    import AboutTaylorOS from "$lib/components/TAY_OS/Applications/AboutTaylorOS.svelte"
+    import AboutBuilder from "$lib/components/TAY_OS/Applications/AboutBuilder.svelte"
+    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition"
+    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS"
+    import { createEventDispatcher } from 'svelte'
 
-    const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 
-    export let reference: WindowReference;
-    export let screen: TaylorOS;
+    export let reference: WindowReference
+    export let screen: TaylorOS
     console.log(reference)
 
     function closeWindow(event: CustomEvent) {

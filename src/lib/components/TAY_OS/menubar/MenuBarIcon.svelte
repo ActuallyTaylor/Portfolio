@@ -1,14 +1,14 @@
 <script lang="ts">
-    import type { MenuBarItem } from '$lib/models/TAY_OS/MenuBarItem';
-    import type { TaylorOS } from '$lib/models/TAY_OS/TaylorOS';
-    import { createEventDispatcher } from 'svelte';
+    import type { MenuBarItem } from '$lib/models/TAY_OS/MenuBarItem'
+    import type { TaylorOS } from '$lib/models/TAY_OS/TaylorOS'
+    import { createEventDispatcher } from 'svelte'
 
     export let screen: TaylorOS
     export let item: MenuBarItem
 
     export let focusedMenuBarItem: (MenuBarItem | null)
     
-    const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 
     function toggleFocus() {
         if (focusedMenuBarItem == item) {

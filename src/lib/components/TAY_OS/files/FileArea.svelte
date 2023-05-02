@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let direction: string = "flex-start";
+    export let direction: string = "flex-start"
 </script>
 
 <div class="fileWrapper" style="justify-content: {direction};">

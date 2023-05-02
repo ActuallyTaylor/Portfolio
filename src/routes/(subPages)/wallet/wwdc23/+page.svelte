@@ -1,8 +1,8 @@
 <script lang="ts">
     import PageNavigation from "$lib/components/ProjectPage/ProjectPageNav.svelte"
-    import { goto } from "$app/navigation";
+    import { goto } from "$app/navigation"
 
-    let name: string;
+    let name: string
 
     function downloadPass() {
         goto("https://actuallyhome.herokuapp.com/API/wallet/wwdc23/create?name=" + name)

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { BlogEntry } from "$lib/models/BlogEntry";
+    import type { BlogEntry } from "$lib/models/BlogEntry"
 
-    export let blog: BlogEntry;
+    export let blog: BlogEntry
 </script>
 
 <style>
