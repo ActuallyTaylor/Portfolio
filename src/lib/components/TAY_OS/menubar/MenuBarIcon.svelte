@@ -59,7 +59,7 @@
 </style>
 
 <div class="iconContainer" on:click={toggleFocus} on:focusout={defocusItem}>
-    <img src="/assets/images/TayOS/{item.icon}.png" alt="Tay OS" width="25px" height="25px">
+    <img src="/assets/images/TayOS/{item.icon}" alt="Tay OS" width="25px" height="25px">
     {#if (item.name != null)}
     <p>{item.name}</p>
     {/if}

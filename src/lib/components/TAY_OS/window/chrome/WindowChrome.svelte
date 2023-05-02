@@ -46,7 +46,7 @@
     }
 
     .WindowChrome h1 {
-        text-transform: uppercase;
+        /* text-transform: uppercase; */
         white-space: nowrap;
         text-align: center;
         padding-left: 10px;

@@ -28,7 +28,7 @@
 </script>
 
 <div class="file" style="{screen.focusedFile == file ? "filter: invert(1);" : ""}" on:click={selected} on:dblclick={openWindow}>
-    <img src="/assets/images/TayOS/{file.icon}.png" width=70 height=70 alt="file icon">
+    <img src="/assets/images/TayOS/{file.icon}" width=70 height=70 alt="file icon">
     <p>{file.name}</p>
 </div>
 

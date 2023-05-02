@@ -8,6 +8,7 @@
     import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte";
     import { TayFile } from "$lib/models/TAY_OS/TayFile";
     import MenuBar from "$lib/components/TAY_OS/menubar/MenuBar.svelte";
+    import AboutTaylorOS from "$lib/components/TAY_OS/Pages/AboutTaylorOS.svelte";
 
     export let screen: Screen = new Screen();
     export let innerWidth: number;
@@ -68,20 +69,20 @@
 </svelte:head>
 
 <MenuBar screen={screen} on:focusMenuItem={focusMenuItem} on:defocusMenuItem={defocusMenuItem} on:openWindow={openWindow}/>
-<div class="AppWrapper" style="width:{innerWidth}px;height:{innerHeight - 30}px;">
-    <FileArea>
-        <File screen={screen} file={new TayFile("TAY_OS", "A new way to look through my projects!", "TAY_OS", "taybot.filled")} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
+<div class="AppWrapper" style="width:{innerWidth}px;height:{innerHeight - 30}px;">    
+    <FileArea direction={"flex-end"}>
+        <File screen={screen} file={new TayFile("TaylorOS", "A new way to look through my projects!", "TaylorOS", "taybot.svg")} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
     </FileArea>
 
     {#each screen.openWindows as window}
-        {#if window.name == "TAY_OS"}
+        {#if window.name == "TaylorOS"}
             <Window on:focusWindow={focusWindow} on:openWindow={openWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
                 new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false, true)}
                 isFocused={screen.focusedWindow == window}
             >
                 <div class="HorizontalStack">
                     <div class="FileSideBar VerticalStack">
-                        <h1>{screen.focusedFile?.name ?? "Taylor OS"}</h1>
+                        <h1>{screen.focusedFile?.name ?? "TaylorOS"}</h1>
                         <hr>
                         <p>{screen.focusedFile?.description ?? "A new way to look through my projects!"}</p>
                     </div>
@@ -94,15 +95,12 @@
                 </div>
             </Window>
         {/if}
-        {#if window.name == "ABOUT"}
+        {#if window.name == "About TaylorOS"}
         <Window on:focusWindow={focusWindow} on:openWindow={openWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
-            new WindowPosition(300, 100, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false, false)}
+            new WindowPosition(375, 225, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false, false)}
             isFocused={screen.focusedWindow == window}
             >
-            <div>
-                <h1>Taylor OS</h1>
-                <h2>Version 1.0</h2>
-            </div>
+            <AboutTaylorOS/>
         </Window>
         {/if}
 

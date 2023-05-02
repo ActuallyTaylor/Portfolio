@@ -52,9 +52,9 @@
             windowPosition.isExpanded = true;
             windowPosition.isDraggable = false;
             windowPosition.centerAnchor = false;
-            windowPosition.top = 10;
+            windowPosition.top = 40;
             windowPosition.left = 10;
-            windowPosition.height = innerHeight - 30;
+            windowPosition.height = innerHeight - 60;
             windowPosition.width = innerWidth - 20;
         }
     }

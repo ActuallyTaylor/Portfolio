@@ -22,7 +22,7 @@
 
     function openAbout() {
         dispatch("openWindow", {
-            name: "ABOUT"
+            name: "About TaylorOS"
         })
     }
 </script>
@@ -63,9 +63,9 @@
 </style>
 
 <div class="menuBar">
-    <MenuBarIcon screen={screen} item={new MenuBarItem(null, "taybot")} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
+    <MenuBarIcon screen={screen} item={new MenuBarItem(null, "taybot.svg")} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
         <button on:click={openAbout}>
-            About TayOS
+            About TaylorOS
         </button>  
         <button>
             Shutdown
