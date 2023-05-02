@@ -8,9 +8,10 @@
     import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte";
     import { TayFile } from "$lib/models/TAY_OS/TayFile";
     import MenuBar from "$lib/components/TAY_OS/menubar/MenuBar.svelte";
-    import AboutTaylorOS from "$lib/components/TAY_OS/Pages/AboutTaylorOS.svelte";
-    import AboutBuilder from "$lib/components/TAY_OS/Pages/AboutBuilder.svelte";
+    import AboutTaylorOS from "$lib/components/TAY_OS/Applications/AboutTaylorOS.svelte";
+    import AboutBuilder from "$lib/components/TAY_OS/Applications/AboutBuilder.svelte";
     import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase";
+    import Babel from "$lib/components/TAY_OS/Applications/Babel.svelte";
 
     export let screen: TaylorOS = new TaylorOS();
     export let innerWidth: number;
@@ -84,36 +85,19 @@
         <!-- Route Babel Pages -->
         {console.log(screen.openWindows)}
         {#if window.application == ApplicationDatabase.babel }
-            <Window on:focusWindow={focusWindow} on:openWindow={openWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
-                new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false, true)}
-                isFocused={screen.focusedWindow == window}>
-                <div class="HorizontalStack">
-                    <div class="FileSideBar VerticalStack">
-                        <h1>{screen.focusedFile?.name ?? "TaylorOS"}</h1>
-                        <hr>
-                        <p>{screen.focusedFile?.description ?? "A new way to look through my projects!"}</p>
-                    </div>
-                    <FileArea>
-                        <FileIcon screen={screen} file={new TayFile("My Projects", "View all of my different projects!", "MY_PROJECTS", ApplicationDatabase.babel)} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
-                        <FileIcon screen={screen} file={new TayFile("Photography", "See my photography in action!", "PHOTOGRAPHY", ApplicationDatabase.babel)} on:openWindow={openWindow} on:selectFile={selectFile}/>
-                        <FileIcon screen={screen} file={new TayFile("Blogs", "Read my blog!", "BLOG", ApplicationDatabase.babel)} on:openWindow={openWindow} on:selectFile={selectFile}/>
-                        <FileIcon screen={screen} file={new TayFile("Passes", "Grab some of my World Wide Developer Conference wallet passes!", "WALLET", ApplicationDatabase.babel)} on:openWindow={openWindow} on:selectFile={selectFile}/>
-                    </FileArea>        
-                </div>
-            </Window>
-
+            <Babel window={window} screen={screen} on:closeWindow={closeWindow} on:focusWindow={focusWindow} on:deselectFile={deselectFile} on:openWindow={openWindow} on:selectFile={selectFile}/>
         {/if}
 
         <!-- Route About Pages -->
         {#if window.application == ApplicationDatabase.about }
             {#if window.name == "About TaylorOS"}
-            <Window on:focusWindow={focusWindow} on:openWindow={openWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
+            <Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
                 new WindowPosition(375, 225, innerHeight / 2 - 112.5, innerWidth / 2 - 187.5, true, false, false)}
                 isFocused={screen.focusedWindow == window}>
                 <AboutTaylorOS/>
             </Window>
             {:else}
-            <Window on:focusWindow={focusWindow} on:openWindow={openWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
+            <Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
                 new WindowPosition(475, 250, innerHeight / 2 - 125, innerWidth / 2 - 225, true, false, false)}
                 isFocused={screen.focusedWindow == window}>
                 <AboutBuilder application={screen.getApplicationByName(window.name.replace("About ", ""))}/>
