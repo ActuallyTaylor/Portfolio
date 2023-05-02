@@ -39,14 +39,6 @@
         screen.openWindows = screen.openWindows;
     }
 
-    function selectFile(event: CustomEvent) {
-        screen.focusedFile = event.detail.file;
-    }
-
-    function deselectFile(event: CustomEvent) {
-        screen.focusedFile = null;
-    }
-
     function focusWindow(event: CustomEvent) {
         let window = event.detail.reference
 
@@ -70,13 +62,13 @@
 
 <MenuBar screen={screen} on:focusMenuItem={focusMenuItem} on:defocusMenuItem={defocusMenuItem} on:openWindow={openWindow}/>
 <div class="AppWrapper" style="width:{innerWidth}px;height:{innerHeight - 30}px;">    
-    <BabelDesktop screen={screen} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
+    <BabelDesktop screen={screen} on:openWindow={openWindow}/>
 
     <!-- Route all of the open windows to their respective applications -->
     {#each screen.openWindows as window}
         <!-- Route Babel Pages -->
         {#if window.application == ApplicationDatabase.babel }
-            <Babel reference={window} screen={screen} on:closeWindow={closeWindow} on:focusWindow={focusWindow} on:deselectFile={deselectFile} on:openWindow={openWindow} on:selectFile={selectFile}/>
+            <Babel reference={window} screen={screen} on:closeWindow={closeWindow} on:focusWindow={focusWindow} on:openWindow={openWindow}/>
         {/if}
 
         <!-- Route About Pages -->
@@ -95,12 +87,5 @@
     /* background-size: contain; */
     background-repeat: repeat;
     /* background-position: center; */
-}
-
-.FileSideBar {
-    min-width: 30%;
-    max-width: 30%;
-    margin-left: 10px;
-    margin-right: 10px;
 }
 </style>

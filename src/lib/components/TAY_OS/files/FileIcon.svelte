@@ -1,10 +1,9 @@
 <script lang="ts">
-    import type { TaylorOS } from '$lib/models/TAY_OS/TaylorOS';
     import type { TayFile } from '$lib/models/TAY_OS/TayFile';
     import { createEventDispatcher } from 'svelte';
 
-    export let screen: TaylorOS
     export let file: TayFile
+    export let focusedFile: (TayFile | null)
 
     const dispatch = createEventDispatcher();
 
@@ -15,7 +14,7 @@
     }
 
     function selected() {
-        if(screen.focusedFile == file) {
+        if(focusedFile == file) {
             dispatch("deselectFile", {
                 file: file
             })
@@ -27,7 +26,7 @@
     }
 </script>
 
-<div class="file" style="{screen.focusedFile == file ? "filter: invert(1);" : ""}" on:click={selected} on:dblclick={openWindow}>
+<div class="file" style="{focusedFile == file ? "filter: invert(1);" : ""}" on:click={selected} on:dblclick={openWindow}>
     <img src="/assets/images/TayOS/{file.icon}" width=70 height=70 alt="file icon">
     <p>{file.name}</p>
 </div>

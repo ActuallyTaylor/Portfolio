@@ -14,6 +14,8 @@
     export let reference: WindowReference
     export let screen: TaylorOS
 
+    export let focusedFile: (TayFile | null) = null
+
     function closeWindow(event: CustomEvent) {
         dispatch("closeWindow", {
             reference: event.detail.reference
@@ -27,38 +29,46 @@
     }
 
     function openWindow(event: CustomEvent) {
+        focusedFile = null;
         dispatch("openWindow", {
             file: event.detail.file
         })
     }
 
     function selectFile(event: CustomEvent) {
-        dispatch("selectFile", {
-            file: event.detail.file
-        })
+        focusedFile = event.detail.file
     }
 
-    function deselectFile(event: CustomEvent) {
-        dispatch("deselectFile", {
-            file: event.detail.file
-        })
+    function deselectFile() {
+        focusedFile = null
     }
 </script>
+
+<style>
+.FileSideBar {
+    min-width: 30%;
+    max-width: 30%;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+</style>
 
 <Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={reference} windowPosition={
     new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false, true)}
     isFocused={screen.focusedWindow == reference}>
     <div class="HorizontalStack">
         <div class="FileSideBar VerticalStack">
-            <h1>{screen.focusedFile?.name ?? "TaylorOS"}</h1>
+            <h2>{focusedFile?.name ?? "Babel"}</h2>
             <hr>
-            <p>{screen.focusedFile?.description ?? "A new way to look through my projects!"}</p>
+            <p>{focusedFile?.description ?? "Select a file to view it's properties"}</p>
         </div>
         <FileArea>
-            <FileIcon screen={screen} file={new TayFile("My Projects", "View all of my different projects!", "MY_PROJECTS", ApplicationDatabase.babel)} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
-            <FileIcon screen={screen} file={new TayFile("Photography", "See my photography in action!", "PHOTOGRAPHY", ApplicationDatabase.babel)} on:openWindow={openWindow} on:selectFile={selectFile}/>
-            <FileIcon screen={screen} file={new TayFile("Blogs", "Read my blog!", "BLOG", ApplicationDatabase.babel)} on:openWindow={openWindow} on:selectFile={selectFile}/>
-            <FileIcon screen={screen} file={new TayFile("Passes", "Grab some of my World Wide Developer Conference wallet passes!", "WALLET", ApplicationDatabase.babel)} on:openWindow={openWindow} on:selectFile={selectFile}/>
+            <FileIcon file={new TayFile("My Projects", "View all of my different projects!", "MY_PROJECTS", ApplicationDatabase.babel)} focusedFile={focusedFile} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
+            <FileIcon file={new TayFile("Photography", "See my photography in action!", "PHOTOGRAPHY", ApplicationDatabase.babel)} focusedFile={focusedFile} on:openWindow={openWindow} on:selectFile={selectFile}/>
+            <FileIcon file={new TayFile("Blogs", "Read my blog!", "BLOG", ApplicationDatabase.babel)} focusedFile={focusedFile} on:openWindow={openWindow} on:selectFile={selectFile}/>
+            <FileIcon file={new TayFile("Passes", "Grab some of my World Wide Developer Conference wallet passes!", "WALLET", ApplicationDatabase.babel)} focusedFile={focusedFile} on:openWindow={openWindow} on:selectFile={selectFile}/>
         </FileArea>        
     </div>
 </Window>

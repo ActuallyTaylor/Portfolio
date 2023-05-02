@@ -10,7 +10,7 @@ export class WindowPosition {
 
     isMoving: boolean = false
     minWidth: number = 225;
-    minHeight: number = 50;
+    minHeight: number = 40;
 
     beforeExpandWidth: string = "";
     beforeExpandHeight: string = "";

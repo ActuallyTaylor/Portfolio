@@ -12,6 +12,8 @@
     export let innerWidth: number = 0;
     export let innerHeight: number = 0;
 
+    export let focusedFile: (TayFile | null) = null
+
     function openWindow(event: CustomEvent) {
         dispatch("openWindow", {
             file: event.detail.file
@@ -19,15 +21,11 @@
     }
 
     function selectFile(event: CustomEvent) {
-        dispatch("selectFile", {
-            file: event.detail.file
-        })
+        focusedFile = event.detail.file
     }
 
-    function deselectFile(event: CustomEvent) {
-        dispatch("deselectFile", {
-            file: event.detail.file
-        })
+    function deselectFile() {
+        focusedFile = null
     }
 </script>
 
@@ -44,5 +42,5 @@
 
 <img style="width:{innerWidth}px;height:{innerHeight - 30}px;" class="background" src="{screen.background}" alt="Desktop Background">
 <FileArea direction={"flex-end"}>
-    <FileIcon screen={screen} file={new TayFile("TaylorOS", "A new way to look through my projects!", "TaylorOS", ApplicationDatabase.babel, "taybot.svg")} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
+    <FileIcon file={new TayFile("TaylorOS", "A new way to look through my projects!", "TaylorOS", ApplicationDatabase.babel, "taybot.svg")} focusedFile={focusedFile} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
 </FileArea>
