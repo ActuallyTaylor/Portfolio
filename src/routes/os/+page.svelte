@@ -48,19 +48,11 @@
 
         screen.focusedWindow = screen.openWindows[index]
     }
-
-    function focusMenuItem(event: CustomEvent) {
-        screen.focusedMenuBarItem = event.detail.item
-    }
-
-    function defocusMenuItem(event: CustomEvent) {
-        screen.focusedMenuBarItem = null
-    }
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight/>
 
-<MenuBar screen={screen} on:focusMenuItem={focusMenuItem} on:defocusMenuItem={defocusMenuItem} on:openWindow={openWindow}/>
+<MenuBar screen={screen} on:openWindow={openWindow}/>
 <div class="AppWrapper" style="width:{innerWidth}px;height:{innerHeight - 30}px;">    
     <BabelDesktop screen={screen} on:openWindow={openWindow}/>
 
@@ -84,8 +76,6 @@
 .AppWrapper {
     padding-top: 30px;
     background-image: url("/assets/images/TayOS/pixels.svg");
-    /* background-size: contain; */
     background-repeat: repeat;
-    /* background-position: center; */
 }
 </style>

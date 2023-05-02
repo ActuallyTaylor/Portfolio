@@ -8,8 +8,6 @@ export class TaylorOS {
     id: number = 0;
     openWindows: WindowReference[] = []
     focusedWindow: (WindowReference | null) = null
-    focusedFile: (TayFile | null) = null
-    focusedMenuBarItem: (MenuBarItem | null) = null;
     currentlyFocusedApp: Application = ApplicationDatabase.applications[0]
     background = "/assets/images/backgrounds/bg_1.jpg"
 

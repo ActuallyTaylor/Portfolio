@@ -5,7 +5,8 @@
     import { createEventDispatcher } from "svelte";
     
     export let screen: TaylorOS
-    
+    export let focusedMenuBarItem: (MenuBarItem | null) = null;
+
     function currentApp(): string {
         return screen.currentlyFocusedApp.name
     }
@@ -13,15 +14,11 @@
     const dispatch = createEventDispatcher();
 
     function focusItem(event: CustomEvent) {
-        dispatch("focusMenuItem", {
-            item: event.detail.item
-        })
+        focusedMenuBarItem = event.detail.item
     }
 
-    function defocusItem(event: CustomEvent) {
-        dispatch("defocusMenuItem", {
-            item: event.detail.item
-        })
+    function defocusItem() {
+        focusedMenuBarItem = null
     }
 
     function openAbout() {
@@ -73,7 +70,7 @@
 </style>
 
 <div class="menuBar">
-    <MenuBarIcon screen={screen} item={new MenuBarItem(null, "taybot.svg")} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
+    <MenuBarIcon screen={screen} item={new MenuBarItem(null, "taybot.svg")} focusedMenuBarItem={focusedMenuBarItem} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
         <button on:click={openAbout}>
             About TaylorOS
         </button>  
@@ -81,14 +78,14 @@
             Shutdown
         </button>  
     </MenuBarIcon>
-    <MenuBarIcon screen={screen} item={new MenuBarItem(currentApp(), null)} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
+    <MenuBarIcon screen={screen} item={new MenuBarItem(currentApp(), null)} focusedMenuBarItem={focusedMenuBarItem} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
         <button on:click={openCurrentAppAbout}>
             About {currentApp()}
         </button>  
     </MenuBarIcon>
     {#each screen.currentlyFocusedApp.menuBarItems as item }
-    <MenuBarIcon screen={screen} item={item} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
+        <MenuBarIcon screen={screen} item={item} on:focusMenuItem={focusItem} focusedMenuBarItem={focusedMenuBarItem} on:defocusMenuItem={defocusItem}>
 
-    </MenuBarIcon>
+        </MenuBarIcon>
     {/each}
 </div>

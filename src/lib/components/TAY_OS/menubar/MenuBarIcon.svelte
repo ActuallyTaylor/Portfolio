@@ -5,11 +5,13 @@
 
     export let screen: TaylorOS
     export let item: MenuBarItem
+
+    export let focusedMenuBarItem: (MenuBarItem | null)
     
     const dispatch = createEventDispatcher();
 
     function toggleFocus() {
-        if (screen.focusedMenuBarItem == item) {
+        if (focusedMenuBarItem == item) {
             dispatch("defocusMenuItem", {
                 item: item
             })
@@ -67,7 +69,7 @@
     }
 </style>
 
-<div class="iconContainer" on:click={toggleFocus} on:focusout={defocusItem} style="{screen.focusedMenuBarItem == item ? "filter: invert(); background: white;" : ""}">
+<div class="iconContainer" on:click={toggleFocus} on:focusout={defocusItem} style="{focusedMenuBarItem == item ? "filter: invert(); background: white;" : ""}">
     {#if (item.icon != null)}
     <img src="/assets/images/TayOS/{item.icon}" alt="{item.name} Icon" width="25px" height="25px">
     {/if}
@@ -79,8 +81,8 @@
     {/if}
     {/if}
 
-    {#if (screen.focusedMenuBarItem == item)}
-    <div class="iconMenu" style="{screen.focusedMenuBarItem == item ? "filter: invert(); background: white;" : ""}">
+    {#if (focusedMenuBarItem == item)}
+    <div class="iconMenu" style="{focusedMenuBarItem == item ? "filter: invert(); background: white;" : ""}">
         <div class="iconMenuBackground">
             <slot>
             
