@@ -11,7 +11,7 @@
 
     const dispatch = createEventDispatcher();
 
-    export let window: WindowReference
+    export let reference: WindowReference
     export let screen: TaylorOS
 
     function closeWindow(event: CustomEvent) {
@@ -45,9 +45,9 @@
     }
 </script>
 
-<Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={window} windowPosition={
+<Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={reference} windowPosition={
     new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false, true)}
-    isFocused={screen.focusedWindow == window}>
+    isFocused={screen.focusedWindow == reference}>
     <div class="HorizontalStack">
         <div class="FileSideBar VerticalStack">
             <h1>{screen.focusedFile?.name ?? "TaylorOS"}</h1>
