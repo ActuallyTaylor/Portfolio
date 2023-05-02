@@ -2,7 +2,7 @@
     import Window from "$lib/components/TAY_OS/window/Window.svelte"
     import File from "$lib/components/TAY_OS/files/FileIcon.svelte";
     import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte";
-    import { Screen } from "$lib/models/TAY_OS/Screen";
+    import { TaylorOS } from "$lib/models/TAY_OS/TaylorOS";
     import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
     import { WindowReference } from "$lib/models/TAY_OS/WindowReference";
     import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte";
@@ -10,7 +10,7 @@
     import MenuBar from "$lib/components/TAY_OS/menubar/MenuBar.svelte";
     import AboutTaylorOS from "$lib/components/TAY_OS/Pages/AboutTaylorOS.svelte";
 
-    export let screen: Screen = new Screen();
+    export let screen: TaylorOS = new TaylorOS();
     export let innerWidth: number;
     export let innerHeight: number;
 

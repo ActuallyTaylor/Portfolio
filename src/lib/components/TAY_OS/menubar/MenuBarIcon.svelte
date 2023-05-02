@@ -1,9 +1,9 @@
 <script lang="ts">
     import type { MenuBarItem } from '$lib/models/TAY_OS/MenuBarItem';
-    import type { Screen } from '$lib/models/TAY_OS/Screen';
+    import type { TaylorOS } from '$lib/models/TAY_OS/TaylorOS';
     import { createEventDispatcher } from 'svelte';
 
-    export let screen: Screen
+    export let screen: TaylorOS
     export let item: MenuBarItem
     
     const dispatch = createEventDispatcher();

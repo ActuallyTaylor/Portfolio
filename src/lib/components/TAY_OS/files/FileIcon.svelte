@@ -1,9 +1,9 @@
 <script lang="ts">
-    import type { Screen } from '$lib/models/TAY_OS/Screen';
+    import type { TaylorOS } from '$lib/models/TAY_OS/TaylorOS';
     import type { TayFile } from '$lib/models/TAY_OS/TayFile';
     import { createEventDispatcher } from 'svelte';
 
-    export let screen: Screen
+    export let screen: TaylorOS
     export let file: TayFile
 
     const dispatch = createEventDispatcher();
