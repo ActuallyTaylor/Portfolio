@@ -11,6 +11,7 @@ export class TaylorOS {
     focusedFile: (TayFile | null) = null
     focusedMenuBarItem: (MenuBarItem | null) = null;
     currentlyFocusedApp: Application = ApplicationDatabase.applications[0]
+    background = "/assets/images/backgrounds/bg_1.jpg"
 
     constructor() { 
         

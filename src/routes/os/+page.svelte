@@ -1,16 +1,14 @@
 <script lang="ts">
-    import Window from "$lib/components/TAY_OS/window/Window.svelte"
     import File from "$lib/components/TAY_OS/files/FileIcon.svelte";
     import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte";
     import { TaylorOS } from "$lib/models/TAY_OS/TaylorOS";
-    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
     import { WindowReference } from "$lib/models/TAY_OS/WindowReference";
-    import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte";
     import { TayFile } from "$lib/models/TAY_OS/TayFile";
     import MenuBar from "$lib/components/TAY_OS/menubar/MenuBar.svelte";
     import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase";
     import Babel from "$lib/components/TAY_OS/Applications/Babel.svelte";
     import About from "$lib/components/TAY_OS/Applications/About.svelte";
+    import BabelDesktop from "$lib/components/TAY_OS/Applications/BabelDesktop.svelte";
 
     export let screen: TaylorOS = new TaylorOS();
     export let innerWidth: number;
@@ -71,9 +69,7 @@
 
 <MenuBar screen={screen} on:focusMenuItem={focusMenuItem} on:defocusMenuItem={defocusMenuItem} on:openWindow={openWindow}/>
 <div class="AppWrapper" style="width:{innerWidth}px;height:{innerHeight - 30}px;">    
-    <FileArea direction={"flex-end"}>
-        <File screen={screen} file={new TayFile("TaylorOS", "A new way to look through my projects!", "TaylorOS", ApplicationDatabase.babel, "taybot.svg")} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
-    </FileArea>
+    <BabelDesktop screen={screen} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
 
     <!-- Route all of the open windows to their respective applications -->
     {#each screen.openWindows as window}
