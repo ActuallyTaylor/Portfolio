@@ -6,6 +6,7 @@
     import Babel from "$lib/components/TAY_OS/Applications/Babel.svelte"
     import About from "$lib/components/TAY_OS/Applications/About.svelte"
     import BabelDesktop from "$lib/components/TAY_OS/Applications/BabelDesktop.svelte"
+    import Alert from "$lib/components/TAY_OS/Alert/Alert.svelte";
 
     export let os: TaylorOS = new TaylorOS()
     export let innerWidth: number = 0
@@ -13,7 +14,7 @@
 
     function openWindow(event: CustomEvent) {
         if (event.detail.file != null) {
-            os.openWindows.push(new WindowReference(event.detail.file.name, os.id, event.detail.file.handlingApplication, event.detail.file))
+            os.openWindows.push(new WindowReference(event.detail.file.name, os.id, event.detail.file.application, event.detail.file))
         } else {
             os.openWindows.push(new WindowReference(event.detail.name, os.id, ApplicationDatabase.about, null))
         }
@@ -44,12 +45,32 @@
 
         os.focusedWindow = os.openWindows[index]
     }
+
+    function clearAlert(alert: OSAlert): boolean {
+        let index = os.alerts.indexOf(alert)
+        if (index == -1) {
+            return false
+        }
+
+        os.alerts.splice(index, 1)
+        os.alerts = os.alerts
+        return true
+    }
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight/>
 
 <MenuBar os={os} on:openWindow={openWindow}/>
 <div class="AppWrapper" style="width:{innerWidth}px;height:{innerHeight - 30}px;">    
+    <div class="AlertWrapper">
+        <!-- Display all of the alerts -->
+        {#each os.alerts as alert}
+            <Alert alert={alert} callback={() =>
+                clearAlert(alert)
+            }/>
+        {/each}
+    </div>
+    
     <BabelDesktop os={os} on:openWindow={openWindow}/>
 
     <!-- Route all of the open windows to their respective applications -->
@@ -64,7 +85,6 @@
             <About reference={window} os={os} on:closeWindow={closeWindow} on:focusWindow={focusWindow}/>
         {/if}
     {/each}
-
 </div>
 
 
@@ -73,5 +93,10 @@
     padding-top: 30px;
     background-image: url("/assets/images/TayOS/pixels.svg");
     background-repeat: repeat;
+}
+
+.AlertWrapper {
+    position: absolute;
+    z-index: 1001;
 }
 </style>

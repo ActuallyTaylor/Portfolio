@@ -23,11 +23,16 @@ export class TayFS {
         this.units.splice(index, 1)
         return true
     }
+
+    public root(): TayFS_Directory {
+        return this.units[0] as TayFS_Directory
+    }
 }
 
 export enum TayFS_Filetype {
     directory,
-    file
+    file,
+    program
 }
 
 export class TayFS_Unit {
@@ -37,15 +42,15 @@ export class TayFS_Unit {
     icon: string
     path!: string
     fileType: TayFS_Filetype
-    handlingApplication: Application
+    application: Application
 
-    constructor(id: number, name: string, description: string | null, icon: string, type: TayFS_Filetype, handlingApplication: Application) {
+    constructor(id: number, name: string, description: string | null, icon: string, type: TayFS_Filetype, application: Application) {
         this.id = id
         this.description = description
         this.name = name
         this.icon = icon
         this.fileType = type
-        this.handlingApplication = handlingApplication
+        this.application = application
     }
 }
 
@@ -53,7 +58,15 @@ export class TayFS_File extends TayFS_Unit {
     constructor(name: string, description: string | null, icon: string, handlingApplication: Application) {
         super(0, name, description, icon, TayFS_Filetype.file, handlingApplication)
     }
+}
 
+export class TayFS_Program extends TayFS_Unit {
+    isSystemApplication: boolean
+
+    constructor(name: string, description: string | null, icon: string, application: Application, isSystemApplication: boolean) {
+        super(0, name, description, icon, TayFS_Filetype.program, application)
+        this.isSystemApplication = isSystemApplication
+    }
 }
 
 export class TayFS_Directory extends TayFS_Unit {

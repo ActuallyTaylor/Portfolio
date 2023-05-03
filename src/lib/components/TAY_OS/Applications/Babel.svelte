@@ -4,8 +4,7 @@
     import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte"
     import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte"
     import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS"
-    import type { TayFS_Directory, TayFS_Unit } from "$lib/models/TAY_OS/FileSystem";
-    import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase"
+    import { TayFS_Filetype, TayFS_Directory, type TayFS_Unit } from "$lib/models/TAY_OS/FileSystem";
     import { createEventDispatcher } from 'svelte'
     import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition"
 
@@ -30,10 +29,18 @@
     }
 
     function openWindow(event: CustomEvent) {
-        focusedFile = null
-        dispatch("openWindow", {
-            file: event.detail.file
-        })
+        // Check to see if we are opening Babel itself
+        if (event.detail.file.name == "Babel" && event.detail.file.fileType == TayFS_Filetype.program) {
+            focusedFile = null
+            dispatch("openWindow", {
+                file: os.fileSystem.root()
+            })
+        } else {
+            focusedFile = null
+            dispatch("openWindow", {
+                file: event.detail.file
+            })
+        }
     }
 
     function selectFile(event: CustomEvent) {
@@ -42,6 +49,10 @@
 
     function deselectFile() {
         focusedFile = null
+    }
+
+    function systemApp(event: CustomEvent) {
+        os.addAlert(event.detail.alert)
     }
 </script>
 
@@ -55,10 +66,10 @@
             <p>{focusedFile?.description ?? directory?.description ?? "Select a file to view it's properties"}</p>
         </div>
 
-        {#if directory != null }
+        {#if directory != null && reference.sourceFile?.fileType == TayFS_Filetype.directory }
         <FileArea>
             {#each directory.units as file }
-                <FileIcon file={file} focusedFile={focusedFile} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile}/>
+                <FileIcon file={file} focusedFile={focusedFile} on:openWindow={openWindow} on:selectFile={selectFile} on:deselectFile={deselectFile} on:systemApp={systemApp}/>
             {/each}
         </FileArea>   
         {:else}

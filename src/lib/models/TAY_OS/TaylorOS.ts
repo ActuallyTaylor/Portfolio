@@ -1,7 +1,8 @@
 import type { WindowReference } from "$lib/models/TAY_OS/WindowReference"
 import type { Application } from "$lib/models/TAY_OS/Application"
 import { ApplicationDatabase } from "./ApplicationDatabase"
-import { TayFS, TayFS_Directory } from "./FileSystem"
+import { TayFS, TayFS_Directory, TayFS_Program } from "./FileSystem"
+import type { OSAlert } from "./OSAlert"
 
 export class TaylorOS {
     id: number = 0
@@ -10,6 +11,8 @@ export class TaylorOS {
     focusedWindow: (WindowReference | null) = null
     currentlyFocusedApp: Application = ApplicationDatabase.applications[0]
     background = "/assets/images/backgrounds/bg_1.jpg"
+
+    alerts: OSAlert[] = []
 
     constructor() {
         let rootDirectory = new TayFS_Directory("TaylorOS", "The root directory for Taylor OS", "taybot.svg")
@@ -34,6 +37,18 @@ export class TaylorOS {
         // Passes
         let passesDirectory = new TayFS_Directory("Wallet Passes", "View and download my Apple World Wide Developer Conference passes!", "folder.png")
         documentsDirectory.addUnit(passesDirectory)
+
+        // // MARK: Applications
+        let applicationsDirectory = new TayFS_Directory("Applications", "The applications folder, containing all of the applications available to Taylor OS", "folder.png")
+        rootDirectory.addUnit(applicationsDirectory)
+
+        // Babel Application
+        let babelApp = new TayFS_Program("Babel", "Babel is the file browser packaged with Taylor OS", "taybot.svg", ApplicationDatabase.babel, true)
+        applicationsDirectory.addUnit(babelApp);
+
+        // About Application
+        let aboutApp = new TayFS_Program("About", "The about application that generates about information for all applications", "file.png", ApplicationDatabase.about, true)
+        applicationsDirectory.addUnit(aboutApp);
     }
 
     public getApplicationByName(name: string): Application {
@@ -46,5 +61,9 @@ export class TaylorOS {
         }
 
         return ApplicationDatabase.applications[index]
+    }
+
+    public addAlert(alert: OSAlert) {
+        this.alerts.push(alert)
     }
 }
