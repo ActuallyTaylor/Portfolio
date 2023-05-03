@@ -1,11 +1,11 @@
 <script lang="ts">
     import type { OSAlert } from "$lib/models/TAY_OS/OSAlert";
     import DraggableResize from "$lib/components/TAY_OS/window/DraggableResize.svelte";
-    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
+    import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
 
     export let alert: OSAlert
     export let callback: () => void
-    export let windowPosition = new WindowPosition(200, 200, 0, 0, true, false, false)
+    export let windowPosition: WindowPosition
 
     function mouseDown() {
         windowPosition.isMoving = true

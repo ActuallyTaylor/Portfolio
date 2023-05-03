@@ -7,6 +7,8 @@
     import About from "$lib/components/TAY_OS/Applications/About.svelte"
     import BabelDesktop from "$lib/components/TAY_OS/Applications/BabelDesktop.svelte"
     import Alert from "$lib/components/TAY_OS/Alert/Alert.svelte";
+    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
+    import type { OSAlert } from "$lib/models/TAY_OS/OSAlert";
 
     export let os: TaylorOS = new TaylorOS()
     export let innerWidth: number = 0
@@ -67,7 +69,7 @@
         {#each os.alerts as alert}
             <Alert alert={alert} callback={() =>
                 clearAlert(alert)
-            }/>
+            } windowPosition={new WindowPosition(200, 200, innerHeight / 2 - 150, innerWidth / 2 - 200, true, false, false)}/>
         {/each}
     </div>
     

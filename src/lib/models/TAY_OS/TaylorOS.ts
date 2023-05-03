@@ -2,7 +2,8 @@ import type { WindowReference } from "$lib/models/TAY_OS/WindowReference"
 import type { Application } from "$lib/models/TAY_OS/Application"
 import { ApplicationDatabase } from "./ApplicationDatabase"
 import { TayFS, TayFS_Directory, TayFS_Program } from "./FileSystem"
-import type { OSAlert } from "./OSAlert"
+import { OSAlert } from "./OSAlert"
+import Alert from "$lib/components/TAY_OS/Alert/Alert.svelte"
 
 export class TaylorOS {
     id: number = 0
@@ -12,7 +13,7 @@ export class TaylorOS {
     currentlyFocusedApp: Application = ApplicationDatabase.applications[0]
     background = "/assets/images/backgrounds/bg_1.jpg"
 
-    alerts: OSAlert[] = []
+    alerts: OSAlert[] = [new OSAlert("Invalid Operation!", "This is a system application and can not be opened by itself.")]
 
     constructor() {
         let rootDirectory = new TayFS_Directory("TaylorOS", "The root directory for Taylor OS", "taybot.svg")
