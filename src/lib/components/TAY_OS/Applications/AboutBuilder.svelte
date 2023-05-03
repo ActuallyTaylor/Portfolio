@@ -23,7 +23,7 @@
 </style>
 
 <div class="aboutMain HorizontalStack HorizontallyCentered VerticallyCentered">
-    <img class="image" src="/assets/images/TayOS/{application.icon}" height=150 alt="taybot">
+    <img class="image" src="/assets/images/TayOS/icons/{application.icon}" height="150px" alt="taybot">
     <div class="VerticalStack">
         <p><b>{application.name}</b></p>
         <p>{application.description}</p>

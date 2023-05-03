@@ -72,7 +72,7 @@
 
 <div class="iconContainer" on:click={toggleFocus} on:focusout={defocusItem} style="{focusedMenuBarItem == item ? "filter: invert(); background: white;" : ""}">
     {#if (item.icon != null)}
-    <img src="/assets/images/TayOS/{item.icon}" alt="{item.name} Icon" width="25px" height="25px">
+    <img src="/assets/images/TayOS/icons/{item.icon}" alt="{item.name} Icon" width="25px" height="25px">
     {/if}
     {#if (item.name != null)}
     {#if item.name == os.currentlyFocusedApp.name }

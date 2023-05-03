@@ -2,9 +2,10 @@ import { Project } from "./models/Project"
 
 export class Data {
     static works: Project[] = [
+        new Project("Taylor OS", "Website", "os", "software"),
+        new Project("Manny", "iOS App", "manny", "ios"),
         new Project("Jellycuts", "iOS App", "jellycuts", "ios"),
         new Project("SCUM Map", "iOS App", "scum", "ios"),
-        new Project("Manny", "iOS App", "manny", "ios"),
         new Project("Firefly", "iOS Framework", "firefly", "ios"),
         new Project("Hephaestus", "Game Engine", "hephaestus", "software"),
         new Project("Solar Explorer", "Simulation", "solarexplorer", "simulations"),
