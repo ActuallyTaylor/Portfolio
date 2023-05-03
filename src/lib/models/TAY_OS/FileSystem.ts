@@ -35,6 +35,11 @@ export enum TayFS_Filetype {
     program
 }
 
+export enum TayFS_Datatype {
+    markdown,
+    url
+}
+
 export class TayFS_Unit {
     id: number
     name: string
@@ -55,8 +60,13 @@ export class TayFS_Unit {
 }
 
 export class TayFS_File extends TayFS_Unit {
-    constructor(name: string, description: string | null, icon: string, handlingApplication: Application) {
+    data: string | null
+    dataType: TayFS_Datatype | null
+
+    constructor(name: string, description: string | null, icon: string, handlingApplication: Application, data: string | null = null, dataType: TayFS_Datatype | null = null) {
         super(0, name, description, icon, TayFS_Filetype.file, handlingApplication)
+        this.data = data
+        this.dataType = dataType
     }
 }
 

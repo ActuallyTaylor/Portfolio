@@ -16,6 +16,9 @@
     export let focusedFile: (TayFS_Unit | null) = null
     export let directory: (TayFS_Directory | null) = reference.sourceFile as TayFS_Directory
 
+    export let innerWidth: number = 0
+    export let innerHeight: number = 0
+
     function closeWindow(event: CustomEvent) {
         dispatch("closeWindow", {
             reference: event.detail.reference
@@ -56,10 +59,12 @@
     }
 </script>
 
+<svelte:window bind:innerWidth bind:innerHeight/>
+
 <Window on:focusWindow={focusWindow} on:closeWindow={closeWindow} reference={reference} windowPosition={
     new WindowPosition(500, 500, innerHeight / 2 - 250, innerWidth / 2 - 250, true, false, true)}
     isFocused={os.focusedWindow == reference}>
-    <div class="HorizontalStack">
+    <div class="HorizontalStack container">
         <div class="FileSideBar VerticalStack">
             <h2>{focusedFile?.name ?? directory?.name ?? "Babel"}</h2>
             <hr>
@@ -86,5 +91,9 @@
         margin-right: 10px;
         overflow: hidden;
         word-wrap: break-word;
+    }
+
+    .container {
+        padding-bottom: 64px;
     }
 </style>    

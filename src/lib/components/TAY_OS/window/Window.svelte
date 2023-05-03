@@ -145,7 +145,7 @@
 <DraggableResize windowPosition={windowPosition} on:resized={resized} on:focusedWindow={focusWindow} zIndex={isFocused ? 10 : 0}>
     <div class="Window" style="width:{windowPosition.width}px; height:{windowPosition.height}px;">
         <WindowChrome windowName={reference.name} windowPosition={windowPosition} on:closeWindow={closeWindow} on:expandWindow={expandWindow} on:chromeMouseUp={chromeMouseUp} on:chromeMouseDown={chromeMouseDown}></WindowChrome>
-        <div class="WindowContainer" style="max-height:{windowPosition.height - 64}px;">
+        <div class="WindowContainer" style="max-height:{windowPosition.height}px; height: {windowPosition.height}px;">
             <slot>
 
             </slot>    

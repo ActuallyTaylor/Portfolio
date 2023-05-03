@@ -9,6 +9,7 @@
     import Alert from "$lib/components/TAY_OS/Alert/Alert.svelte";
     import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
     import type { OSAlert } from "$lib/models/TAY_OS/OSAlert";
+    import Netsplorer from "$lib/components/TAY_OS/Applications/Netsplorer.svelte";
 
     export let os: TaylorOS = new TaylorOS()
     export let innerWidth: number = 0
@@ -86,6 +87,12 @@
         {#if window.application == ApplicationDatabase.about }
             <About reference={window} os={os} on:closeWindow={closeWindow} on:focusWindow={focusWindow}/>
         {/if}
+
+        <!-- Route Netsplorer Pages -->
+        {#if window.application == ApplicationDatabase.netsplorer }
+            <Netsplorer reference={window} os={os} on:closeWindow={closeWindow} on:focusWindow={focusWindow} on:openWindow={openWindow}/>
+        {/if}
+    
     {/each}
 </div>
 
