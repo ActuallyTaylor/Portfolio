@@ -6,7 +6,9 @@ export class ApplicationDatabase {
     static netsplorer = new Application("Netsplorer", "Netsplorer is Taylor OS's built in browser 🤯", "netsplorer.svg", [])
 
     static applications: Application[] = [
-        ApplicationDatabase.babel
+        ApplicationDatabase.babel,
+        ApplicationDatabase.about,
+        ApplicationDatabase.netsplorer
     ]
 }
 

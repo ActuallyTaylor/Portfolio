@@ -47,6 +47,7 @@
         })
 
         os.focusedWindow = os.openWindows[index]
+        os.currentlyFocusedApp = os.focusedWindow.application
     }
 
     function clearAlert(alert: OSAlert): boolean {

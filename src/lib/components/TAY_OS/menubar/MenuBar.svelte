@@ -7,10 +7,6 @@
     export let os: TaylorOS
     export let focusedMenuBarItem: (MenuBarItem | null) = null;
 
-    function currentApp(): string {
-        return os.currentlyFocusedApp.name
-    }
-
     const dispatch = createEventDispatcher();
 
     function focusItem(event: CustomEvent) {
@@ -29,7 +25,7 @@
 
     function openCurrentAppAbout() {
         dispatch("openWindow", {
-            name: `About ${currentApp()}`
+            name: `About ${os.currentlyFocusedApp.name}`
         })
     }
 </script>
@@ -103,9 +99,9 @@
             Shutdown
         </a>
     </MenuBarIcon>
-    <MenuBarIcon os={os} item={new MenuBarItem(currentApp(), null)} focusedMenuBarItem={focusedMenuBarItem} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
+    <MenuBarIcon os={os} item={new MenuBarItem(os.currentlyFocusedApp.name, null)} focusedMenuBarItem={focusedMenuBarItem} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
         <button on:click={openCurrentAppAbout}>
-            About {currentApp()}
+            About {os.currentlyFocusedApp.name}
         </button>  
     </MenuBarIcon>
     {#each os.currentlyFocusedApp.menuBarItems as item }
