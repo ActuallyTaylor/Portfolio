@@ -64,11 +64,34 @@
     padding-top: 5px;
     padding-bottom: 5px;
     margin: 0px;
+
+    font-size: 0.85em;
 }
 
 .menuBar button:hover {
     filter: invert();
 }
+
+.menuBar a {
+    border-style: none;
+    background-color: white;
+    text-align: left;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0px;
+
+    font-size: 0.85em;
+    color: black;
+    text-decoration: none;
+}
+
+.menuBar a:hover {
+    filter: invert();
+}
+
 </style>
 
 <div class="menuBar">
@@ -76,9 +99,9 @@
         <button on:click={openAbout}>
             About TaylorOS
         </button>  
-        <button>
+        <a href="/">
             Shutdown
-        </button>  
+        </a>
     </MenuBarIcon>
     <MenuBarIcon os={os} item={new MenuBarItem(currentApp(), null)} focusedMenuBarItem={focusedMenuBarItem} on:focusMenuItem={focusItem} on:defocusMenuItem={defocusItem}>
         <button on:click={openCurrentAppAbout}>
