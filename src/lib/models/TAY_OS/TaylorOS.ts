@@ -13,7 +13,7 @@ export class TaylorOS {
     currentlyFocusedApp: Application = ApplicationDatabase.applications[0]
     background = "/assets/images/backgrounds/bg_1.jpg"
 
-    alerts: OSAlert[] = [new OSAlert("Invalid Operation!", "This is a system application and can not be opened by itself.")]
+    alerts: OSAlert[] = []
 
     constructor() {
         let rootDirectory = new TayFS_Directory("TaylorOS", "The root directory for Taylor OS", "taybot.svg")
