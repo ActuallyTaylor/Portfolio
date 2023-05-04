@@ -22,11 +22,11 @@ blockquote {
     padding-top: 1px;
     padding-bottom: 1px;
     margin-left: 0px;
-    background-color: var(--secondaryBase);
+    background-color: var(--crust);
 }
 
 table, th, td {
-    border: 2px solid var(--secondaryBase);
+    border: 2px solid var(--crust);
     border-collapse: collapse;
 }
 

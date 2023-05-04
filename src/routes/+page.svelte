@@ -1,10 +1,10 @@
 <script lang="ts">
-    import ProjectCard from "$lib/components/ProjectCard.svelte";
-    import BlogCard from "$lib/components/BlogCard.svelte";
-    import { Data } from "$lib/data";
+    import ProjectCard from "$lib/components/ProjectCard.svelte"
+    import BlogCard from "$lib/components/BlogCard.svelte"
+    import { Data } from "$lib/data"
 
-    export let data;
-    export const blogs = data.blogs;
+    export let data
+    export const blogs = data.blogs
 
     // MARK: My Work
     let selectedWork = "allWork"

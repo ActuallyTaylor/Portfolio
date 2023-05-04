@@ -1,9 +1,6 @@
 <script lang="ts">
-    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte";
-    import LeftAlignedDescriptionSection from "$lib/components/PageSections/LeftAlignedDescriptionSection.svelte";
-    import VideoSection from "$lib/components/PageSections/VideoSection.svelte";
-    import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte";
-    import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte";
+    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
+    import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 </script>
 <svelte:head>
   <title>Manny Privacy Policy</title>

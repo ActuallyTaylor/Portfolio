@@ -1,10 +1,10 @@
 <script lang="ts">
-    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte";
-    import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte";
-    import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte";
+    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
+    import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
+    import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 
-    import { Data } from "$lib/data";
-    import { Project } from "$lib/models/Project";
+    import { Data } from "$lib/data"
+    import { Project } from "$lib/models/Project"
 
     const id = "dungoenofepsilon"
     export let project: Project = Data.works.find((obj: Project) => {
@@ -13,11 +13,11 @@
 </script>
 <svelte:head>
   <title>{project.name.replaceAll("<br>", "")} - Project</title>
-  <meta name="description" content="Welcome Explorer, the universe is your sandbox">
+  <meta name="description" content="Hello Adventurer, don't get lost.">
 </svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name.replaceAll("<br>", "")}/>
-    <ProjectPageHeader projectID={id} name={project.name.replaceAll("<br>", "")} subtitle="Welcome Explorer, the universe is your sandbox" headerColor="#FFB6B6"/>
+    <ProjectPageHeader projectID={id} name={project.name.replaceAll("<br>", "")} subtitle="Hello Adventurer, don't get lost." headerColor="#FFB6B6"/>
 
     <DescriptionSection title={undefined}>
         <span slot="description">
