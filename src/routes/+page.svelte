@@ -193,13 +193,13 @@ Work Stack
 }
 </style>
 
-<header>
+<header>z
     <img src="/favicon.png" alt="User Icon" />
     <div class="headerTitle">
         <h1 class="headerTitle">Taylor Lineman</h1>
         <h2 class="headerTitle">Freelance iOS Development</h2>
         <div>
-            <a href="https://mastodon.social/@TaylorLineman">
+            <a href="https://mastodon.social/@TaylorLineman" rel="me">
                 <img src="assets/design/headerLinks/mastodon.svg" style="height: 24px; width: 24px;" alt="Mastodon Logo" title="My Mastodon Account!">
             </a>
             <a href="https://twitter.com/TaylorLineman">
