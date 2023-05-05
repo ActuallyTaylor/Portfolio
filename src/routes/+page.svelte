@@ -193,7 +193,7 @@ Work Stack
 }
 </style>
 
-<header>z
+<header>
     <img src="/favicon.png" alt="User Icon" />
     <div class="headerTitle">
         <h1 class="headerTitle">Taylor Lineman</h1>
