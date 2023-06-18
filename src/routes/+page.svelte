@@ -6,6 +6,8 @@
     export let data
     export const blogs = data.blogs
 
+    console.log("❤️ Welcome traveler! ❤️")
+
     // MARK: My Work
     let selectedWork = "allWork"
 
