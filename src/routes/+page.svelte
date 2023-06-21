@@ -43,7 +43,6 @@
 </script>
 
 <svelte:head>
-    <html lang="en"/>
     <title>Taylor Lineman</title>
     <meta name="description" content="Taylor Lineman's Personal Website">  
 </svelte:head>
