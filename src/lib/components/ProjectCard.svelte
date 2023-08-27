@@ -66,7 +66,7 @@
 }
 </style>
 
-<a href="./{project.id}" class="nodec">
+<a href="{project.url}" class="nodec">
     <div style='background: url("/assets/design/{project.id}/background.png"); background-size: contain; background-repeat: no-repeat; background-position: center;' class="card" >
         <div style='background: url("/assets/design/{project.id}/shape.svg"); background-size: contain; background-repeat: no-repeat; background-position: center;' class="shape" >
             <h5>{@html project.name}</h5>

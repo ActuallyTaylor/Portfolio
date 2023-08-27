@@ -26,7 +26,23 @@
     function handleSimulationClick() {
         selectedWork = "simulations"
     }
+    
+    // MARK: Open Source
+    let selectedOpenSource = "allWork"
 
+    function handleAllOpenSourceWork() {
+        selectedOpenSource = "allWork"
+    }
+
+    function handleJellycutsClick() {
+        selectedOpenSource = "jellycuts"
+    }
+
+    function handlePackagesClick() {
+        selectedOpenSource = "packages"
+    }
+
+    // MARK: Interests
     let selectedInterest = "allInterests"
 
     function handleAllInterests() {
@@ -179,6 +195,11 @@ Work Stack
     margin: 20px;
 }
 
+.SectionDescription {
+    margin-top: 0px;
+    color: var(--subtext1);
+}
+
 @media screen and (max-width: 600px) {
     .WorkCards {
         align-items: center;
@@ -297,6 +318,7 @@ Work Stack
             </button>    
         </div>
     </div>
+    <p class="SectionDescription">Below is a lot of the programming / software work that I have done over the years. Some of it is commercial and some of it is just for fun!</p>
     <div class="WorkCards" id="WorkCards">
         {#each Data.works as project}
             {#if selectedWork == project.category || selectedWork == "allWork" }
@@ -306,10 +328,67 @@ Work Stack
     </div>
 </section>
 
-<!-- My Interests -->
+<!-- Open Source Work -->
+<section>
+    <div class="WorkStack">
+        <h1>Open Source</h1>
+        <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" width="5px" />
+        <div class="FilterStack">
+            <button on:click={handleAllOpenSourceWork} id="allWork" class:underlinedHeader="{selectedOpenSource == "allWork"}">
+                <h4>
+                    All Work
+                    <img
+                        src="/assets/design/headerShapes/hexagon.svg"
+                        alt="iOS Apps Hexagon"
+                        width="18"
+                        height="18"
+                    />
+                    <img
+                        src="/assets/design/headerShapes/circle.svg"
+                        alt="Simulations Circle"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>
+            <button on:click={handleJellycutsClick} id="jellycuts" class:underlinedHeader="{selectedOpenSource == "jellycuts"}">
+                <h4>
+                    iOS Apps
+                    <img
+                        src="/assets/design/headerShapes/hexagon.svg"
+                        alt="Jellycuts Hexagon"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>
+            <button on:click={handlePackagesClick} id="packages" class:underlinedHeader="{selectedOpenSource == "packages"}">
+                <h4>
+                    Simulations
+                    <img
+                        src="/assets/design/headerShapes/circle.svg"
+                        alt="Packages Circle"
+                        width="18"
+                        height="18"
+                    />
+                </h4>
+            </button>    
+        </div>
+    </div>
+    <p class="SectionDescription">Take a look at my Open Source work that I have done throughout the years! All of this work is available on my <a href="https://github.com/ActuallyTaylor">GitHub Profile</a>.</p>
+    <div class="WorkCards" id="WorkCards">
+        {#each Data.openSource as project}
+            {#if selectedOpenSource == project.category || selectedOpenSource == "allWork" }
+                <ProjectCard project={project}/>
+            {/if}
+        {/each}
+    </div>
+</section>
+
+<!-- My Photography -->
 <section>
     <div class="WorkStack HorizontalStack VerticallyCentered">
-        <h1>My Interests</h1>
+        <h1>Photography</h1>
         <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
         <div class="FilterStack">
             <button id="allInterests" on:click={handleAllInterests}  class:underlinedHeader="{selectedInterest == "allInterests"}">
@@ -354,6 +433,7 @@ Work Stack
             </button>
         </div>        
     </div>
+    <p class="SectionDescription">Checkout some of my photography! I really enjoy taking photos but I don't really get to often. Whenever I have the time to take a ton of photos and edit them they get thrown up here!</p>
     <div class="WorkCards" id="InterestsCards">
         {#each Data.interests as project}
             {#if selectedInterest == project.category || selectedInterest == "allInterests" }

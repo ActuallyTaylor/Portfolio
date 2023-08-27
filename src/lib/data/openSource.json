@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Open Jellycuts",
+        "subtitle": "iOS App",
+        "id": "open-jellycuts",
+        "category": "jellycuts",
+        "url": "https://github.com/ActuallyTaylor/Open-Jellycuts"
+    },
+    {
+        "name": "Open Jellycore",
+        "subtitle": "Compiler",
+        "id": "open-jellycore",
+        "category": "jellycuts",
+        "url": "https://github.com/ActuallyTaylor/Open-Jellycore"
+    },
+    {
+        "name": "SFSymbols",
+        "subtitle": "Swift Package",
+        "id": "sfsymbols",
+        "category": "packages",
+        "url": "https://github.com/ActuallyTaylor/SFSymbols"
+    },
+    {
+        "name": "Hydrogen Reporter",
+        "subtitle": "Swift Package",
+        "id": "hydrogen",
+        "category": "packages",
+        "url": "https://github.com/ActuallyTaylor/HydrogenReporter"
+    },
+    {
+        "name": "Firefly",
+        "subtitle": "Swift Package",
+        "id": "firefly",
+        "category": "packages",
+        "url": "https://github.com/ActuallyTaylor/Firefly"
+    },
+    {
+        "name": "Swift Themes",
+        "subtitle": "Swift Package",
+        "id": "swiftthemes",
+        "category": "packages",
+        "url": "https://github.com/ActuallyTaylor/Swift-Themes"
+    }
+]

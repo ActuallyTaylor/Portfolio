@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Taylor OS",
+      "subtitle": "Website",
+      "id": "os",
+      "category": "software",
+      "url": "./os"
+    },
+    {
+      "name": "Manny",
+      "subtitle": "iOS App",
+      "id": "manny",
+      "category": "ios",
+      "url": "./manny"
+    },
+    {
+      "name": "Jellycuts",
+      "subtitle": "iOS App",
+      "id": "jellycuts",
+      "category": "ios",
+      "url": "./jellycuts"
+    },
+    {
+      "name": "SCUM Map",
+      "subtitle": "iOS App",
+      "id": "scum",
+      "category": "ios",
+      "url": "./scum"
+    },
+    {
+      "name": "Hephaestus",
+      "subtitle": "Game Engine",
+      "id": "hephaestus",
+      "category": "software",
+      "url": "./hephaestus"
+    },
+    {
+      "name": "Solar Explorer",
+      "subtitle": "Simulation",
+      "id": "solarexplorer",
+      "category": "simulations",
+      "url": "./solarexplorer"
+    },
+    {
+      "name": "T.I.A",
+      "subtitle": "Simulation",
+      "id": "tia",
+      "category": "simulations",
+      "url": "./tia"
+    },
+    {
+      "name": "Dungeon <br>of Epsilon",
+      "subtitle": "Game",
+      "id": "dungoenofepsilon",
+      "category": "software",
+      "url": "./dungoenofepsilon"
+    }
+  ]
