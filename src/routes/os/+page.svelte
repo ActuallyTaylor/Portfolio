@@ -62,6 +62,13 @@
     }
 </script>
 
+<svelte:head>
+    <script
+    src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+    data-app-id="246FDFED-E311-4B6E-B80A-5187ACA4DF8F"
+    ></script>
+</svelte:head>
+
 <svelte:window bind:innerWidth bind:innerHeight/>
 
 <MenuBar os={os} on:openWindow={openWindow}/>

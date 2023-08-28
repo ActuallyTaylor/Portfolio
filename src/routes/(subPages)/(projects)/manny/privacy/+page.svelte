@@ -5,6 +5,11 @@
 <svelte:head>
   <title>Manny Privacy Policy</title>
   <meta name="description" content="Learn how your data is used in Manny">
+
+  <script
+  src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+  data-app-id="246FDFED-E311-4B6E-B80A-5187ACA4DF8F"
+  ></script>
 </svelte:head>
 <span>
     <ProjectPageNav id={"manny"} name={"Manny Privacy"}/>

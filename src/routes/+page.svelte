@@ -61,6 +61,11 @@
 <svelte:head>
     <title>Taylor Lineman</title>
     <meta name="description" content="Taylor Lineman's Personal Website">  
+
+    <script
+    src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+    data-app-id="246FDFED-E311-4B6E-B80A-5187ACA4DF8F"
+    ></script>
 </svelte:head>
 
 <style>

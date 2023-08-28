@@ -62,6 +62,11 @@
 <svelte:head>
   <title>WWDC22 Wallet Pass</title>
   <meta name="description" content="An unofficial Apple Wallet pass for WWDC22!">
+
+  <script
+  src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+  data-app-id="246FDFED-E311-4B6E-B80A-5187ACA4DF8F"
+  ></script>
 </svelte:head>
 
 <PageNavigation id={`wallet/wwdc22`} name="WWDC22 Wallet Pass"/>

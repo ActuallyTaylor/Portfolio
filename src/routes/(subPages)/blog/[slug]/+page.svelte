@@ -27,6 +27,11 @@
   <meta name="description" content="{blog.description}">
   <link rel="stylesheet" href="/assets/css/blog.css"/>
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+
+  <script
+  src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+  data-app-id="246FDFED-E311-4B6E-B80A-5187ACA4DF8F"
+  ></script>
 </svelte:head>
 
 <style>

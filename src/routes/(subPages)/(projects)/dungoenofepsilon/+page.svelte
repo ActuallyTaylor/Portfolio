@@ -14,6 +14,11 @@
 <svelte:head>
   <title>{project.name.replaceAll("<br>", "")} - Project</title>
   <meta name="description" content="Hello Adventurer, don't get lost.">
+
+  <script
+  src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
+  data-app-id="246FDFED-E311-4B6E-B80A-5187ACA4DF8F"
+  ></script>
 </svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name.replaceAll("<br>", "")}/>
