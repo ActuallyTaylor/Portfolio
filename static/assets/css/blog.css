@@ -23,6 +23,12 @@ blockquote {
     padding-bottom: 1px;
     margin-left: 0px;
     background-color: var(--crust);
+    width: 100%;
+    overflow: scroll;
+}
+
+blockquote p {
+    color: var(--subtext0);
 }
 
 table, th, td {
@@ -37,10 +43,6 @@ th {
 td {
     text-align: start;
     padding: 5px;
-}
-
-blockquote p {
-    color: var(--subtext0);
 }
 
 @media screen and (max-width: 600px) {
