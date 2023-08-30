@@ -263,7 +263,7 @@ Work Stack
 <section>
     <div class="WorkStack">
         <h1>My Work</h1>
-        <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" width="5px" />
+        <img src="/assets/element/VerticalDivider.svg" alt="" height="18px" />
         <div class="FilterStack">
             <button on:click={handleAllWorkClick} id="allWork" class:underlinedHeader="{selectedWork == "allWork"}">
                 <h4>
@@ -337,7 +337,7 @@ Work Stack
 <section>
     <div class="WorkStack">
         <h1>Open Source</h1>
-        <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" width="5px" />
+        <img src="/assets/element/VerticalDivider.svg" alt="" height="18px" />
         <div class="FilterStack">
             <button on:click={handleAllOpenSourceWork} id="allWork" class:underlinedHeader="{selectedOpenSource == "allWork"}">
                 <h4>
@@ -394,7 +394,7 @@ Work Stack
 <section>
     <div class="WorkStack HorizontalStack VerticallyCentered">
         <h1>Photography</h1>
-        <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
+        <img src="/assets/element/VerticalDivider.svg" alt="" height="18px" />
         <div class="FilterStack">
             <button id="allInterests" on:click={handleAllInterests}  class:underlinedHeader="{selectedInterest == "allInterests"}">
                 <h4>
@@ -452,7 +452,7 @@ Work Stack
 <section>
     <div class="WorkStack HorizontalStack VerticallyCentered">
         <h1>Blog</h1>
-        <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
+        <img src="/assets/element/VerticalDivider.svg" alt="" height="18px" />
         <a href="/blog/rss" target="_blank">
             <h4>
                 RSS Feed
