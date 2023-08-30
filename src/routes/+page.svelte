@@ -26,7 +26,7 @@
     function handleSimulationClick() {
         selectedWork = "simulations"
     }
-    
+
     // MARK: Open Source
     let selectedOpenSource = "allWork"
 
@@ -60,7 +60,7 @@
 
 <svelte:head>
     <title>Taylor Lineman</title>
-    <meta name="description" content="Taylor Lineman's Personal Website">  
+    <meta name="description" content="Taylor Lineman's Personal Website">
 
     <script
     src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
@@ -211,7 +211,7 @@ Work Stack
         justify-content: center;
         flex-wrap: wrap;
     }
-    
+
     .walletImage {
         width: 100%;
         margin: 20px;
@@ -251,7 +251,7 @@ Work Stack
 <section>
     <h1>About Me</h1>
     <p>
-        Hey all 👋 My name is Taylor, I am an independent Developer based in New York! I mostly work in the world of iOS, but I have been venturing out into the other worlds of programming. Most recently my venture has taken me down the path of C++ and firmware development. Something that I have grown to love. 
+        Hey all 👋 My name is Taylor, I am an independent Developer based in New York! I mostly work in the world of iOS, but I have been venturing out into the other worlds of programming. Most recently my venture has taken me down the path of C++ and firmware development. Something that I have grown to love.
     </p>
 
     <p>
@@ -320,7 +320,7 @@ Work Stack
                         height="18"
                     />
                 </h4>
-            </button>    
+            </button>
         </div>
     </div>
     <p class="SectionDescription">Below is a lot of the programming / software work that I have done over the years. Some of it is commercial and some of it is just for fun!</p>
@@ -377,7 +377,7 @@ Work Stack
                         height="18"
                     />
                 </h4>
-            </button>    
+            </button>
         </div>
     </div>
     <p class="SectionDescription">Take a look at my Open Source work that I have done throughout the years! All of this work is available on my <a href="https://github.com/ActuallyTaylor">GitHub Profile</a>.</p>
@@ -436,7 +436,7 @@ Work Stack
                     />
                 </h4>
             </button>
-        </div>        
+        </div>
     </div>
     <p class="SectionDescription">Checkout some of my photography! I really enjoy taking photos but I don't really get to often. Whenever I have the time to take a ton of photos and edit them they get thrown up here!</p>
     <div class="WorkCards" id="InterestsCards">
@@ -448,25 +448,15 @@ Work Stack
     </div>
 </section>
 
-<!-- My Skills -->
-<!-- <section>
-    <div class="WorkStack HorizontalStack VerticallyCentered">
-        <h1>My Skills</h1>
-    </div>
-    <div>
-        <progress id="file" value="10" max="10"> 32% </progress>
-    </div>
-</section> -->
-
 <!-- Blog -->
 <section>
     <div class="WorkStack HorizontalStack VerticallyCentered">
         <h1>Blog</h1>
         <img src="/assets/element/VerticalDivider.svg" alt="" height="32px" />
-        <a href="https://actuallytaylor.com/blog/rss" target="_blank">
+        <a href="/blog/rss">
             <h4>
-                https://actuallytaylor.com/blog/rss
-            </h4>    
+                RSS Feed
+            </h4>
         </a>
     </div>
     <div class="BlogCards" id="blogArray">
@@ -483,7 +473,7 @@ Work Stack
         <a href="/wallet/wwdc23" class="walletLink">
             <h3>WWDC23 Wallet Pass Maker</h3>
             <img alt="WWDC23 Wallet Pass" src="/assets/images/wallet/wwdc23.png" class="walletImage"/>
-        </a>    
+        </a>
         <a href="/wallet/wwdc22" class="walletLink">
             <h3>WWDC22 Wallet Pass Maker</h3>
             <img alt="WWDC22 Wallet Pass" src="/assets/images/wallet/wwdc22.png" class="walletImage"/>

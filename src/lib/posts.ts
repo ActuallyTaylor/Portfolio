@@ -49,16 +49,16 @@ export function createRSSFeed(): string {
     })
 
     let rss = `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
-<channel>
-    <title>${title}</title>
-    <subtitle>Experience the web with me!</subtitle>
-    <link>${siteURL}/blog/rss</link>
-    <atom:link href="${siteURL}/blog/rss" rel="self" type="application/rss+xml" />
-    ${feedItems}
-</channel>
-</rss>
-`
+    <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>${title}</title>
+        <subtitle>Experience the web with me!</subtitle>
+        <link>${siteURL}/blog/rss</link>
+        <atom:link href="${siteURL}/blog/rss" rel="self" type="application/rss+xml" />
+        ${feedItems}
+    </channel>
+    </rss>
+    `
 
     return rss
 }
