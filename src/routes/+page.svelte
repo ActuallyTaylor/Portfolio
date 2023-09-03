@@ -369,7 +369,7 @@ Work Stack
             </button>
             <button on:click={handlePackagesClick} id="packages" class:underlinedHeader="{selectedOpenSource == "packages"}">
                 <h4>
-                    Simulations
+                    Packages
                     <img
                         src="/assets/design/headerShapes/circle.svg"
                         alt="Packages Circle"
