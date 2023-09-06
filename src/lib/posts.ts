@@ -14,11 +14,12 @@ export function readPosts(): BlogEntry[] {
             let slug = attributes.slug
             let description = attributes.description
             let author = attributes.author
+            let readingTime = attributes.readingTime
             let date = new Date(attributes.date)
             let hex = `#${attributes.hex}`
             let content = frontmatter.body
 
-            blogs.push({title, slug, description, author, date, hex, content})
+            blogs.push({title, slug, readingTime, description, author, date, hex, content})
         }
     })
 

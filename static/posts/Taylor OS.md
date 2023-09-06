@@ -5,8 +5,9 @@ description: Writing my own mock operating system for the browser!
 author: Taylor Lineman
 date: 2023-05-03T14:05:90.590-04:00
 hex: 8BA8EF
+readingTime: 3 min read
 ---
-Through bouts of studying for finals the past few days I have been working on something that I think is pretty cool. A mock operating system right in the browser! This website is basically a new way to check out all of the stuff on this main website, except it feels like you are exploring it using an operating system from the 90s. 
+Through bouts of studying for finals the past few days I have been working on something that I think is pretty cool. A mock operating system right in the browser! This website is basically a new way to check out all of the stuff on this main website, except it feels like you are exploring it using an operating system from the 90s.
 
 > If you want to check out the site you can jump this article and see it in action [here](/os)!
 
@@ -44,4 +45,4 @@ function toggleFocus() {
 In the future I am planning to continue development on this fun little extension to my site; albeit I am going to slow down development. I want to bring the rest of my site into it, so that would be my blogs, wallet passes, and photography. I want to add some fun little tools such as a MacPaint clone, a word processor, calculator and maybe some programming using web assembly!
 
 ## Thats all for now!
-I hope you all enjoy messing around in my little mock operating system! If you have any suggestions or question you can reach my at `TaylorLineman@mastodon.social`.  
+I hope you all enjoy messing around in my little mock operating system! If you have any suggestions or question you can reach my at `TaylorLineman@mastodon.social`.

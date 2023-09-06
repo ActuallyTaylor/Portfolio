@@ -3,8 +3,9 @@ title: Wonderful Web Wednesday - 1
 slug: wonderWeb1
 description: The first in a series of blog posts that goes over some cool websites I have found!
 author: Taylor Lineman
-date: 2023-08-27T18:08:30.830-04:00
+date: 2023-08-30T18:08:30.830-04:00
 hex: f48d55
+readingTime: 3 min read
 ---
 As I venture throughout the internet, I collect a folder of websites / posts that really interest me. These are sites that I revisit every so often. I find these posts or websites to be some of the most interesting collections of work that anyone can read. The folder that I have in my Obsidian Vault is called Wonderful Web, and I think that works perfectly as the name for this series, so say 👋 to Wonderful Web Wednesday - 1!
 

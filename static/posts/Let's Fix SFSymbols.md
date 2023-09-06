@@ -5,6 +5,7 @@ description: Using SFSymbols in code can be annoying, let's fix that.
 author: Taylor Lineman
 date: 2023-06-20T22:06:72.672-08:00
 hex: f48d55
+readingTime: 4 min read
 ---
 During Apple Platform development, you are going to use [SFSymbols](https://developer.apple.com/sf-symbols/). They are an amazing tool that provides you with so many beautiful icons. However, using them can be a little annoying...
 
@@ -21,22 +22,22 @@ Don't get me wrong, this entire process is super easy, but we like Swift here, s
 > https://github.com/ActuallyTaylor/SFSymbols
 
 ## Getting Started
-The first step to Swiftifing something like this is to look at how we deal with large sets of strings we like to pick through. 
+The first step to Swiftifing something like this is to look at how we deal with large sets of strings we like to pick through.
 
-The first option is to make all of these symbols a static member of an `SFSymbol struct`. This is an option but not what we want. 
+The first option is to make all of these symbols a static member of an `SFSymbol struct`. This is an option but not what we want.
 
 The next option is to create an `SFSymbol enum`. This is the perfect choice for what we want! It allows us to have a single enumeration that contains all 5000+ SFSymbols with access to all of them inline. We can also easily add variables and functions that we need to the enumeration. An enumeration also allows us to store small amounts of data using parameters within enumeration cases. This is perfect for when we have a custom symbol that needs to store its name.
 
 ## Where I ended up
 ### Enumeration
-The following code is pulled directly from the [SFSymbol Enumeration](https://github.com/ActuallyTaylor/SFSymbols/blob/main/Sources/SFSymbols/SFSymbol.swift). It is a fairly simple enum when you look at the SFSymbols Version 4 section, however, once you reach the SFSymbols Version 5, there are 4 extra lines needed to add some availability checks. 
+The following code is pulled directly from the [SFSymbol Enumeration](https://github.com/ActuallyTaylor/SFSymbols/blob/main/Sources/SFSymbols/SFSymbol.swift). It is a fairly simple enum when you look at the SFSymbols Version 4 section, however, once you reach the SFSymbols Version 5, there are 4 extra lines needed to add some availability checks.
 
 > These could be condensed into a single `@available(iOS 17, macOS 15, watchOS 15, tvOS 17)` check, however, that would lose the ability to add an availability message.
 
 ```swift
 public enum SFSymbol: Equatable {
     case custom(_ named: String)
-    
+
     // Version 4
     case square_and_arrow_up
     case square_and_arrow_up_fill

@@ -5,6 +5,7 @@ description: A discussion about where the future of Manny is going.
 author: Taylor Lineman
 date: 2023-03-23T10:03:87.387-04:00
 hex: f48d55
+readingTime: 4 min read
 ---
 ### Some Remarks
 Manny is one of my favorite projects that I have worked on, it has always been an interest of mine to make a social media app. The rise of Mastodon created the perfect environment for me to fulfill this! I am excited to keep developing Manny, and I hope to make it one of the most well polished and feature packed apps for Mastodon!
@@ -62,8 +63,8 @@ The general app should support all of the following features eventually. Most of
 - [ ] Full app theming
 - [ ] In app sign up
 - [ ] See current instance information
-- [ ] Custom URL support 
-- [ ] Tap on tab bars to return to top 
+- [ ] Custom URL support
+- [ ] Tap on tab bars to return to top
 - [ ] Follow Recommendations
 
 ### Composer

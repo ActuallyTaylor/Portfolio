@@ -38,16 +38,42 @@
     .header {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
+    }
+
+    .title {
+      padding: 0px;
+      margin-top: 20px;
+      font-weight: 700;
+    }
+
+    .dateAndReadingTime {
+      font-weight: 600;
+      margin-top: 5px;
+      padding: 0px;
+    }
+
+    hr {
+        border-width: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    hr::before {
+      content: "\2022\2022\2022";
+      letter-spacing: 1.25em;
+      margin-left: 1.25em;
+      font-size: 1.1em;
     }
 </style>
 
-<div>  
+<div>
     <PageNavigation id={`blog/${blog.slug}`} name={blog.title}/>
     <div class="header">
-        <h1 class="headerTitle">{blog.title}</h1>
-        <h2 class="headerTitle">{blog.description}</h2>    
+      <h1 class="title">{blog.title}</h1>
+      <h3 class="dateAndReadingTime">{blog.date.toLocaleDateString("lookup", {weekday: "long", year: "numeric", day: "numeric", month: "long"})}  •  {blog.readingTime}</h3>
+      <hr/>
     </div>
 
     <SvelteMarkdown {source} renderers={renderers}/>
