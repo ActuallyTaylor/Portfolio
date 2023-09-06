@@ -24,7 +24,7 @@
 </svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name}/>
-    <ProjectPageHeader projectID={id} name={project.name} subtitle="A C++ Game Engine" headerColor="#CFFFEE"/>
+    <ProjectPageHeader name={project.name} subtitle="A C++ Game Engine"/>
 
     <DescriptionSection title={undefined}>
         <span slot="description">
@@ -38,7 +38,7 @@
         <span slot="extras">
             <a href="https://github.com/ActuallyZach/Hephaestus" target="_blank">
                 <img alt="Hephaestus Github" srcset="/assets/badges/GithubBadge.png 1x, /assets/badges/GithubBadge@2x.png 2x" class="appstoreButton" />
-            </a>        
+            </a>
         </span>
     </DescriptionSection>
 

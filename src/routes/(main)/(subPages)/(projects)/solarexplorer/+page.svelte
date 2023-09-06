@@ -21,8 +21,7 @@
   ></script>
 </svelte:head>
 <span>
-    <ProjectPageNav id={id} name={project.name}/>
-    <ProjectPageHeader projectID={id} name={project.name} subtitle="Welcome Explorer, the universe is your sandbox" headerColor="#C9B6FF"/>
+    <ProjectPageHeader name={project.name} subtitle="Welcome Explorer, the universe is your sandbox" />
 
     <DescriptionSection title={undefined}>
         <span slot="description">

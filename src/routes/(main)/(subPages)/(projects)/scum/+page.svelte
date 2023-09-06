@@ -22,8 +22,7 @@
 </svelte:head>
 
 <span>
-    <ProjectPageNav id={id} name={project.name}/>
-    <ProjectPageHeader projectID={id} name={project.name} subtitle="Know the game" headerColor="#D1FFCA"/>
+    <ProjectPageHeader name={project.name} subtitle="Know the game"/>
 
     <LeftAlignedDescriptionSection title="SCUM Map App" path="/assets/images/scum/Screenshot.png">
         <span slot="description">

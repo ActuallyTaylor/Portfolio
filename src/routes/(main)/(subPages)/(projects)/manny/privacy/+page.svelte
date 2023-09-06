@@ -12,7 +12,6 @@
   ></script>
 </svelte:head>
 <span>
-    <ProjectPageNav id={"manny"} name={"Manny Privacy"}/>
     <DescriptionSection title="Your Data Inside of Manny">
         <span slot="description">
             When you use Manny, you are directly talking to the Mastodon instance that your account resides on. All requests go directly to the instances with no middle man. Images and request data are cached on device to reduce the load on instances. When the app is started a packet of analytics is sent to Telemetry Deck. This is used to allow the developer to better understand what features need the most attention. This data is not linked to you in any way and can not be used to track you, nor is it sold to any Third Parties.

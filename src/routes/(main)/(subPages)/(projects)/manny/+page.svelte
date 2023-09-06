@@ -21,8 +21,7 @@
   ></script>
 </svelte:head>
 <span>
-    <ProjectPageNav id={id} name={project.name}/>
-    <ProjectPageHeader projectID={id} name={project.name} subtitle="The cutest Mastodon Client!" headerColor="#F0DAFD"/>
+    <ProjectPageHeader name={project.name} subtitle="The cutest Mastodon Client!"/>
 
     <LeftAlignedDescriptionSection title="What is Manny" path="/assets/images/manny/manny.png">
         <span slot="description">

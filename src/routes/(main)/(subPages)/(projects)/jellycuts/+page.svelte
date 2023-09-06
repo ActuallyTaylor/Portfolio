@@ -24,7 +24,7 @@
 </svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name}/>
-    <ProjectPageHeader projectID={id} name={project.name} subtitle="Supercharge your Shortcuts" headerColor="#EECAFF"/>
+    <ProjectPageHeader name={project.name} subtitle="Supercharge your Shortcuts"/>
 
     <DescriptionSection title="What is Jellycuts?">
         <span slot="description">

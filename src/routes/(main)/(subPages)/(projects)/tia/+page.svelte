@@ -24,8 +24,7 @@
 </svelte:head>
 
 <span>
-    <ProjectPageNav id={id} name={project.name}/>
-    <ProjectPageHeader projectID={id} name={project.name} subtitle="Watch the world evolve." headerColor="#FFB6B6"/>
+    <ProjectPageHeader name={project.name} subtitle="Watch the world evolve."/>
 
     <DescriptionSection title={undefined}>
         <span slot="description">
@@ -34,7 +33,7 @@
     </DescriptionSection>
     <DescriptionSection title={"About"}>
         <span slot="description">
-            T.I.A is an application that allows the user to create a genetic simulation. The user can create different species with different sets of genes. 
+            T.I.A is an application that allows the user to create a genetic simulation. The user can create different species with different sets of genes.
             These species will then live together in a randomly generated environment. Based on the species genes, the genetic algorithm backing the application will
             simulate the species evolving and changing to better fit their environments.
 
@@ -48,10 +47,10 @@
         <span slot="extras">
             <a href="https://github.com/ActuallyZach/Terran-Integration-Application-WWDC21" target="_blank">
                 <img alt="TIA WWDC21 GitHub" srcset="/assets/badges/GithubBadge.png 1x, /assets/badges/GithubBadge@2x.png 2x" class="appstoreButton" />
-            </a>        
+            </a>
         </span>
     </DescriptionSection>
     <VideoSection title={"Expo Video"} youtubeEmbedID={"qPPdZWZiEEY"}>
-    
+
     </VideoSection>
 </span>
