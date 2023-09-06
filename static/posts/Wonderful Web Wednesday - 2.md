@@ -1,7 +1,7 @@
 ---
 title: Wonderful Web Wednesday - 2
 slug: wonderfulWebWednesday2
-description: 
+description: Encryption that doesn't really exist and data that could be lost forever
 author: Taylor Lineman
 date: 2023-09-04T19:09:61.961-04:00
 hex: f48d55
