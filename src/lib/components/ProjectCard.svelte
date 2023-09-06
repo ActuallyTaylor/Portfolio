@@ -15,8 +15,8 @@
     min-height: 175px;
 
     border-radius: 7px;
-    
-    margin-right: 50px;
+
+    margin: 10px;
 }
 
 .shape {
@@ -33,6 +33,8 @@
 }
 
 .shape h5 {
+    font-family: 'Avenir Next', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
     text-transform: uppercase;
     font-weight: 500;
     padding: 0px;
@@ -44,6 +46,8 @@
 }
 
 .shape h6 {
+    font-family: 'Avenir Next', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
     text-transform: uppercase;
     color: var(--shapeSecondaryFontColor);
     font-weight: 400;
@@ -58,11 +62,8 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 600px) {
-    .card {
-        margin-bottom: 20px;
-        margin-right: 20px;
-    }
+a:hover {
+    color: var(--text);
 }
 </style>
 

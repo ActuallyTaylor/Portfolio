@@ -3,9 +3,10 @@ title: Wonderful Web Wednesday - 2
 slug: wonderfulWebWednesday2
 description: Encryption that doesn't really exist and data that could be lost forever
 author: Taylor Lineman
-date: 2023-09-04T19:09:61.961-04:00
+date: 2023-09-06T09:09:61.961-04:00
 hex: f48d55
 readingTime: 3 min read
+series: wonderfulWeb
 ---
 ## [Testing Converso](https://crnkovic.dev/testing-converso/) - Crnković
 

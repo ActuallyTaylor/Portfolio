@@ -1,44 +1,44 @@
 [
     {
         "name": "Open Jellycuts",
-        "subtitle": "iOS App",
+        "description": ", an Open-Source version of my iOS App Jellycuts. This version was created in an effort to create a more open app environment and provide an example of a full SwiftUI application.",
         "id": "open-jellycuts",
-        "category": "jellycuts",
+        "category": "current",
         "url": "https://github.com/ActuallyTaylor/Open-Jellycuts"
     },
     {
         "name": "Open Jellycore",
-        "subtitle": "Compiler",
+        "description": ". This is a compiler for Jelly language. It uses Tree-Sitter as a parser and lexer. Compilation steps are then handled by the repository, compiled Jellycuts are then converted into .shortcut files.",
         "id": "open-jellycore",
-        "category": "jellycuts",
+        "category": "current",
         "url": "https://github.com/ActuallyTaylor/Open-Jellycore"
     },
     {
         "name": "SFSymbols",
-        "subtitle": "Swift Package",
+        "description": ", a Swift Package that provides a Swifty endpoint for Apple's SFSymbol Set. It has convience functions for every part of an app's UI that would need to use SFSymbols.",
         "id": "sfsymbols",
-        "category": "packages",
+        "category": "current",
         "url": "https://github.com/ActuallyTaylor/SFSymbols"
     },
     {
         "name": "Hydrogen Reporter",
-        "subtitle": "Swift Package",
+        "description": ", a Swift Package that makes debugging Apple platform app's significantly easier. It provides a core logger functionality that efficiently logs to the necessary system entries. It also provides the ability to swizzle the console output to receive all warnings and errors of the App. There is also a optional UI component that allows you to observe the current state of SwiftUI Views.",
         "id": "hydrogen",
-        "category": "packages",
+        "category": "current",
         "url": "https://github.com/ActuallyTaylor/HydrogenReporter"
     },
     {
         "name": "Firefly",
-        "subtitle": "Swift Package",
+        "description": ", is a now depreceated iOS and macOS syntax higlighter written in pure Swift.",
         "id": "firefly",
-        "category": "packages",
+        "category": "past",
         "url": "https://github.com/ActuallyTaylor/Firefly"
     },
     {
         "name": "Swift Themes",
-        "subtitle": "Swift Package",
+        "description": ", an experimental Swift package that provides many color styles for popular themes.",
         "id": "swiftthemes",
-        "category": "packages",
+        "category": "current",
         "url": "https://github.com/ActuallyTaylor/Swift-Themes"
     }
 ]

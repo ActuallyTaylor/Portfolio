@@ -1,58 +1,66 @@
 [
     {
       "name": "Taylor OS",
-      "subtitle": "Website",
+      "description": ", a small project that I made for fun one weekend. Taylor OS is a mock OS that runs completely in the browser. It is written completely in SvelteKit and runs as just a subpage of this site.",
       "id": "os",
-      "category": "software",
+      "category": "current",
       "url": "./os"
     },
     {
       "name": "Manny",
-      "subtitle": "iOS App",
+      "description": ", a Mastodon client for iOS. Manny is an experimental Mastodon client that pushes forward how we interact with Social Media. It makes experiencing the largest decentralized social network easy and fun!",
       "id": "manny",
-      "category": "ios",
+      "category": "current",
       "url": "./manny"
     },
     {
       "name": "Jellycuts",
-      "subtitle": "iOS App",
+      "description": ", an iOS App and programming language that allows developers to write Siri Shortcuts using a programming language. This is in contrast to the native drag and drop interface offered by Apple.",
       "id": "jellycuts",
-      "category": "ios",
+      "category": "current",
       "url": "./jellycuts"
     },
     {
       "name": "SCUM Map",
-      "subtitle": "iOS App",
+      "description": ", a companion app for the video game SCUM. It supports custom location pins along with server sharing so you and your friends can all contribute to a map.",
       "id": "scum",
-      "category": "ios",
+      "category": "current",
       "url": "./scum"
     },
     {
       "name": "Hephaestus",
-      "subtitle": "Game Engine",
+      "description": ". A game engine that I created for my High School Senior project. It is written in C++ and uses OpenGL, GLFW, and GLEW under the hood. It was written as an exploration of low level graphics programming.",
       "id": "hephaestus",
-      "category": "software",
+      "category": "past",
       "url": "./hephaestus"
     },
     {
       "name": "Solar Explorer",
-      "subtitle": "Simulation",
+      "description": ", my winning 2022 submission to <a href=\"https://developer.apple.com/wwdc22/swift-student-challenge/\">Apple's Swift Student Challenge</a>. The experience is a universe sandbox based game that allows you to create an entire universe. You can spawn in planets, change their mass, and velocity and then watch how they change the universe. On each of the planets there is an entire genetic simulation of an ecosystem that is based on my project from 2021.",
       "id": "solarexplorer",
-      "category": "simulations",
+      "category": "past",
       "url": "./solarexplorer"
     },
     {
       "name": "T.I.A",
-      "subtitle": "Simulation",
+      "description": ", my winning 2021 submission to <a href=\"https://developer.apple.com/wwdc21/swift-student-challenge/\">Apple's Swift Student Challenge</a>. T.I.A is a story based simulation that takes the user through an experience of controlling a mini universe of different species.",
       "id": "tia",
-      "category": "simulations",
+      "category": "past",
       "url": "./tia"
     },
     {
-      "name": "Dungeon <br>of Epsilon",
-      "subtitle": "Game",
+      "name": "Dungeon of Epsilon",
+      "description": ", my winning 2020 submission to <a href=\"https://developer.apple.com/wwdc20/swift-student-challenge/\">Apple's Swift Student Challenge</a>. A text based Role Playing Game inspired by games of the 80s and 90s.",
       "id": "dungoenofepsilon",
-      "category": "software",
+      "category": "past",
       "url": "./dungoenofepsilon"
+    },
+    {
+      "name": "RIT Electric Vehicle Team (EVT)",
+      "description": ". I work on firmware for electric motercycles at EVT! It is super cool and a brand new experience for me.",
+      "id": "ritEVT",
+      "category": "currentTeam",
+      "url": "https://github.com/RIT-EVT"
     }
+
   ]

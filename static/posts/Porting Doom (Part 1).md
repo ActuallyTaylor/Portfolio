@@ -6,6 +6,7 @@ author: Taylor Lineman
 date: 2023-03-13T22:03:56.356-04:00
 hex: db4436
 readingTime: 13 min read
+series: misc
 ---
 ![Doom.png](/assets/blogs/portingDoomP1/Doom.png)
 > It's not pretty but it is a fully ported version of Doom!

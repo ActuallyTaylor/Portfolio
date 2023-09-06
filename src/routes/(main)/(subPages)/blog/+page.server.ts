@@ -4,8 +4,12 @@ export const prerender = true
 
 export async function load(event: RequestEvent) {
     let blogs = readPosts()
+    let wonderfulWeb = blogs.filter((post) => {
+        return post.series == "wonderfulWeb"
+    })
 
     return {
-        blogs: blogs
+        blogs: blogs,
+        wonderfulWeb: wonderfulWeb
     }
 }
