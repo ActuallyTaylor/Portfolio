@@ -25,7 +25,7 @@
 
     <DescriptionSection title={undefined}>
         <span slot="description">
-            Solar Explorer is my 2022 submission to <a href="https://developer.apple.com/wwdc22/swift-student-challenge/">Apple's Swift Student Challenge</a>. The experience is a universe sandbox based game that allows you to create an entire universe. You can spawn in planets, change their mass, and velocity and then watch how they change the universe. On each of the planets there is an entire genetic simulation of an ecosystem that is based on my project from 2021
+            Solar Explorer is my winning 2022 submission to <a href="https://developer.apple.com/wwdc22/swift-student-challenge/">Apple's Swift Student Challenge</a>. The experience is a universe sandbox based game that allows you to create an entire universe. You can spawn in planets, change their mass, and velocity and then watch how they change the universe. On each of the planets there is an entire genetic simulation of an ecosystem that is based on my project from 2021
         </span>
         <span slot="extras">
             <a href="https://github.com/ActuallyZach/Solar-Explorer-WWDC22" target="_blank">

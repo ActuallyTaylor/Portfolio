@@ -25,7 +25,7 @@
 
     <DescriptionSection title={undefined}>
         <span slot="description">
-            Dungeon of Epsilon is my 2020 submission to <a href="https://developer.apple.com/wwdc22/swift-student-challenge/">Apple's Swift Student Challenge</a>. This was my first year submitting a project to the challenge and my first year being one of the 350 winners.
+            Dungeon of Epsilon is my winning 2020 submission to <a href="https://developer.apple.com/wwdc22/swift-student-challenge/">Apple's Swift Student Challenge</a>.
         </span>
     </DescriptionSection>
     <DescriptionSection title={"About"}>

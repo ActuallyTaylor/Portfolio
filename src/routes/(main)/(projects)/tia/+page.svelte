@@ -28,7 +28,7 @@
 
     <DescriptionSection title={undefined}>
         <span slot="description">
-            Terran Integration Application (or T.I.A. for short) is my 2021 submission to <a href="https://developer.apple.com/wwdc22/swift-student-challenge/">Apple's Swift Student Challenge</a>. This was my second year submitting a project to the challenge and also my second year being one of the 350 winners.
+            Terran Integration Application (or T.I.A. for short) is my winning 2021 submission to <a href="https://developer.apple.com/wwdc22/swift-student-challenge/">Apple's Swift Student Challenge</a>.
         </span>
     </DescriptionSection>
     <DescriptionSection title={"About"}>
