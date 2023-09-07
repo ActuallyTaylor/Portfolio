@@ -4,15 +4,15 @@
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
     import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 
-    import { Data } from "$lib/data"
+    import { ritinfraredPhotos, interests } from "$lib/data"
     import { Project } from "$lib/models/Project"
 
     const id = "ritinfrared"
-    export let project: Project = Data.interests.find((obj: Project) => {
+    export let project: Project = interests.find((obj: Project) => {
         return obj.id == id
     }) ?? new Project("undefined", "undefined", "undefined", "undefined")
 
-    export let paths = Data.ritinfraredPhotos
+    export let paths = ritinfraredPhotos
 </script>
 <svelte:head>
   <title>{project.name} - Project</title>
@@ -25,7 +25,7 @@
 </svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name.replaceAll("<br>", "")}/>
-    <ProjectPageHeader projectID={id} name={project.name.replaceAll("<br>", "")} subtitle="Infrared Photography" headerColor="#B6FFED"/>
+    <ProjectPageHeader name={project.name} subtitle="Infrared Photography"/>
 
     <DescriptionSection title={undefined}>
         <span slot="description">
@@ -36,7 +36,7 @@
     </DescriptionSection>
     <DescriptionSection title={undefined}>
         <span slot="description">
-            Some of my favorite photos in this set were actually a mistake. My favorite photos here show what I like to call ghost people. These ghost people are a 
+            Some of my favorite photos in this set were actually a mistake. My favorite photos here show what I like to call ghost people. These ghost people are a
             result of the long exposure time needed for infrared on an unconverted camera.
         </span>
     </DescriptionSection>

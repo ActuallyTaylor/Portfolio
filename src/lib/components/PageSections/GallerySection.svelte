@@ -60,7 +60,7 @@
     height: 100px;
     width: 100px;
     object-fit: cover;
-    margin-right: 10px; 
+    margin-right: 10px;
     opacity: .5;
     border-radius: 7px;
 }

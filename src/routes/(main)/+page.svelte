@@ -63,7 +63,7 @@
 
 <section>
     <a href="/gallery">
-        <h2>📸️ Photography</h2>
+        <h2>📸 Gallery</h2>
     </a>
     <p>
         You can see my photography in a gallery format on this website!

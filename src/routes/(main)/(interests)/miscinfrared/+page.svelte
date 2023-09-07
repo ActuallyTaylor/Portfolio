@@ -4,15 +4,15 @@
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
     import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 
-    import { Data } from "$lib/data"
+    import { miscInfraredPhotos, interests } from "$lib/data"
     import { Project } from "$lib/models/Project"
 
     const id = "miscinfrared"
-    export let project: Project = Data.interests.find((obj: Project) => {
+    export let project: Project = interests.find((obj: Project) => {
         return obj.id == id
     }) ?? new Project("undefined", "undefined", "undefined", "undefined")
 
-    export let paths = Data.miscInfraredPhotos
+    export let paths = miscInfraredPhotos
 </script>
 <svelte:head>
   <title>{project.name} - Project</title>

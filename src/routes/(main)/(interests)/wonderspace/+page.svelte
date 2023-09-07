@@ -4,15 +4,15 @@
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
     import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 
-    import { Data } from "$lib/data"
+    import { inter, wonder } from "$lib/data"
     import { Project } from "$lib/models/Project"
 
     const id = "wonderspace"
-    export let project: Project = Data.interests.find((obj: Project) => {
+    export let project: Project = interests.find((obj: Project) => {
         return obj.id == id
     }) ?? new Project("undefined", "undefined", "undefined", "undefined")
 
-    export let paths = Data.wonderPhotos
+    export let paths = wonderPhotos
 </script>
 <svelte:head>
   <title>{project.name} - Project</title>
@@ -25,7 +25,7 @@
 </svelte:head>
 <span>
     <ProjectPageNav id={id} name={project.name.replaceAll("<br>", "")}/>
-    <ProjectPageHeader projectID={id} name={project.name.replaceAll("<br>", "")} subtitle="Modern Art Museum" headerColor="#C9B6FF"/>
+    <ProjectPageHeader name={project.name.replaceAll("<br>", "")} subtitle="Modern Art Museum"/>
 
     <DescriptionSection title={undefined}>
         <span slot="description">

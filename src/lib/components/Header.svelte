@@ -40,7 +40,7 @@
         <h4>●</h4>
         <a href="/blog">Writing</a>
         <h4>●</h4>
-        <a href="/programming">Apps</a>
+        <a href="/programming">Programming</a>
         <h4>●</h4>
         <a href="https://github.com/ActuallyTaylor">GitHub</a>
         <h4>●</h4>

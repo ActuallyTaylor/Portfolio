@@ -1,36 +1,10 @@
-<script lang="ts">
-    import ProjectCard from "$lib/components/ProjectCard.svelte"
-    import { Data } from "$lib/data"
-
-    export let currentProjects = Data.works.filter((project) => {
-        return project.category == "current"
-    })
-
-    export let currentTeamProjects = Data.works.filter((project) => {
-        return project.category == "currentTeam"
-    })
-
-    export let pastProjects = Data.works.filter((project) => {
-        return project.category == "past"
-    })
-
-    export let currentOpenSource = Data.openSource.filter((project) => {
-        return project.category == "current"
-    })
-
-    export let pastOpenSource = Data.openSource.filter((project) => {
-        return project.category == "past"
-    })
-
-</script>
-
 <style>
-.cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
+img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 70%;
+    border-radius: 7px;
 }
 </style>
 
@@ -48,61 +22,17 @@
 </section>
 
 <section>
-    <h2>What I am working on now</h2>
-    <p>These projects are what I currently spend most of my time on. Most of the proejcts are Apple Platform based projects, many being iOS Apps or Swift Packages.</p>
-    <h3>Projects</h3>
-    <ul class="alwaysUnderlinedLink">
-    {#each currentProjects as project}
-        <li>
-            <p>
-                <a href="{project.url}">{project.name}</a>{@html project.description}
-            </p>
-        </li>
-    {/each}
-    </ul>
-    <h3>Team Projects</h3>
-    <ul class="alwaysUnderlinedLink">
-    {#each currentTeamProjects as project}
-        <li>
-            <p>
-                <a href="{project.url}">{project.name}</a>{@html project.description}
-            </p>
-        </li>
-    {/each}
-    </ul>
-    <h3>Open Source</h3>
-    <ul class="alwaysUnderlinedLink">
-    {#each currentOpenSource as project}
-        <li>
-            <p>
-                <a href="{project.url}">{project.name}</a>{@html project.description}
-            </p>
-        </li>
-    {/each}
-    </ul>
-</section>
+    <h2>Some Cool Things</h2>
+    <h3>My cat Simon 🐈‍⬛</h3>
+    <p>
+        Simon is my cat! He is the most opinionated cat ever. He needs to eat at the exact same time every day. He has recently learned that he can give someone two quick taps on their shoulders to get their attention.
+    </p>
+    <img src="/assets/images/about/simon.jpg" alt="A cat with a blue dot on its nose"/>
 
+    <h3>My old Macintosh Plus 🍎</h3>
+    <p>
+        This is my old Macintosh Plus! It is one of my favorite pieces of retro tech that I own. It is actually a a Macintosh 512k with an upgraded motherboard from a Macintosh Plus. I have the boot up disks and a couple of utility disks for it. However, I want to get disks for IDEs so I can write some code for the old thing.
+    </p>
+    <img src="/assets/images/about/macintoshPlus.jpeg" alt="A cat with a blue dot on its nose"/>
 
-<section>
-    <h2>What I have worked on in the past</h2>
-    <h3>Projects</h3>
-    <ul class="alwaysUnderlinedLink">
-    {#each pastProjects as project}
-        <li>
-            <p>
-                <a href="{project.url}">{project.name}</a>{@html project.description}
-            </p>
-        </li>
-    {/each}
-    </ul>
-    <h3>Open Source</h3>
-    <ul class="alwaysUnderlinedLink">
-    {#each pastOpenSource as project}
-        <li>
-            <p>
-                <a href="{project.url}">{project.name}</a>{@html project.description}
-            </p>
-        </li>
-    {/each}
-    </ul>
 </section>

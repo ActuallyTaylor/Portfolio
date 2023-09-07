@@ -5,11 +5,11 @@
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
     import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 
-    import { Data } from "$lib/data"
+    import { works } from "$lib/data"
     import { Project } from "$lib/models/Project"
 
     const id = "jellycuts"
-    export let project: Project = Data.works.find((obj: Project) => {
+    export let project: Project = works.find((obj: Project) => {
         return obj.id == id
     }) ?? new Project("undefined", "undefined", "undefined", "undefined")
 </script>
