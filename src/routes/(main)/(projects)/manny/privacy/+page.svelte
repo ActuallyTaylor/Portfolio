@@ -1,6 +1,5 @@
 <script lang="ts">
     import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
-    import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 </script>
 <svelte:head>
   <title>Manny Privacy Policy</title>
@@ -11,6 +10,7 @@
   data-app-id="246FDFED-E311-4B6E-B80A-5187ACA4DF8F"
   ></script>
 </svelte:head>
+
 <span>
     <DescriptionSection title="Your Data Inside of Manny">
         <span slot="description">

@@ -1,5 +1,4 @@
 <script lang="ts">
-    import PageNavigation from "$lib/components/ProjectPage/ProjectPageNav.svelte"
     import { goto } from "$app/navigation"
 
     let name: string
@@ -10,53 +9,53 @@
 </script>
 
 <style>
-    .form {
-        display: block;
-    }
+      .form {
+      display: block;
+  }
 
-    .form button {
-        background-color: var(--secondaryBase);
-        color: var(--primary);
-        font-family: inherit;
-        font-size: inherit;
-        margin-right: 6px;
-        margin-bottom: 6px;
-        padding: 10px;
-        border: none;
-        border-radius: 6px;
-        outline: none;
-    }
+  .form button {
+      background-color: var(--crust);
+      color: var(--primary);
+      font-family: inherit;
+      font-size: inherit;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      padding: 10px;
+      border: solid var(--black) 1px;
+      border-radius: 6px;
+      outline: none;
+  }
 
-    .form input {
-        background-color: var(--secondaryBase);
-        color: var(--primary);
-        font-family: inherit;
-        font-size: inherit;
-        margin-right: 6px;
-        margin-bottom: 6px;
-        padding: 10px;
-        border: none;
-        border-radius: 6px;
-        outline: none;
-    }
+  .form input {
+      background-color: var(--crust);
+      color: var(--primary);
+      font-family: inherit;
+      font-size: inherit;
+      margin-right: 6px;
+      margin-bottom: 6px;
+      padding: 10px;
+      border: solid var(--black) 1px;
+      border-radius: 6px;
+      outline: none;
+  }
 
-    .form p {
-        margin-top: 5px;
-        margin-right: 10px;
-    }
+  .form p {
+      margin-top: 5px;
+      margin-right: 10px;
+  }
 
-    img {
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  img {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+  }
 
-    @media screen and (max-width: 600px) {
-        img {
-            width: 90%;
-            margin: 20px;
-        }        
-    }
+  @media screen and (max-width: 600px) {
+      img {
+          width: 90%;
+          margin: 20px;
+      }
+  }
 </style>
 
 <svelte:head>
@@ -69,17 +68,16 @@
   ></script>
 </svelte:head>
 
-<PageNavigation id={`wallet/wwdc22`} name="WWDC22 Wallet Pass"/>
 <h1>WWDC22 Wallet Pass Maker!</h1>
 <p>This pass maker will let you make an unofficial Apple wallet pass for the WWWDC22 event!</p>
 
 <div class="form">
     <div class="HorizontalStack VerticallyCentered">
         <p>Your Name </p>
-        <input autocomplete="name" id="name" type="text" name="name" bind:value={name}>    
+        <input autocomplete="name" id="name" type="text" name="name" bind:value={name}>
     </div>
     <br>
-    <button on:click={downloadPass}>Create Pass</button>    
+    <button on:click={downloadPass}>Create Pass</button>
 </div>
 
 <h2>What the pass looks like</h2>

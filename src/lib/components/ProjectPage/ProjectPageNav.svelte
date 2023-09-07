@@ -39,7 +39,7 @@
 
 <nav>
     <a class="name" href="/">
-        <p>Taylor Lineman</p>   
+        <p>Taylor Lineman</p>
     </a>
     <p>
         <a href="/">Home</a> / <a href="/{id}">{name}</a>

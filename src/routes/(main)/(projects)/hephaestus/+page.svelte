@@ -3,7 +3,6 @@
     import LeftAlignedDescriptionSection from "$lib/components/PageSections/LeftAlignedDescriptionSection.svelte"
     import RightAlignedDescriptionSection from "$lib/components/PageSections/RightAlignedDescriptionSection.svelte"
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
-    import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 
     import { works } from "$lib/data"
     import { Project } from "$lib/models/Project"
@@ -22,8 +21,8 @@
   data-app-id="246FDFED-E311-4B6E-B80A-5187ACA4DF8F"
   ></script>
 </svelte:head>
+
 <span>
-    <ProjectPageNav id={id} name={project.name}/>
     <ProjectPageHeader name={project.name} subtitle="A C++ Game Engine"/>
 
     <DescriptionSection title={undefined}>

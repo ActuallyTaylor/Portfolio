@@ -1,7 +1,6 @@
 <script lang="ts">
     import { onMount } from 'svelte'
     import Header from "$lib/components/Header.svelte"
-    import PageNavigation from "$lib/components/ProjectPage/ProjectPageNav.svelte"
     import SvelteMarkdown, { type Renderers } from 'svelte-markdown'
     import ListItem from '$lib/components/MarkdownRenderers/ListItem.svelte'
 

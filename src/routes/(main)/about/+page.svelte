@@ -21,6 +21,28 @@ img {
     </p>
 </section>
 
+<section class="alwaysUnderlinedLink">
+    <h2>WWDC Wallet Passes</h2>
+    <p>
+        Every WWDC I like to make Wallet Passes for everyone attending virtually!
+        They are a fun way to remember your time at WWDC without having to attend.
+        There are currently three passses going back to 2021. The passes are themed
+        after the invitations each year 😊
+    </p>
+    <ol>
+        <li>
+            <a href="/wallet/wwdc21">WWDC 2021 Pass</a>
+        </li>
+        <li>
+            <a href="/wallet/wwdc22">WWDC 2022 Pass</a>
+        </li>
+        <li>
+            <a href="/wallet/wwdc23">WWDC 2023 Pass</a>
+        </li>
+
+    </ol>
+</section>
+
 <section>
     <h2>Some Cool Things</h2>
     <h3>My cat Simon 🐈‍⬛</h3>

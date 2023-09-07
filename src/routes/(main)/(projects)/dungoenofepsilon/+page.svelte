@@ -1,7 +1,6 @@
 <script lang="ts">
     import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
-    import ProjectPageNav from "$lib/components/ProjectPage/ProjectPageNav.svelte"
 
     import { works } from "$lib/data"
     import { Project } from "$lib/models/Project"
