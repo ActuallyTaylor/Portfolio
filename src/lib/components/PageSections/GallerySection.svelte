@@ -70,6 +70,7 @@
 }
 
 .bottomBarButton {
+    color: var(--sky);
     background: none;
 	color: inherit;
 	border: none;
@@ -83,7 +84,9 @@
     opacity: 1.0;
     border: solid rgba(0, 0, 255, 0.8) 2px;
 }
-
+img {
+    color : "red";
+}
 </style>
 
 <div class="description">

@@ -34,6 +34,7 @@
 }
 </style>
 
+<h1>📝️ Writing</h1>
 <section>
     <p>
         Every week I Wednesday I write a blog post called Wonderful Web! This blog post
