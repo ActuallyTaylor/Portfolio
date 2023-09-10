@@ -8,7 +8,7 @@ hex: f48d55
 readingTime: 3 min read
 series: wonderfulWeb
 ---
-## [Testing Converso](https://crnkovic.dev/testing-converso/) - Crnković
+## [Testing Converso](https://web.archive.org/web/20230904235656/https%3A%2F%2Fcrnkovic.dev%2Ftesting-converso%2F) - Crnković
 
 [Converso](https://web.archive.org/web/20230000000000*/https://conversoapp.com/) **was** a messaging app meant to change the way people talked over the internet. It was released on the 21st of January, 2023 and is now **gone** from the internet. The only things left are a blog post exposing the absolutely rampant security flaws in their "state-of-the-art" encryption, and a couple of [sponsored articles](https://www.westernjournal.com/man-creates-messaging-app-fbi-cant-crack-anyone-can-download-stopped-airport-days-later/).
 
@@ -18,7 +18,8 @@ The article begins by Crnković explaining how they heard about the app Converso
 
 This led them to digging into what was actually happening behind the scenes at Converso. 
 
-What they found is absolutely astonishing. I won't spoil a single bit here so go read it over at https://crnkovic.dev/testing-converso/!
+What they found is absolutely astonishing. I won't spoil a single bit here so go read it over at [https://crnkovic.dev/testing-converso/](https://web.archive.org/web/20230904235656/https%3A%2F%2Fcrnkovic.dev%2Ftesting-converso%2F)!
+
 ### Some secondary research (Spoilers)
 Before writing this post, I decided to do some research into what Converso used to look like. 
 
