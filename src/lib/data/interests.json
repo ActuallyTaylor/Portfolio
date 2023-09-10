@@ -1,28 +1,28 @@
 [
     {
       "name": "Roe v. Wade",
-      "subtitle": "Protest",
+      "description": "Protest",
       "id": "roevwade",
       "category": "photography",
       "url": "./roevwade"
     },
     {
       "name": "R.I.T",
-      "subtitle": "Infrared",
+      "description": "Infrared",
       "id": "ritinfrared",
       "category": "infraredPhotography",
       "url": "./ritinfrared"
     },
     {
       "name": "Wonder",
-      "subtitle": "Place",
+      "description": "Place",
       "id": "wonderspace",
       "category": "photography",
       "url": "./wonderspace"
     },
     {
       "name": "Misc",
-      "subtitle": "Infrared",
+      "description": "Infrared",
       "id": "miscinfrared",
       "category": "infraredPhotography",
       "url": "./miscinfrared"

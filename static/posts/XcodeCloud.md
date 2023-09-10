@@ -6,6 +6,7 @@ author: Taylor Lineman
 date: 2023-02-27T00:00:00.000Z
 hex: f48d55
 readingTime: 4 min read
+series: misc
 ---
 ## Opening
 When I started working on [Manny for Mastodon](/manny), I quickly ran into issues with clean architecture. Especially on the deployment and source control side of things. I knew that I needed a solution to this problem, one that would be simple to setup and also work really well with my development style and pipeline.

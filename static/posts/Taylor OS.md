@@ -6,6 +6,7 @@ author: Taylor Lineman
 date: 2023-05-03T14:05:90.590-04:00
 hex: 8BA8EF
 readingTime: 3 min read
+series: misc
 ---
 Through bouts of studying for finals the past few days I have been working on something that I think is pretty cool. A mock operating system right in the browser! This website is basically a new way to check out all of the stuff on this main website, except it feels like you are exploring it using an operating system from the 90s.
 

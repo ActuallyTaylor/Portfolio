@@ -1,22 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width" />
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/rss">
+<html lang="en" prefix="og: https://ogp.me/ns#">
 
-        <style>
-        :root {
+<head>
+   <meta charset="utf-8" />
+   <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+   <meta name="viewport" content="width=device-width" />
+   <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/rss">
+   <link rel="me" href="https://mastodon.social/@TaylorLineman">
+   <title>Taylor Lineman</title>
+
+   <!-- Open Graph Begin -->
+   <meta property="og:title" content="Taylor Lineman">
+   <meta property="og:url" content="https://actuallytaylor.com">
+   <meta property="og:type" content="website">
+   <meta property="og:image" content="https://actuallytaylor.com/opengraph.png">
+   <meta property="og:image:width" content="1280">
+   <meta property="og:image:height" content="720">
+   <!-- Open Graph End -->
+
+   <style>
+      :root {
+         /* Base Colors */
+         --base: rgb(245, 240, 245);
+         --mantel: rgb(254, 243, 254);
+         --crust: rgb(255, 248, 255);
+
+         /* Text Colors */
+         --text: rgb(76, 79, 105);
+         --subtext1: rgb(102, 104, 123);
+         --subtext2: rgb(133, 135, 153);
+
+         /* Colors */
+         --red: rgb(240, 68, 114);
+         --rosewater: rgb(250, 175, 166);
+         --pink: rgb(252, 184, 200);
+         --blue: rgb(83, 148, 233);
+         --sky: rgb(54, 164, 246);
+         --teal: rgb(47, 201, 201);
+         --mint: rgb(108, 222, 181);
+         --green: rgb(147, 217, 128);
+         --orange: rgb(255, 117, 37);
+         --peach: rgb(255, 148, 111);
+         --lemon: rgb(250, 226, 132);
+         --brown: rgb(204, 170, 127);
+         --lavender: rgb(196, 167, 231);
+         --black: rgb(58, 59, 69);
+         --white: rgb(255, 248, 255);
+
+         --visitedLink: var(--peach);
+         --link: var(--sky);
+      }
+
+      @media (prefers-color-scheme: dark) {
+         :root {
             /* Base Colors */
-            --base: rgb(245,240,245);
-            --mantel: rgb(254, 243, 254);
-            --crust: rgb(255, 248, 255);
+            --base: rgb(42, 45, 61);
+            --mantel: rgb(48, 52, 71);
+            --crust: rgb(72, 77, 100);
 
             /* Text Colors */
-            --text: rgb(76, 79, 105);
-            --subtext1: rgb(102, 104, 123);
-            --subtext2: rgb(133, 135, 153);
+            --text: rgb(198, 206, 239);
+            --subtext1: rgb(164, 176, 220);
+            --subtext2: rgb(132, 141, 173);
 
             /* Colors */
             --red: rgb(240, 68, 114);
@@ -31,71 +76,108 @@
             --peach: rgb(255, 148, 111);
             --lemon: rgb(250, 226, 132);
             --brown: rgb(204, 170, 127);
-            --lavender: rgb(196, 167, 231);
             --black: rgb(58, 59, 69);
-            --white: rgb(255, 248, 255);
+         }
+      }
 
-            --primaryFontColor: var(--text);
-            --secondaryFontColor: var(--subtext1);
-            --backgroundColor: var(--base);
-            --blogBackgroundColor: var(--mantel);
-            --navBarBackgroundColor: var(--mantel);
+      body {
+         font-family: 'Avenir Next', 'HelveticaNeue-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-            --shapePrimaryFontColor: #000000;
-            --shapeSecondaryFontColor: #393939;
+         /* Default background color and text color */
+         background-color: var(--base);
+         color: var(--text);
 
-            --visitedLink: var(--peach);
-            --link: var(--sky);
-        }
+         /* Center column of max width 650px */
+         max-width: 700px;
+         margin: auto auto;
 
-        @media (prefers-color-scheme: dark) {
-            :root {
-                /* Base Colors */
-                --base: rgb(42, 45, 61);
-                --mantel: rgb(48, 52, 71);
-                --crust: rgb(72, 77, 100);
+         margin-bottom: 50px;
+      }
 
-                /* Text Colors */
-                --text: rgb(198, 206, 239);
-                --subtext1: rgb(164, 176, 220);
-                --subtext2: rgb(132, 141, 173);
+      @media screen and (max-width: 700px) {
+         body {
+            margin-left: 20px;
+            margin-right: 20px;
+         }
+      }
 
-                /* Colors */
-                --red: rgb(240, 68, 114);
-                --rosewater: rgb(250, 175, 166);
-                --pink: rgb(252, 184, 200);
-                --blue: rgb(83, 148, 233);
-                --sky: rgb(54, 164, 246);
-                --teal: rgb(47, 201, 201);
-                --mint: rgb(108, 222, 181);
-                --green: rgb(147, 217, 128);
-                --orange: rgb(255, 117, 37);
-                --peach: rgb(255, 148, 111);
-                --lemon: rgb(250, 226, 132);
-                --brown: rgb(204, 170, 127);
-                --black: rgb(58, 59, 69);
-            }
-        }
+      :is(h1, h2, h3, h4, h5, h6) {
+         font-family: Georgia, 'Times New Roman', Times, serif;
+      }
 
-        body {
-            background-color: var(--base);
-        }
 
-        code {
-            white-space: pre-wrap;
-            background-color: var(--base);
-            padding: 2px;
-            border-radius: 4px;
-            margin: 2px;
-        }
+      h1 {
+         font-size: 1.75em;
+      }
 
-        pre code {
-            border-radius: 7px;
-        }
-        </style>
-		%sveltekit.head%
-	</head>
-	<body>
-		<div>%sveltekit.body%</div>
-	</body>
+      hr {
+         display: flex;
+         justify-content: center;
+         border-width: 0px;
+         margin-top: 5px;
+         margin-bottom: 5px;
+         margin-left: auto;
+         margin-right: auto;
+         color: var(--subtext2);
+      }
+
+      hr::before {
+         content: "\2022\2022\2022";
+         letter-spacing: 1.25em;
+         margin-left: 1.25em;
+         font-size: 1.1em;
+      }
+
+      code {
+         white-space: pre-wrap;
+         background-color: var(--base);
+         padding: 2px;
+         border-radius: 4px;
+         margin: 2px;
+      }
+
+      pre code {
+         border-radius: 7px;
+      }
+
+      a {
+          color: var(--text);
+          text-decoration: none;
+      }
+
+      a:hover {
+          color: var(--link);
+          text-decoration: underline;
+          text-decoration-color: var(--link);
+      }
+      .alwaysColoredLinkForATag {
+         color: var(--link);
+      }
+
+      .alwaysColoredLink a {
+          color: var(--link);
+      }
+
+      .alwaysColoredLinkForATag {
+          text-decoration: underline;
+      }
+
+      .alwaysUnderlinedLink a {
+          text-decoration: underline;
+      }
+
+      .appstoreButton {
+           height: 3em;
+           width: auto;
+       }
+   </style>
+
+   %sveltekit.head%
+
+</head>
+
+<body>
+   <div>%sveltekit.body%</div>
+</body>
+
 </html>
