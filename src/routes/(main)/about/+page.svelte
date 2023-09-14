@@ -12,13 +12,29 @@ img {
     <h1>👋 Hey!</h1>
     <p>
         I am Taylor Lineman, programmer, weekly writer, photographer and a student!
-        You may know me as <i>ActuallyTaylor</i> on <a href="https://mastodon.social/@TaylorLineman">Mastodon</a>,  <a href="https://github.com/ActuallyTaylor">GitHub</a>, and <a href="https://twitter.com/TaylorLineman">Twitter</a>.
+        You may know me as <i>ActuallyTaylor</i> on <a href="https://mastodon.social/@TaylorLineman">Mastodon</a>, <a href="https://github.com/ActuallyTaylor">GitHub</a>, and <a href="https://twitter.com/TaylorLineman">Twitter</a>.
     </p>
     <p>
         Currently, I am studying Software Engineering at <a href="https://www.rit.edu/">Rochester Institute of Technology 🐅</a>.
         You can find me mostly working on my iOS Apps and Open Source projects, however recently
         I have ventured into Firmware development and started to love the challenge that comes with it.
     </p>
+</section>
+
+<section class="alwaysUnderlinedLink">
+    <h2>Get in touch!</h2>
+    <p>
+        If you want to get in touch with me you can contact me at any of the below
+        addresses! If you really need to contact me, email is best!
+    </p>
+    <ul>
+        <li>
+           <a href="mailto:taylor.lineman@gmail.com">Email: taylor.lineman@gmail.com</a>
+        </li>
+        <li>
+            <a href="https://mastodon.social/@TaylorLineman">Mastodon</a>
+        </li>
+    </ul>
 </section>
 
 <section class="alwaysUnderlinedLink">
