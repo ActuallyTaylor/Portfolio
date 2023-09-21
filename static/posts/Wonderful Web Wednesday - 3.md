@@ -18,7 +18,7 @@ Unlike mediums that came before them, the web is almost infinitely customizable 
 
 > But beneath questions like “how do I make my pages look the same on every platform” and “how can I make my fonts appear identical on the Macintosh and Windows” is an underlying question – “how do I control the user’s browser?” Indeed, the word control turns up with surprising frequency.
 >
-> -- <cite>John Allsopp</cite>
+> -- John Allsopp
 
 The first key to creating an accessible webpage is to relinquish complete control.
 
@@ -26,7 +26,7 @@ The nature of the web is that everyone has access to it in whatever format they 
 
 > The journey begins by letting go of control, and becoming flexible.
 >
-> -- <cite>John Allsopp</cite>
+> -- John Allsopp
 ### The Journey
 A great website is a site that anyone can experience. This doesn't mean that it needs to look plain or be low on features. It just means that it needs to be **adaptable**. By taking time during the design period of a website or application to consider accessibility and adaptability, you can make someones day. That is what is so beautiful about the web. Just by conforming to simple standards such as using adaptable font sizes, differentiated colors, and percentage based layouts you can create a webpage that could give someone the ability to fully experience your work.
 
@@ -34,4 +34,4 @@ John Allsopp's entire philosophy that adaptability is truly accessibility is som
 
 > It is the nature of the web to be flexible, and it should be our role as designers and developers to embrace this flexibility, and produce pages which, by being flexible, are accessible to all.
 >
-> -- <cite>John Allsopp</cite>
+> -- John Allsopp
