@@ -70,7 +70,7 @@
     }
 </style>
 
-<div class="iconContainer" on:click={toggleFocus} on:focusout={defocusItem} style="{focusedMenuBarItem == item ? "filter: invert(); background: white;" : ""}">
+<div class="iconContainer" on:click={toggleFocus} on:keydown={toggleFocus} on:focusout={defocusItem} style="{focusedMenuBarItem == item ? "filter: invert(); background: white;" : ""}">
     {#if (item.icon != null)}
     <img src="/assets/images/TayOS/icons/{item.icon}" alt="{item.name} Icon" width="25px" height="25px">
     {/if}

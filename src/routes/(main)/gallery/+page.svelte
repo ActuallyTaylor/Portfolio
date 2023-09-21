@@ -1,10 +1,6 @@
 <script lang="ts">
     import Gallery from "$lib/components/Gallery.svelte"
     import { roevwadePhotos, ritinfraredPhotos, miscInfraredPhotos, wonderPhotos } from "$lib/data"
-
-    export let selectedPhoto: string = roevwadePhotos[0]
-
-
 </script>
 
 <style>
