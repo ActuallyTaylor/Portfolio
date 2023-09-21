@@ -44,7 +44,7 @@
     <meta property="og:description" content={blog.description}>
     <meta property="og:type" content="article">
     { #if blog.series == "wonderfulWeb" }
-    <meta property="og:image" content="https://actuallytaylor.com/opengraph.png">
+    <meta property="og:image" content="https://actuallytaylor.com/wonderfulopengraph.png">
     <meta property="og:image:width" content="1820.44">
     <meta property="og:image:height" content="1024">
     { :else }
