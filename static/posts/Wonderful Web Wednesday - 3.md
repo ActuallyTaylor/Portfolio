@@ -6,6 +6,7 @@ author: Taylor Lineman
 date: 2023-09-20
 hex: f48d55
 readingTime: 4 min read
+series: wonderfulWeb
 ---
 ## [A Dao of Web Design](https://alistapart.com/article/dao/#section8) - John Allsopp
 Now this is certainly an old article. Published on April 7th of 2000, this article was written at a time where the adoption of CSS was still a debate. The article focuses on why we as developers and designers should be pushing for an accessible web. I was sent this article by my Web Development professor last semester. This article really made me think about how others experience the web and the applications we use on a daily basis.  

@@ -29,20 +29,30 @@
     <link rel="stylesheet" href="/assets/css/blog.css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 
-    <!-- Open Graph Begin -->
-    <meta property="og:title" content={blog.title}>
-    <meta property="og:url" content="https://actuallytaylor.com/blog/{blog.slug}">
-    <meta property="og:description" content={blog.description}>
-    <meta property="og:type" content="article">
-    <meta property="og:image" content="https://actuallytaylor.com/opengraph.png">
-    <meta property="og:image:width" content="1280">
-    <meta property="og:image:height" content="720">
-    <!-- Open Graph End -->
+    { #if blog.series == "wonderfulWeb" }
+    <link rel="icon" href="%sveltekit.assets%/wonderfulfavicon.png" />
+    { /if }
 
     <script
     src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
     data-app-id="246FDFED-E311-4B6E-B80A-5187ACA4DF8F"
     ></script>
+
+    <!-- Open Graph Begin -->
+    <meta property="og:title" content={blog.title}>
+    <meta property="og:url" content="https://actuallytaylor.com/blog/{blog.slug}">
+    <meta property="og:description" content={blog.description}>
+    <meta property="og:type" content="article">
+    { #if blog.series == "wonderfulWeb" }
+    <meta property="og:image" content="https://actuallytaylor.com/opengraph.png">
+    <meta property="og:image:width" content="1820.44">
+    <meta property="og:image:height" content="1024">
+    { :else }
+    <meta property="og:image" content="https://actuallytaylor.com/opengraph.png">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="720">
+    { /if }
+    <!-- Open Graph End -->
 </svelte:head>
 
 <style>
