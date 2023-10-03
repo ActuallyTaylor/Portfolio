@@ -31,7 +31,7 @@
         <h2>📝️ Writing</h2>
     </a>
     <p>
-        Every week I Wednesday I write a blog post called Wonderful Web! This blog post
+        Almost every Wednesday I write a blog post called Wonderful Web! This blog post
         highlights a set of new websites each week. These sites can be anything, but are
         usually tech related.
     </p>
