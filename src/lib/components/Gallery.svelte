@@ -1,16 +1,14 @@
 <script lang="ts">
-    import { fade, blur, fly, slide, scale } from "svelte/transition";
+    import { Photo } from "$lib/models/Photo";
+    import { onMount } from 'svelte';
 
-    export let photos: string[]
-    export let selectedPhoto: string = photos[0]
+    export let photos: Photo[]
+    export let selectedPhoto: Photo = photos[0]
 
-    function clickedPhoto(path: string) {
-        selectedPhoto = path
+    let isFullscreen = false;
 
-        let element = document.getElementById(selectedPhoto)
-        element?.scrollIntoView({
-            behavior: "smooth"
-        })
+    function clickedPhoto(photo: Photo) {
+        selectedPhoto = photo
     }
 
     function nextPhoto() {
@@ -27,7 +25,6 @@
             clickedPhoto(photos[index - 1])
         }
     }
-
 </script>
 
 <style>
@@ -36,6 +33,7 @@
         max-height: 500px;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        cursor: pointer;
     }
 
     .mainPhotoContainer {
@@ -112,7 +110,7 @@
     }
 
     .notSelected {
-        border: solid clear 2px;
+        border: solid transparent 2px;
     }
 </style>
 
@@ -121,7 +119,7 @@
         {#each photos as path}
         <li class="photoGalleryListItem">
             <button on:click={() => clickedPhoto(path)}>
-                <img class="{selectedPhoto == path ? 'selected' : 'notSelected'}" id={path} src={path} alt={path} loading="lazy">
+                <img class="{selectedPhoto == path ? 'selected' : 'notSelected'}" id={path.gallery_path} src={path.gallery_path} alt={path.caption} loading="lazy">
             </button>
         </li>
         {/each}
@@ -136,5 +134,6 @@
 </div>
 
 <div class="mainPhotoContainer">
-    <img class="mainPhoto" src={selectedPhoto.replace('compressed', 'gallery')} alt={selectedPhoto}>
+    <img class="mainPhoto" src={selectedPhoto.large_path} alt={selectedPhoto.caption}>
 </div>
+
