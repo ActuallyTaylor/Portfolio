@@ -1,5 +1,12 @@
 [
   {
+    "name": "Cereal",
+    "description": ", a Serial Console for macOS that operates completely in the terminal.",
+    "id": "cereal",
+    "category": "current",
+    "url": "https://github.com/ActuallyTaylor/cereal"
+  },
+  {
     "name": "Accessibility Navigator",
     "description": ", is a Swift Package that I made while working on Impel. It allows you to navigate macOS' accessibility / a11y tree.",
     "id": "accessibilitynavigator",

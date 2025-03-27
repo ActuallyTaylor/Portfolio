@@ -1,46 +1,56 @@
-import { readdirSync, readFileSync } from 'fs'
-import fm from "front-matter"
-import type { BlogEntry } from './models/BlogEntry'
+import { readdirSync, readFileSync } from "fs";
+import fm from "front-matter";
+import type { BlogEntry } from "./models/BlogEntry";
 
 export function readPosts(): BlogEntry[] {
-    let blogs: BlogEntry[] = []
+  let blogs: BlogEntry[] = [];
 
-    readdirSync("./static/posts/").forEach((file) => {
-        if (file.includes(".md")) {
-            let readFile = readFileSync(`./static/posts/${file}`)
-            let frontmatter = fm(readFile.toString())
-            let attributes = frontmatter.attributes
-            let title = attributes.title
-            let slug = attributes.slug
-            let description = attributes.description
-            let author = attributes.author
-            let readingTime = attributes.readingTime
-            let series = attributes.series
+  readdirSync("./static/posts/").forEach((file) => {
+    if (file.includes(".md")) {
+      let readFile = readFileSync(`./static/posts/${file}`);
+      let frontmatter = fm(readFile.toString());
+      let attributes = frontmatter.attributes;
+      let title = attributes.title;
+      let slug = attributes.slug;
+      let description = attributes.description;
+      let author = attributes.author;
+      let readingTime = attributes.readingTime;
+      let series = attributes.series;
 
-            let date = new Date(attributes.date)
-            let hex = `#${attributes.hex}`
-            let content = frontmatter.body
+      let date = new Date(attributes.date);
+      let hex = `#${attributes.hex}`;
+      let content = frontmatter.body;
 
-            blogs.push({title, slug, series, readingTime, description, author, date, hex, content})
-        }
-    })
+      blogs.push({
+        title,
+        slug,
+        series,
+        readingTime,
+        description,
+        author,
+        date,
+        hex,
+        content,
+      });
+    }
+  });
 
-    blogs.sort(function(a,b): any{
-            return (b.date.getTime() - a.date.getTime())
-    })
+  blogs.sort(function (a, b): any {
+    return b.date.getTime() - a.date.getTime();
+  });
 
-    return blogs
+  return blogs;
 }
 
 export function createRSSFeed(): string {
-    const title = escapeXml("Taylor Lineman")
-    const description = escapeXml("")
-    const siteURL = escapeXml("https://actuallytaylor.com")
+  const title = escapeXml("Taylor Lineman");
+  const description = escapeXml("");
+  const siteURL = escapeXml("https://actuallytaylor.com");
 
-    let feedItems = ""
+  let feedItems = "";
 
-    readPosts().forEach(element => {
-        feedItems += `
+  readPosts().forEach((element) => {
+    feedItems += `
     <item>
         <title>${element.title}</title>
         <description>${element.description}</description>
@@ -48,10 +58,10 @@ export function createRSSFeed(): string {
         <link>${siteURL}/blog/${escapeXml(element.slug)}</link>
         <guid isPermaLink="true">${siteURL}/blog/${escapeXml(element.slug)}</guid>
     </item>
-        `
-    })
+        `;
+  });
 
-    let rss = `<?xml version="1.0" encoding="UTF-8"?>
+  let rss = `<?xml version="1.0" encoding="UTF-8"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title>${title}</title>
@@ -61,19 +71,24 @@ export function createRSSFeed(): string {
         ${feedItems}
     </channel>
     </rss>
-    `
+    `;
 
-    return rss
+  return rss;
 }
 
 function escapeXml(unsafe: string) {
-    return unsafe.replace(/[<>&'"]/g, function (c) {
-        switch (c) {
-            case '<': return '&lt'
-            case '>': return '&gt'
-            case '&': return '&amp'
-            case '"': return '&quot'
-            case "'": return '&apos'
-        }
-    })
+  return unsafe.replace(/[<>&'"]/g, function (c) {
+    switch (c) {
+      case "<":
+        return "&lt";
+      case ">":
+        return "&gt";
+      case "&":
+        return "&amp";
+      case '"':
+        return "&quot";
+      case "'":
+        return "&apos";
+    }
+  });
 }

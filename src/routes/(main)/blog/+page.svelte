@@ -27,7 +27,7 @@
 <section>
     <h1>All Posts</h1>
     {#each blogs as blog}
-        <a href="blog/{blog.slug}">
+        <a href="/blog/{blog.slug}">
             <div class="blogEntry">
                 <h5>
                     {blog.date.toLocaleDateString("lookup", {
@@ -45,7 +45,7 @@
 <section>
     <h1>Wonderful Web Wednesday</h1>
     {#each wonderfulWeb as blog}
-        <a href="blog/{blog.slug}">
+        <a href="/blog/{blog.slug}">
             <div class="blogEntry">
                 <h5>
                     {blog.date.toLocaleDateString("lookup", {
