@@ -1,6 +1,6 @@
 import { readdirSync, readFileSync } from "fs";
 import path from "path";
-import { Photo } from "./models/Photo";
+import type { Photo } from "./models/Photo";
 
 export function readPhotos(): Photo[] {
   const metadataPath = "./static/photos/metadata.json";
