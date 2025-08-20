@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Roe v. Wade",
+    "description": "Protest",
+    "id": "roevwade",
+    "category": "photography",
+    "url": "/roevwade"
+  },
+  {
+    "name": "R.I.T",
+    "description": "Infrared",
+    "id": "ritinfrared",
+    "category": "infraredPhotography",
+    "url": "/ritinfrared"
+  },
+  {
+    "name": "Wonder",
+    "description": "Place",
+    "id": "wonderspace",
+    "category": "photography",
+    "url": "/wonderspace"
+  },
+  {
+    "name": "Misc",
+    "description": "Infrared",
+    "id": "miscinfrared",
+    "category": "infraredPhotography",
+    "url": "/miscinfrared"
+  }
+]
