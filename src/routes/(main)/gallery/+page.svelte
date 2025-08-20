@@ -14,6 +14,10 @@
     </ul>
 </section>
 
+<section>
+    <p>More coming soon...</p>
+</section>
+
 <!-- <section class="alwaysUnderlinedLink">
     <Gallery photos={items}/>
     {#each items as photo}
