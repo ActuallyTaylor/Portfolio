@@ -1,34 +1,3 @@
-<script lang="ts">
-    import Gallery from '$lib/components/Gallery.svelte';
-
-    export let data;
-    export let items = data.photos;
-</script>
-
-<style>
-    .fullscreen {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 100;
-    }
-
-    .fullscreen img {
-        max-width: 100%;
-        max-height: 100%;
-        user-select: none;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-    }
-</style>
-
 <section class="alwaysUnderlinedLink">
     <h1>📸 Gallery</h1>
     <p>
@@ -38,16 +7,22 @@
     </p>
     <h2>Cameras</h2>
     <ul>
-        <li><a href="https://en.wikipedia.org/wiki/Nikon_Z50">Nikon Z50</a></li>
-        <li><a href="https://en.wikipedia.org/wiki/Nikon_D3200">Nikon D3200</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Nikon_Z50">Nikon Z50 (Digital)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Nikon_D3200">Nikon D3200 (Digital)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Canon_T50">Canon T50 (Film)</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Polaroid_Impulse">Polaroid Impulse (Film)</a></li>
     </ul>
 </section>
 
-<section class="alwaysUnderlinedLink">
+<!-- <section class="alwaysUnderlinedLink">
     <Gallery photos={items}/>
-</section>
+    {#each items as photo}
+        <img src={photo.gallery_path} alt={photo.caption}>
+    {/each}
+</section> 
+-->
 
-
+<!-- 
 <section>
     <h2>Events</h2>
     <h3>Roe v Wade Protests (June 27th 2022)</h3>
@@ -61,4 +36,4 @@
         We joined a group of people who were already protesting out front of the Supreme Court. We spent the day out in front of the Supreme Court with the rest of the protesters hearing others share their stories.
     </p>
 </section>
-
+ -->
