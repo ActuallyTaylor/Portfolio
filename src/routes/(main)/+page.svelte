@@ -15,10 +15,7 @@
 <section class="alwaysUnderlinedLink">
     <h2>👋 Hey!</h2>
     <p>
-        I am Taylor Lineman, programmer, photographer and a student! I am <i
-            >ActuallyTaylor</i
-        >
-        on
+        I am Taylor Lineman, programmer, photographer and a student! I am <i>ActuallyTaylor</i > on
         <a href="https://mastodon.social/@TaylorLineman">Mastodon</a>,
         <a href="https://bsky.app/profile/taylorlineman.bsky.social">BlueSky</a
         >,
@@ -61,14 +58,6 @@
         personal projects but some also stem from clubs I do at school. My
         personal projects usually focus on Apple Centric development and my
         school projects focus on firmware and hardware!
-    </p>
-    <p>
-        I am not currently working on any projects as I am finishing up a co-op
-        at <a
-            class="alwaysColoredLinkForATag"
-            href="https://github.com/impel-intelligence">Impel Intelligence</a
-        >. I plan on reviving a couple of my older projects very soon, so stay
-        tuned! 🎉
     </p>
     <a href="/programming" class="alwaysColoredLinkForATag">See my projects »</a
     >
