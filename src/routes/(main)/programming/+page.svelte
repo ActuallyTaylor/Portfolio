@@ -29,14 +29,6 @@
     usually focus on Apple Centric development and my school projects focus on
     firmware and hardware!
 </p>
-<p>
-    I am not currently working on any projects as I am finishing up a co-op at <a
-        class="alwaysColoredLinkForATag"
-        href="https://github.com/impel-intelligence">Impel Intelligence</a
-    >. I plan on reviving a couple of my older projects very soon, so stay
-    tuned! 🎉
-</p>
-
 <section>
     <h2>What I am working on now</h2>
     <p>
