@@ -8,7 +8,6 @@ export function readPhotos(): Photo[] {
 
   return metadata.map((item: any) => ({
     gallery_path: `/photos/gallery/${item.filename}`,
-    large_path: `/photos/large/${item.filename}`,
     caption: item.caption,
   }));
 }

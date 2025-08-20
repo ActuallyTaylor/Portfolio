@@ -1,2 +1,14 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+static/photos/bridge.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/bus.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/butterfly-standing.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/chameleon.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/dome.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/epcot.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/man-in-alley.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/polaroids.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/butterfly.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/mantis.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/protest.jpg filter=lfs diff=lfs merge=lfs -text
+static/photos/roses.jpg filter=lfs diff=lfs merge=lfs -text
