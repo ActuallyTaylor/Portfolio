@@ -28,8 +28,8 @@
     </p>
     <ul>
         <li>
-            <a href="mailto:taylor.lineman@gmail.com"
-                >Email: taylor.lineman@gmail.com</a
+            <a href="mailto:website@actuallytaylor.com"
+                >Email: website@actuallytaylor.com</a
             >
         </li>
         <li>
