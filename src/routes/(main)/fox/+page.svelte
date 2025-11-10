@@ -1,4 +1,6 @@
 <script>
+    import { onMount } from 'svelte';
+    
     var imageURL = ""
 
     async function newFox() {
@@ -13,7 +15,10 @@
         imageURL = result['image']
     }
 
-    newFox()
+
+	onMount(() => {
+        newFox()
+    });
 </script>
 
 <h1>Fox 🦊</h1>
