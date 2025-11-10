@@ -32,7 +32,7 @@ I sat on this issue while running errands for the next hour or so. Eventually, I
 
 ## Second Iteration: Cereal
 ### Writing Cereal
-*Cereal* came to life fairly quickly; it took less than two hours to implement [ORSSerialPort](https://github.com/armadsen/ORSSerialPort). There were no real hitches until I had to implement proper exit behavior. Capturing 1st the SIGINT sent by hitting `ctrl-c` was straightforward, but actually quitting the program proved to be difficult.
+*Cereal* came to life fairly quickly; it took less than two hours to implement [ORSSerialPort](https://github.com/armadsen/ORSSerialPort). There were no real hitches until I had to implement proper exit behavior. Capturing the SIGINT sent by hitting `ctrl-c` was straightforward, but actually quitting the program proved to be difficult.
 
 Since I was using [Swift Argument Parser's](https://github.com/apple/swift-argument-parser) `ParsableCommand`, I had to exit using the functions they provide. Right off the bat, I had trouble calling exit. It turns out that I could not rely on the default `exit()` function; rather, I had to run `ParsableCommand.exit(withError:)`. This really tripped me up; it took me a while to wrap my head around how to properly call the exit function and get the exit codes I wanted.
 
