@@ -3,13 +3,9 @@
     import VideoSection from "$lib/components/PageSections/VideoSection.svelte"
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
 
-    import { works } from "$lib/data"
     import { Project } from "$lib/models/Project"
 
-    const id = "tia"
-    export let project: Project = works.find((obj: Project) => {
-        return obj.id == id
-    }) ?? new Project("undefined", "undefined", "undefined", "undefined")
+    let project: Project = $props();
 </script>
 
 <svelte:head>
