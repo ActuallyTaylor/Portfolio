@@ -1,7 +1,7 @@
 <script lang="ts">
-    export let data;
-    export const blogs = data.blogs;
-    export const wonderfulWeb = data.wonderfulWeb;
+    let props = $props();
+    const blogs = props.data.blogs;
+    const wonderfulWeb = props.data.wonderfulWeb;
 </script>
 
 <svelte:head>
