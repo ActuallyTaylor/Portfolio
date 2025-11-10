@@ -18,7 +18,5 @@ export async function load(event: RequestEvent) {
         throw error(400, "Blog not found")
     }
 
-    return {
-        blog: blog
-    }
+    return blog;
 }

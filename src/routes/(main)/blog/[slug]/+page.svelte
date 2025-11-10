@@ -3,10 +3,13 @@
     import Header from "$lib/components/Header.svelte"
     import SvelteMarkdown, { type Renderers } from 'svelte-markdown'
     import ListItem from '$lib/components/MarkdownRenderers/ListItem.svelte'
+    import type { BlogEntry } from '$lib/models/BlogEntry.js';
 
-    export let data
-    let blog = data.blog
+    let data = $props();
+    let blog: BlogEntry = data.data;
+    
     const source = blog.content
+
     const renderers: Renderers = {
         "listitem": ListItem
     }
@@ -29,9 +32,9 @@
     <link rel="stylesheet" href="/assets/css/blog.css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 
-    { #if blog.series == "wonderfulWeb" }
-    <link rel="icon" href="/wwwfavicon.png" />
-    { /if }
+    {#if blog.series == "wonderWeb"}
+        <link rel="icon" href="/wwwfavicon.png" />
+    {/if}
 
     <script
     src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
@@ -43,15 +46,15 @@
     <meta property="og:url" content="https://actuallytaylor.com/blog/{blog.slug}">
     <meta property="og:description" content={blog.description}>
     <meta property="og:type" content="article">
-    { #if blog.series == "wonderfulWeb" }
+    {#if blog.series == "wonderfulWeb" }
     <meta property="og:image" content="https://actuallytaylor.com/wonderfulopengraph.png">
     <meta property="og:image:width" content="1820.44">
     <meta property="og:image:height" content="1024">
-    { :else }
+    {:else }
     <meta property="og:image" content="https://actuallytaylor.com/opengraph.png">
     <meta property="og:image:width" content="1280">
     <meta property="og:image:height" content="720">
-    { /if }
+    {/if }
     <!-- Open Graph End -->
 </svelte:head>
 
