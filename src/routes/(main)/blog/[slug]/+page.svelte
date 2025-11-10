@@ -5,8 +5,8 @@
     import ListItem from '$lib/components/MarkdownRenderers/ListItem.svelte'
     import type { BlogEntry } from '$lib/models/BlogEntry.js';
 
-    let data = $props();
-    let blog: BlogEntry = data.data;
+    let props = $props();
+    let blog: BlogEntry = props.data;
     
     const source = blog.content
 
