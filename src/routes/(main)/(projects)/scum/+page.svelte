@@ -2,13 +2,9 @@
     import LeftAlignedDescriptionSection from "$lib/components/PageSections/LeftAlignedDescriptionSection.svelte"
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
 
-    import { works } from "$lib/data"
     import { Project } from "$lib/models/Project"
 
-    const id = "scum"
-    export let project: Project = works.find((obj: Project) => {
-        return obj.id == id
-    }) ?? new Project("undefined", "undefined", "undefined", "undefined")
+    let project: Project = $props();
 </script>
 <svelte:head>
   <title>{project.name} - Project</title>

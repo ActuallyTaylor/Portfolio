@@ -15,7 +15,6 @@
         imageURL = result['image']
     }
 
-
 	onMount(() => {
         newFox()
     });

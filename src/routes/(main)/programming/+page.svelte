@@ -1,25 +1,17 @@
 <script lang="ts">
-    import { works, openSource } from "$lib/data";
+    import type { PageProps } from './$types';
 
-    export let currentProjects = works.filter((project) => {
-        return project.category == "current";
-    });
+	let { data }: PageProps = $props();
+    
+    // Deconstruct data from page laod.
+    let {
+        currentProjects,
+        currentTeamProjects,
+        pastProjects,
+        currentOpenSource,
+        pastOpenSource
+    }  = data;
 
-    export let currentTeamProjects = works.filter((project) => {
-        return project.category == "currentTeam";
-    });
-
-    export let pastProjects = works.filter((project) => {
-        return project.category == "past";
-    });
-
-    export let currentOpenSource = openSource.filter((project) => {
-        return project.category == "current";
-    });
-
-    export let pastOpenSource = openSource.filter((project) => {
-        return project.category == "past";
-    });
 </script>
 
 <h1>👾 Programming</h1>
@@ -30,15 +22,15 @@
     firmware and hardware!
 </p>
 <section>
-    <h2>What I am working on now</h2>
+    <h2>What I'm working on now.</h2>
     <p>
         These projects are what I currently spend most of my time on. Most of
         the proejcts are Apple Platform based projects, many being iOS Apps or
         Swift Packages.
     </p>
     <h3>Projects</h3>
-    {#if (currentProjects = [])}
-        I am not working on anything at the moment... I will be soon so stay
+    {#if (!currentProjects || currentProjects.length === 0)}
+        I am not working on any public personal projects at the moment... I will be soon so stay
         tuned!
     {/if}
     <ul class="alwaysUnderlinedLink">
@@ -76,7 +68,7 @@
 </section>
 
 <section>
-    <h2>What I have worked on in the past</h2>
+    <h2>What I've worked on in the past.</h2>
     <h3>Projects</h3>
     <ul class="alwaysUnderlinedLink">
         {#each pastProjects as project}
