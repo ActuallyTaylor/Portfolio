@@ -37,7 +37,7 @@
     <div class="navigation">
         <a href="/about">About</a>
         <h4>●</h4>
-        <a href="/blog/rss" target="_blank">RSS</a>
+        <a href="/blog/rss.xml" target="_blank">RSS</a>
         <h4>●</h4>
         <a href="/blog">Writing</a>
         <h4>●</h4>
