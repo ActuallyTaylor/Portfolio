@@ -11,7 +11,7 @@
 }
 
 .image {
-    border-radius: 20px;
+    border-radius: 7px;
     width: 40%;
 }
 .descriptionStack { 

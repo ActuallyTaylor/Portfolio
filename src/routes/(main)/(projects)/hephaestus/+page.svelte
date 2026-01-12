@@ -6,7 +6,7 @@
 
     import { Project } from "$lib/models/Project"
 
-    let project: Project = $props();
+    let { data: project } = $props();
 </script>
 <svelte:head>
   <title>{project.name} - Project</title>
@@ -31,7 +31,7 @@
             If you want to view the progress of the Hephaestus game engine, you can view it below on GitHub.
         </span>
         <span slot="extras">
-            <a href="https://github.com/ActuallyZach/Hephaestus" target="_blank">
+            <a href="https://github.com/ActuallyTaylor/Hephaestus" target="_blank">
                 <img alt="Hephaestus Github" srcset="/assets/badges/GithubBadge.png 1x, /assets/badges/GithubBadge@2x.png 2x" class="appstoreButton" />
             </a>
         </span>

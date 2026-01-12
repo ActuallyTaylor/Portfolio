@@ -7,7 +7,7 @@
     import { works } from "$lib/data";
     import { Project } from "$lib/models/Project";
 
-    let project: Project = $props();
+    let { data: project } = $props();
 </script>
 
 <svelte:head>
