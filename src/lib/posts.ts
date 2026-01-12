@@ -56,7 +56,7 @@ export function createRSSFeed(): string {
         })
         .ele('channel')
         .ele('title').txt(title).up()
-        .ele('subtitle').txt("Experience the web with me!").up()
+        .ele('description').txt("Taylor's ramblings and development updates.").up()
         .ele('link').txt(siteURL + '/blog/rss').up()
         .ele('atom:link', {href: siteURL + '/blog/rss', rel: 'self', type: 'application/rss+xml'}).up();
 
