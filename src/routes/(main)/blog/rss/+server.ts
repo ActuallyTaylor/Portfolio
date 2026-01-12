@@ -8,7 +8,7 @@ export const GET = async () => {
 
     let response = new Response(body)
     response.headers.set('Cache-Control', `max-age=0, s-max-age=${600}`)
-    response.headers.set('Content-Type', `application/xml`)
+    response.headers.set('Content-Type', `application/atom+xml`)
 
     return response
 }
