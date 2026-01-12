@@ -74,6 +74,7 @@
 
     .blogEntry h5 {
         color: var(--subtext2);
+        min-width: 6em;
         margin-right: 20px;
         margin-bottom: 10px;
         margin-top: 12px;
