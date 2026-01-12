@@ -3,7 +3,7 @@
 
 	let { data }: PageProps = $props();
     
-    // Deconstruct data from page laod.
+    // Deconstruct data from page load.
     let {
         currentProjects,
         currentTeamProjects,
