@@ -1,5 +1,12 @@
 [
   {
+    "name": "Tinytaire",
+    "description": ", a small Solitaire game for the Playdate written in 100% Embedded Swift.",
+    "id": "tinytaire",
+    "category": "current",
+    "url": "/tinytaire"
+  },
+  {
     "name": "Impel",
     "description": ", was a promptless AI assistant. I created it during my time at Impel Intelligence!",
     "id": "impel",
