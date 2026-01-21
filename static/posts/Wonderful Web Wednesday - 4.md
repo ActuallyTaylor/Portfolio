@@ -1,7 +1,7 @@
 ---
 title: Wonderful Web Wednesday - 4
 slug: wonderfulWebWednesday4
-description: Lua and a hotel history
+description: Lua and a hotel mystery
 author: Taylor Lineman
 date: 2023-10-04
 hex: f48d55
