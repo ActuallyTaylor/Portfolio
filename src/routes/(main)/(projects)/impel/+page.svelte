@@ -12,7 +12,7 @@
 
 <svelte:head>
     <title>{project.name} - Project</title>
-    <meta name="description" content="An AI Assitant for the future" />
+    <meta name="description" content="A proactive AI Assitant for the future" />
 
     <script
         src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"
@@ -21,7 +21,7 @@
 </svelte:head>
 
 <span>
-    <ProjectPageHeader name={project.name} subtitle="Impel, AI Assistant" />
+    <ProjectPageHeader name={project.name} subtitle="A proactive AI Assitant for the future" />
 
     <DescriptionSection title="What was Impel?">
         <span slot="description">
@@ -29,8 +29,8 @@
             with <a
                 class="alwaysColoredLinkForATag"
                 href="https://github.com/impel-intelligence"
-                >Impel Intelligence</a
-            >. The idea of Impel was to create an AI that could run completely
+                >Impel Intelligence</a>.
+            The idea of Impel was to create an AI that could run completely
             on-device and interprete what you were doing in real-time. This
             proccessing was done through a combination of a text-classifciation
             model that I trained and some good old custom detection code.
@@ -51,12 +51,14 @@
         </span>
     </VideoSection>
 
-    <VideoSection title={"Meetings Feature"} localPath={"videos/Meeting.mp4"}>
+    <VideoSection
+        title={"Full Natural Language Search"}
+        localPath={"videos/Search.mp4"}
+    >
         <span slot="description">
-            Impel was able to detect when you were in a meeting and would
-            automatically record and transcribe meetings. This gave you an
-            automatic note taker, no more worrying about taking notes or
-            starting a recording.
+            Impel supported full natural language search for every piece of content it ingested. If there is a concept you generally knew, adding some keywords or vagually explaining it would be enough for Impel to find the content you wanted.
+            <br>
+            This was implemented using a custom <a class="alwaysColoredLinkForATag" href="https://github.com/impel-intelligence/MagnitudeDB">Vector Database</a> backed by <a class="alwaysColoredLinkForATag" href="https://github.com/impel-intelligence/SwiftFaiss">Faiss</a> along with some clever content tagging and chunking.
         </span>
     </VideoSection>
 
@@ -69,17 +71,19 @@
         </span>
     </VideoSection>
 
-    <!--
-        <span slot="extras">
-            <a
-                href="https://apps.apple.com/us/app/jellycuts/id1522625245"
-                target="_blank"
-            >
-                <img
-                    alt="iOS AppStore Badge"
-                    srcset="/assets/badges/appBadge.png 1x, /assets/badges/appBadge@2x.png 2x"
-                    class="appstoreButton"
-                />
-            </a>
-        </span> -->
+    <VideoSection title={"Record Meetings"} localPath={"videos/Meeting.mp4"}>
+        <span slot="description">
+            Impel was able to detect when you were in a meeting and would
+            automatically record and transcribe meetings. This gave you an
+            automatic note taker, no more worrying about taking notes or
+            starting a recording.
+        </span>
+    </VideoSection>
+
+    <VideoSection title={"Connect to everything"} localPath={"videos/Connected.mp4"}>
+        <span slot="description">
+            Since Impel's search was focused on finding exactly what you needed, it was able to search across a plethora of connected services. Any documents in Google Drive, Notion and more were available to Impel's vector datbaase. This allowed you to have on central serach for all of your knowledge.
+        </span>
+    </VideoSection>
+
 </span>
