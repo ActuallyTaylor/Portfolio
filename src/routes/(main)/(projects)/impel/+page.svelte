@@ -25,7 +25,7 @@
 
     <DescriptionSection title="What was Impel?">
         <span slot="description">
-            Impel was an AI assitant that I worked on for a couple of months
+            Impel was an AI assitant that I worked on for a few months
             with <a
                 class="alwaysColoredLinkForATag"
                 href="https://github.com/impel-intelligence"
