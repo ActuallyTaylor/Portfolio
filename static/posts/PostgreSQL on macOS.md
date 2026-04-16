@@ -1,13 +1,13 @@
 ---
 title: Properly installing PostgreSQL on macOS 
 slug: macOSPostgres
-description: A quick tutorial on how to install Postgres and expose the commnad line tools on macOS.
+description: An opinionated tutorial on how to install Postgres and expose the commnad line tools on macOS.
 author: Taylor Lineman
 date: 2026-04-15T00:00:00.000Z
 series: misc
 ---
 
-There are a lot of ways to *"properly"* install PostgreSQL, the fastest and by far easiest is to just use the [Postgres App](https://postgresapp.com/). I prefer to install it using brew:
+There are a lot of ways to *properly* install PostgreSQL, the fastest and by far easiest is to just use the [Postgres App](https://postgresapp.com/). I prefer to install it using brew:
 
 ```zsh
 brew install --cask postgres-app
