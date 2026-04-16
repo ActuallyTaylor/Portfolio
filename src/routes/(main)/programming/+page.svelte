@@ -10,7 +10,7 @@
         pastProjects,
         currentOpenSource,
         pastOpenSource
-    }  = data;
+    }  = $derived(data);
 
 </script>
 
