@@ -1,7 +1,5 @@
 <script lang="ts">
     let props = $props();
-    const blogs = props.data.blogs;
-    const wonderfulWeb = props.data.wonderfulWeb;
 </script>
 
 <svelte:head>
@@ -26,7 +24,7 @@
 
 <section>
     <h1>All Posts</h1>
-    {#each blogs as blog}
+    {#each props.data.blogs as blog}
         <a href="/blog/{blog.slug}">
             <div class="blogEntry">
                 <h5>
@@ -44,7 +42,7 @@
 
 <section>
     <h1>Wonderful Web Wednesday</h1>
-    {#each wonderfulWeb as blog}
+    {#each props.data.wonderfulWeb as blog}
         <a href="/blog/{blog.slug}">
             <div class="blogEntry">
                 <h5>

@@ -1,18 +1,12 @@
 <script lang="ts">
     import {onMount} from 'svelte'
-    import Header from "$lib/components/Header.svelte"
-    import SvelteMarkdown, {type Renderers} from 'svelte-markdown'
-    import ListItem from '$lib/components/MarkdownRenderers/ListItem.svelte'
+    import SvelteMarkdown from '@humanspeak/svelte-markdown'
     import type {BlogEntry} from '$lib/models/BlogEntry.js';
 
     let props = $props();
     let blog: BlogEntry = props.data;
 
     const source = blog.content
-
-    const renderers: Renderers = {
-        "listitem": ListItem
-    }
 
     onMount(() => {
         let hljsScript = document.createElement('script')
@@ -106,6 +100,6 @@
 
 <section>
     <div class="alwaysUnderlinedLink">
-        <SvelteMarkdown {source} renderers={renderers}/>
+        <SvelteMarkdown {source} />
     </div>
 </section>

@@ -2,8 +2,6 @@
     import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
 
-    import { Project } from "$lib/models/Project"
-
     let { data: project } = $props();
 </script>
 <svelte:head>
