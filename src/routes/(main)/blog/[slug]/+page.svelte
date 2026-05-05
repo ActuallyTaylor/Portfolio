@@ -9,11 +9,11 @@
 
     // Create an open-graph entry for this blog post.
     let openGraph: OpenGraph =  $derived({
-        image: `${page.url.origin}/opengraph/blog/${data.slug}.png`,
+        image: `https://actuallytaylor.com/opengraph/blog/${data.slug}.png`,
         imageAlt: "",
         title: data.title,
         contentType: "article",
-        url: page.url.toString(),
+        url: `https://actuallytaylor.com/blog/${data.slug}`,
         description: data.description,
         imageWidth: 1200,
         imageHeight: 630
