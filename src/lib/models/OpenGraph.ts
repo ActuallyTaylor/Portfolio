@@ -3,6 +3,8 @@ export interface OpenGraph {
     imageAlt: string
     title: string
     description: string
+    url: string
+    contentType: string
 
     imageWidth: number
     imageHeight: number

@@ -1,6 +1,7 @@
 <script lang="ts">
     import {onMount} from 'svelte'
     import SvelteMarkdown from '@humanspeak/svelte-markdown'
+    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
 
     let { data } = $props()
 
@@ -32,20 +33,19 @@
     ></script>
 
     <!-- Open Graph Begin -->
-    <meta property="og:title" content={data.blog.title}>
-    <meta property="og:url" content="https://actuallytaylor.com/blog/{data.blog.slug}">
-    <meta property="og:description" content="{data.blog.description}">
-    <meta property="og:type" content="article">
+
     {#if data.blog.series === "wonderfulWeb" }
+        <meta property="og:title" content={data.blog.title}>
+        <meta property="og:url" content="https://actuallytaylor.com/blog/{data.blog.slug}">
+        <meta property="og:description" content="{data.blog.description}">
+        <meta property="og:type" content="article">
+
         <meta property="og:image" content="https://actuallytaylor.com/wonderfulopengraph.png">
         <meta property="og:image:width" content="1820.44">
         <meta property="og:image:height" content="1024">
         <meta property="og:image:alt" content="Dictionary Entry: Wonderful Web Wednesday, (Noun), Finding beauty in the web every Wednesday.">
     {:else }
-        <meta property="og:image" content="{data.openGraph.image}">
-        <meta property="og:image:width" content="{data.openGraph.imageWidth.toString()}">
-        <meta property="og:image:height" content="{data.openGraph.imageHeight.toString()}">
-        <meta property="og:image:alt" content="{data.openGraph.imageAlt}">
+        <OpenGraphMeta openGraph={data.openGraph}/>
     {/if  }
     <!-- Open Graph End -->
 </svelte:head>

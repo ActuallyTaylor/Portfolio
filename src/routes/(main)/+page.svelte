@@ -1,10 +1,15 @@
 <script lang="ts">
+    import Header from "$lib/components/Header.svelte";
+    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
+
     console.log("❤️ Welcome traveler! ❤️");
 </script>
 
 <svelte:head>
     <title>Taylor Lineman</title>
     <meta name="description" content="Taylor Lineman's Personal Website" />
+
+    <OpenGraphMeta title="Taylor Lineman" description="Taylor Lineman's Personal Website"/>
 
     <script
         src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"

@@ -1,3 +1,11 @@
+<script lang="ts">
+    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
+</script>
+
+<svelte:head>
+    <OpenGraphMeta title="Taylor's Gallery" description="A gallery of photos." />
+</svelte:head>
+
 <section class="alwaysUnderlinedLink">
     <h1>📸 Gallery</h1>
     <p>

@@ -1,11 +1,14 @@
 <script lang="ts">
+    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
+
     let props = $props();
 
 </script>
 
 <svelte:head>
     <title>Taylor Lineman</title>
-    <meta name="description" content="Taylor Lineman's Personal Website" />
+    <meta name="description" content="Taylor Lineman's Blog" />
+    <OpenGraphMeta title="Taylor's Blog" description="Taylor Lineman's Blog!"/>
 
     <script
         src="https://cdn.telemetrydeck.com/websdk/telemetrydeck.min.js"

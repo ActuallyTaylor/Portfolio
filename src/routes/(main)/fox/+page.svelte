@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
     
     var imageURL = ""
 
@@ -19,6 +20,10 @@
         newFox()
     });
 </script>
+
+<svelte:head>
+    <OpenGraphMeta title="Fox" description="Random images of foxes." />
+</svelte:head>
 
 <h1>Fox 🦊</h1>
 <p>The result of a 15 minute hackathon in my SWEN-440 class. We had to use an un-authenticated API from the <a href="https://github.com/public-api-lists/public-api-lists">public-api-lists</a> GitHub page.</p>
