@@ -1,6 +1,6 @@
 import {existsSync, mkdirSync, writeFileSync} from "node:fs";
 import {CircleColor, gradientForCircleColor, Memoji} from "$lib/memoji";
-
+import type { CanvasRenderingContext2D } from 'canvas';
 import {createCanvas, loadImage} from 'canvas';
 
 // https://stackoverflow.com/a/16599668/14886210
