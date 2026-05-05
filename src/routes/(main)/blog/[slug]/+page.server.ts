@@ -1,5 +1,4 @@
 import type {BlogEntry} from '$lib/models/BlogEntry'
-import type {BlogProps} from '$lib/models/BlogProps';
 import {readPosts} from '$lib/posts'
 import {error, type RequestEvent} from '@sveltejs/kit'
 import type { OpenGraph } from "$lib/models/OpenGraph";
@@ -7,7 +6,7 @@ import type { OpenGraph } from "$lib/models/OpenGraph";
 // We need to prerender here because it is using filesystem operations that only work on Netlify if they are pre-rendered as Netlify does not give you a server to run your SvelteKit site on.
 export const prerender = true
 
-export async function load(event: RequestEvent): Promise<BlogProps> {
+export async function load(event: RequestEvent): Promise<BlogEntry> {
     if (typeof event.params.slug !== 'string') {
         throw error(400, "Blog not found")
     }
@@ -21,16 +20,5 @@ export async function load(event: RequestEvent): Promise<BlogProps> {
         throw error(400, "Blog not found")
     }
 
-    let openGraph: OpenGraph = {
-        image: `${event.url.origin}/opengraph/blog/${blog.slug}.png`,
-        imageAlt: "",
-        title: blog.title,
-        contentType: "article",
-        url: event.url.toString(),
-        description: blog.description,
-        imageWidth: 1200,
-        imageHeight: 630
-    }
-
-    return {blog, openGraph};
+    return blog;
 }
