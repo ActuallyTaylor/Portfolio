@@ -5,7 +5,7 @@ description: An opinionated tutorial on how to install Postgres and expose the c
 author: Taylor Lineman
 date: 2026-04-15T00:00:00.000Z
 series: misc
-memoji: smile
+memoji: gossip
 meomojiBackground: dusky_purple
 ---
 

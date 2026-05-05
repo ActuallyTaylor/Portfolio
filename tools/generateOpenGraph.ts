@@ -106,7 +106,7 @@ if (!existsSync('./static/opengraph')) {
 }
 
 for (const blog of blogPosts) {
-    const imageBuffer = await createMemoji(Memoji.gossip, blog.memojiBackground, blog.title, blog.description);
+    const imageBuffer = await createMemoji(blog.memoji, blog.memojiBackground, blog.title, blog.description);
 
     writeFileSync(`./static/opengraph/blog/${blog.slug}.png`, imageBuffer)
     console.log(`Created opengraph image for ${blog.title}`)
