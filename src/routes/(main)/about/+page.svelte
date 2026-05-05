@@ -1,3 +1,11 @@
+<script>
+import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
+</script>
+
+<svelte:head>
+    <OpenGraphMeta title="Taylor Lineman - About" description="About Taylor Lineman!"/>
+</svelte:head>
+
 <section class="alwaysUnderlinedLink">
     <h2>👋 Hey!</h2>
     <p>

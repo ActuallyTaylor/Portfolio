@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { PageProps } from './$types';
+    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
 
 	let { data }: PageProps = $props();
     
@@ -13,6 +14,10 @@
     }  = $derived(data);
 
 </script>
+
+<svelte:head>
+    <OpenGraphMeta title="Taylor Lineman - Programming" description="Taylor Lineman's programming projects." />
+</svelte:head>
 
 <h1>👾 Programming</h1>
 <p>
