@@ -1,5 +1,4 @@
 import { readdirSync, readFileSync } from "fs";
-import path from "path";
 import type { Photo } from "./models/Photo";
 
 export function readPhotos(): Photo[] {

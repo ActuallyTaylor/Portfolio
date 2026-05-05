@@ -4,9 +4,10 @@ slug: wonderfulWebWednesday2
 description: Encryption that doesn't really exist and data that could be lost forever
 author: Taylor Lineman
 date: 2023-09-06T09:09:61.961-04:00
-hex: f48d55
 readingTime: 3 min read
 series: wonderfulWeb
+memoji: smile
+meomojiBackground: dusky_purple
 ---
 ## [Testing Converso](https://web.archive.org/web/20230904235656/https%3A%2F%2Fcrnkovic.dev%2Ftesting-converso%2F) - Crnković
 

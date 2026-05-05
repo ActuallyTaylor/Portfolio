@@ -4,9 +4,10 @@ slug: cereal
 description: Writing a serial console for macOS.
 author: Taylor Lineman
 date: 2025-03-27T00:00:00.000Z
-hex: ea7ca4
 readingTime: 2 min read
 series: misc
+memoji: smile
+meomojiBackground: dusky_purple
 ---
 ## Motivation
 [Cereal](https://github.com/ActuallyTaylor/cereal) is an idea that I have had for a couple of years now. The idea started while I was working on my first project at RIT EVT. We use UART to connect to all of our devices for debug and information printing. On macOS, this means that you use *[screen](https://www.gnu.org/software/screen/manual/screen.html)* to view the serial connection.
