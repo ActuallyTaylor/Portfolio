@@ -10,10 +10,10 @@ export function readPosts(): BlogEntry[] {
 
     let postsDirectory = "./static/posts/";
 
-    if (!existsSync(postsDirectory)) {
-        // When built, the posts are in the root directory, so if we couldn't find the static posts, detect them here.
-        postsDirectory = "build/posts/";
-    }
+    // if (!existsSync(postsDirectory)) {
+    //     // When built, the posts are in the root directory, so if we couldn't find the static posts, detect them here.
+    //     postsDirectory = "build/posts/";
+    // }
 
     readdirSync(postsDirectory).forEach((file) => {
         if (file.includes(".md")) {
