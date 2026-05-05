@@ -3,11 +3,19 @@ import {readdirSync, readFileSync} from "fs";
 import fm from "front-matter";
 import type {BlogEntry} from "./models/BlogEntry";
 import {CircleColor, Memoji} from "$lib/memoji";
+import {existsSync} from "node:fs";
 
 export function readPosts(): BlogEntry[] {
     let blogs: BlogEntry[] = [];
 
-    readdirSync("./static/posts/").forEach((file) => {
+    let postsDirectory = "./static/posts/";
+
+    if (!existsSync(postsDirectory)) {
+        // When built, the posts are in the root directory, so if we couldn't find the static posts, detect them here.
+        postsDirectory = "./posts";
+    }
+
+    readdirSync(postsDirectory).forEach((file) => {
         if (file.includes(".md")) {
             let readFile = readFileSync(`./static/posts/${file}`);
             let frontmatter = fm(readFile.toString());
