@@ -2,14 +2,13 @@
     import {onMount} from 'svelte'
     import SvelteMarkdown from '@humanspeak/svelte-markdown'
     import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
-	import { page } from '$app/state';
     import type {OpenGraph} from "$lib/models/OpenGraph";
 
     let { data } = $props()
 
-    // Create an open-graph entry for this blog post.
+    // Create an open-graph entry for this blog post. Normally, I would use page.url. However, these pages are pre-rendered and that URL will be garbage.
     let openGraph: OpenGraph =  $derived({
-        image: `https://actuallytaylor.com/opengraph/blog/${data.slug}.png`,
+        image: `https://actuallytaylor.com/blog/${data.slug}/og.png`,
         imageAlt: "",
         title: data.title,
         contentType: "article",
