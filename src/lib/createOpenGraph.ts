@@ -40,7 +40,7 @@ export async function createMemoji(memoji: Memoji, circleColor: CircleColor, tit
     ctx.save()
 
     const circlePositionX = width / 2;
-    const circlePositionY = height / 2.7;
+    const circlePositionY = height / 2.5;
     const circleRadius = 155;
 
     // Create the clipping circle so the avatars do not have their weird flat bottoms

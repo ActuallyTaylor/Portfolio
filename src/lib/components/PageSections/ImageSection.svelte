@@ -1,6 +1,4 @@
 <script lang="ts">
-    import Image from "$lib/components/Image.svelte";
-
     export let title: string | undefined;
     export let imagePath: string;
 </script>
