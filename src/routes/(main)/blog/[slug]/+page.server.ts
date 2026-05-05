@@ -21,14 +21,14 @@ export async function load(event: RequestEvent): Promise<BlogProps> {
         throw error(400, "Blog not found")
     }
 
-    console.log(`${event.url.origin}/opengraph/blog/${blog.slug}.png`)
+    // console.log(`${event.url.origin}/opengraph/blog/${blog.slug}.png`)
     let openGraph: OpenGraph = {
         image: `${event.url.origin}/opengraph/blog/${blog.slug}.png`,
         imageAlt: "",
         title: blog.title,
         description: blog.description,
-        imageWidth: 1280,
-        imageHeight: 720
+        imageWidth: 1200,
+        imageHeight: 630
     }
 
     return {blog, openGraph};

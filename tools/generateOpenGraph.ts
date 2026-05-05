@@ -28,8 +28,8 @@ function getLines(ctx: CanvasRenderingContext2D, text: string, maxWidth: number)
 }
 
 export async function createMemoji(memoji: Memoji, circleColor: CircleColor, title: string, description: string, backgroundColor: string = "#2A2D3D"): Promise<Buffer> {
-    const width = 1280;
-    const height = 720;
+    const width = 1200;
+    const height = 630;
 
     const canvas = createCanvas(width, height);
     const ctx = canvas.getContext('2d')
@@ -43,7 +43,7 @@ export async function createMemoji(memoji: Memoji, circleColor: CircleColor, tit
 
     const circlePositionX = width / 2;
     const circlePositionY = height / 2.7;
-    const circleRadius = 178;
+    const circleRadius = 155;
 
     // Create the clipping circle so the avatars do not have their weird flat bottoms
     ctx.ellipse(circlePositionX, circlePositionY, circleRadius, circleRadius, 0, 0, 2 * Math.PI)
@@ -62,8 +62,8 @@ export async function createMemoji(memoji: Memoji, circleColor: CircleColor, tit
     ctx.fillStyle = memojiBackgroundGradient
     ctx.fill()
 
-    const memojiSize = 320
-    const memojiYOffset = 36
+    const memojiSize = 278.65
+    const memojiYOffset = 32
     const memojiX = circlePositionX - (memojiSize / 2)
     const memojiY = circlePositionY - circleRadius + memojiYOffset
 
@@ -77,19 +77,20 @@ export async function createMemoji(memoji: Memoji, circleColor: CircleColor, tit
     const titleY = height - (height / 4)
     const descriptionStartY = titleY + 50
     const descriptionLineOffsets = 40
+    const maxDescriptionWidth = width - 100
 
     ctx.fillStyle = "#FFFFFF"
-    ctx.font = "bold 40px Avenir Next"
+    ctx.font = "bold 38px Avenir Next"
     ctx.textAlign = "center"
     ctx.fillText(title, width / 2, titleY)
 
-    const descriptionLines = getLines(ctx, description, 1200)
+    const descriptionLines = getLines(ctx, description, maxDescriptionWidth)
     let previousHeight = descriptionStartY
     ctx.fillStyle = "#CFCFCF"
-    ctx.font = "32px Avenir Next"
+    ctx.font = "30px Avenir Next"
 
     for (const line of descriptionLines) {
-        ctx.fillText(line, width / 2, previousHeight, 1200)
+        ctx.fillText(line, width / 2, previousHeight, maxDescriptionWidth)
         previousHeight += descriptionLineOffsets
     }
 
@@ -105,7 +106,7 @@ if (!existsSync('./static/opengraph')) {
 }
 
 for (const blog of blogPosts) {
-    const imageBuffer = await createMemoji(blog.memoji, blog.memojiBackground, blog.title, blog.description);
+    const imageBuffer = await createMemoji(Memoji.gossip, blog.memojiBackground, blog.title, blog.description);
 
     writeFileSync(`./static/opengraph/blog/${blog.slug}.png`, imageBuffer)
     console.log(`Created opengraph image for ${blog.title}`)
