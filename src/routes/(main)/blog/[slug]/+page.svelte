@@ -1,12 +1,8 @@
 <script lang="ts">
     import {onMount} from 'svelte'
     import SvelteMarkdown from '@humanspeak/svelte-markdown'
-    import type {BlogEntry} from '$lib/models/BlogEntry.js';
 
-    let props = $props();
-    let blog: BlogEntry = props.data;
-
-    const source = blog.content
+    let { data } = $props()
 
     onMount(() => {
         let hljsScript = document.createElement('script')
@@ -20,13 +16,13 @@
 </script>
 
 <svelte:head>
-    <title>{blog.title}</title>
-    <meta name="description" content="{blog.description}">
+    <title>{data.blog.title}</title>
+    <meta name="description" content="{data.blog.description}">
 
     <link rel="stylesheet" href="/assets/css/blog.css"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
 
-    {#if blog.series == "wonderWeb"}
+    {#if data.blog.series == "wonderWeb"}
         <link rel="icon" href="/wwwfavicon.png"/>
     {/if}
 
@@ -36,18 +32,20 @@
     ></script>
 
     <!-- Open Graph Begin -->
-    <meta property="og:title" content={blog.title}>
-    <meta property="og:url" content="https://actuallytaylor.com/blog/{blog.slug}">
-    <meta property="og:description" content={blog.description}>
+    <meta property="og:title" content={data.blog.title}>
+    <meta property="og:url" content="https://actuallytaylor.com/blog/{data.blog.slug}">
+    <meta property="og:description" content="{data.blog.description}">
     <meta property="og:type" content="article">
-    {#if blog.series === "wonderfulWeb" }
+    {#if data.blog.series === "wonderfulWeb" }
         <meta property="og:image" content="https://actuallytaylor.com/wonderfulopengraph.png">
         <meta property="og:image:width" content="1820.44">
         <meta property="og:image:height" content="1024">
+        <meta property="og:image:alt" content="Dictionary Entry: Wonderful Web Wednesday, (Noun), Finding beauty in the web every Wednesday.">
     {:else }
-        <meta property="og:image" content="https://actuallytaylor.com/opengraph.png">
-        <meta property="og:image:width" content="1280">
-        <meta property="og:image:height" content="720">
+        <meta property="og:image" content="{data.openGraph.image}">
+        <meta property="og:image:width" content="{data.openGraph.imageWidth.toString()}">
+        <meta property="og:image:height" content="{data.openGraph.imageHeight.toString()}">
+        <meta property="og:image:alt" content="{data.openGraph.imageAlt}">
     {/if  }
     <!-- Open Graph End -->
 </svelte:head>
@@ -86,20 +84,20 @@
 </style>
 
 <section class="header">
-    <h1 class="title">{blog.title}</h1>
-    <h2 class="description">{blog.description}</h2>
-    <h3 class="dateAndReadingTime">{blog.date.toLocaleDateString("lookup", {
+    <h1 class="title">{data.blog.title}</h1>
+    <h2 class="description">{data.blog.description}</h2>
+    <h3 class="dateAndReadingTime">{data.blog.date.toLocaleDateString("lookup", {
         weekday: "long",
         year: "numeric",
         day: "numeric",
         month: "long"
-    })}  •  {blog.readingTime}</h3>
+    })}  •  {data.blog.readingTime}</h3>
 </section>
 
 <hr/>
 
 <section>
     <div class="alwaysUnderlinedLink">
-        <SvelteMarkdown {source} />
+        <SvelteMarkdown source={data.blog.content} />
     </div>
 </section>

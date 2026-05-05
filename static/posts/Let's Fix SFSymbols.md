@@ -4,9 +4,10 @@ slug: fixSFSymbols
 description: Using SFSymbols in code can be annoying, let's fix that.
 author: Taylor Lineman
 date: 2023-06-20T22:06:72.672-08:00
-hex: f48d55
 readingTime: 4 min read
 series: misc
+memoji: smile
+meomojiBackground: dusky_purple
 ---
 During Apple Platform development, you are going to use [SFSymbols](https://developer.apple.com/sf-symbols/). They are an amazing tool that provides you with so many beautiful icons. However, using them can be a little annoying...
 

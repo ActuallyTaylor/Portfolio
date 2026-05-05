@@ -4,9 +4,10 @@ slug: wonderfulWebWednesday4
 description: Lua and a hotel mystery
 author: Taylor Lineman
 date: 2023-10-04
-hex: f48d55
 readingTime: 3 min read
 series: wonderfulWeb
+memoji: smile
+meomojiBackground: dusky_purple
 ---
 ## [Lua: The Little Language That Could](https://matt.blwt.io/post/lua-the-little-language-that-could/) - Matt Blewit
 

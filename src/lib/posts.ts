@@ -2,6 +2,7 @@ import {create} from 'xmlbuilder2';
 import {readdirSync, readFileSync} from "fs";
 import fm from "front-matter";
 import type {BlogEntry} from "./models/BlogEntry";
+import {CircleColor, Memoji} from "$lib/memoji";
 
 export function readPosts(): BlogEntry[] {
     let blogs: BlogEntry[] = [];
@@ -13,13 +14,26 @@ export function readPosts(): BlogEntry[] {
             let attributes = frontmatter.attributes;
 
             //@ts-ignore
-            let {title, slug, description, author, readingTime, series} = attributes;
+            const {title, slug, description, author, readingTime, series } = attributes;
+            // @ts-ignore
+            const rawMemoji: string = attributes.memoji;
+            // @ts-ignore
+            const rawMemojiBackground: string = attributes.memojiBackground;
+
+            let memoji: Memoji = Memoji[rawMemoji as keyof typeof Memoji]
+
+            if (memoji == undefined) {
+                memoji = Memoji.smile
+            }
+
+            let memojiBackground: CircleColor = CircleColor[rawMemojiBackground as keyof typeof CircleColor]
+
+            if (memojiBackground == undefined) {
+                memojiBackground = CircleColor.dusky_purple
+            }
 
             //@ts-ignore
             let date = new Date(attributes.date);
-
-            //@ts-ignore
-            let hex = `#${attributes.hex}`;
 
             let content = frontmatter.body;
 
@@ -31,8 +45,9 @@ export function readPosts(): BlogEntry[] {
                 description,
                 author,
                 date,
-                hex,
                 content,
+                memoji,
+                memojiBackground
             });
         }
     });
