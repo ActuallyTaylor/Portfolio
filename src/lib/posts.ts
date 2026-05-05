@@ -12,7 +12,7 @@ export function readPosts(): BlogEntry[] {
 
     if (!existsSync(postsDirectory)) {
         // When built, the posts are in the root directory, so if we couldn't find the static posts, detect them here.
-        postsDirectory = "./posts";
+        postsDirectory = "build/posts/";
     }
 
     readdirSync(postsDirectory).forEach((file) => {
