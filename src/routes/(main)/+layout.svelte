@@ -129,6 +129,12 @@
           text-decoration: none;
       }
 
+      /* Links in a p tag should always have an underline */
+      p a {
+          color: var(--text);
+          text-decoration: underline;
+      }
+
       a:hover {
           color: var(--link);
           text-decoration: underline;
