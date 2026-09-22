@@ -2,10 +2,8 @@
     import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
     import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
 
-    import { Project } from "$lib/models/Project"
     import RightAlignedDescriptionSection from "$lib/components/PageSections/RightAlignedDescriptionSection.svelte";
     import LeftAlignedDescriptionSection from "$lib/components/PageSections/LeftAlignedDescriptionSection.svelte";
-    import ImageSection from "$lib/components/PageSections/ImageSection.svelte";
 
     let { data: project } = $props();
 </script>
@@ -21,13 +19,29 @@
 </svelte:head>
 
 <span>
-    <ProjectPageHeader name={project.name} subtitle="Tiny solitaire for a cute console."/>
+    <ProjectPageHeader name={project.name} subtitle="A work in progress solitaire game for a tiny console."/>
 
     <DescriptionSection title={undefined}>
         <span slot="description">
             Tinytaire is a solitaire game written for the <a href="https://play.date/">Playdate console</a>.
             I decided to write Tinytaire after wanting a fun project to test out Embedded Swift. I am a big fan of
             solitaire, and used to play it with my Popi (grandfather) all the time.
+        </span>
+    </DescriptionSection>
+
+    <DescriptionSection title={"Open Source"}>
+        <span slot="description">
+            The solitaire engine that powers Tinytaire is currently the only open-source part of Tinytaire.
+            The engine was designed to be modular enough that it can be used by any client on any system.
+            As embedded swift continues to grow in usefulness, I thought a fun challenge would be to port
+            my solitaire engine to as many devices as possible. This is a long term goal of mine, and something
+            I will definitely post about.
+        </span>
+        <span slot="extras">
+            <a href="https://github.com/ActuallyTaylor/SolitaireCore" target="_blank">
+                <img alt="SolitaireCore on GitHub" srcset="/assets/badges/GithubBadge.png 1x, /assets/badges/GithubBadge@2x.png 2x" class="appstoreButton" />
+            </a>
+
         </span>
     </DescriptionSection>
 
