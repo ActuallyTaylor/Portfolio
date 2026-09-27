@@ -1,5 +1,12 @@
 [
   {
+      "name": "Minna",
+      "description": ", a Minna is a local-first search database and AI assistant for your documents.",
+      "id": "minna",
+      "category": "current",
+      "url": "https://tryminna.com/"
+  },
+  {
     "name": "Tinytaire",
     "description": ", a small Solitaire game for the Playdate written in 100% Embedded Swift.",
     "id": "tinytaire",

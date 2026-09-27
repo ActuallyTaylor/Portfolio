@@ -2,7 +2,6 @@
     import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
 
     let props = $props();
-
 </script>
 
 <svelte:head>
