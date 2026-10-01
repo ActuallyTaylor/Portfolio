@@ -2,6 +2,14 @@
     import Header from "$lib/components/Header.svelte"
 </script>
 
+<svelte:head>
+    <link rel="me" href="https://mastodon.social/@TaylorLineman">
+    <link rel="me atproto" href="https://bsky.app/profile/taylorlineman.bsky.social">
+    <link rel="me" href="https://github.com/ActuallyTaylor">
+    <link rel="me" href="https://mastodon.social/@TaylorLineman">
+    <link rel="me" href="https://twitter.com/TaylorLineman">
+</svelte:head>
+
 <style global>
       :root {
          /* Base Colors */

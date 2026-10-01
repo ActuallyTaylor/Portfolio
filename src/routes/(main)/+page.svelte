@@ -23,9 +23,8 @@
     <p>
         I am Taylor Lineman, programmer, photographer and a student! I am <i>ActuallyTaylor</i > on
         <a href="https://mastodon.social/@TaylorLineman">Mastodon</a>,
-        <a href="https://bsky.app/profile/taylorlineman.bsky.social">BlueSky</a
-        >,
-        <a href="https://github.com/ActuallyTaylor">GitHub</a>, and
+        <a href="https://bsky.app/profile/taylorlineman.bsky.social" rel="me atproto">BlueSky</a>,
+        <a href="https://github.com/ActuallyTaylor" rel="me">GitHub</a>, and
         <a href="https://twitter.com/TaylorLineman">Twitter</a>.
     </p>
     <p>
