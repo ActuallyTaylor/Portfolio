@@ -2,8 +2,8 @@ import {create} from 'xmlbuilder2';
 import {readdirSync, readFileSync} from "fs";
 import fm from "front-matter";
 import type {BlogEntry} from "./models/BlogEntry";
-import {CircleColor, Memoji} from "$lib/memoji";
-import {existsSync} from "node:fs";
+import { CircleColor, Memoji } from "$lib/memoji";
+import { marked } from 'marked';
 
 export function readPosts(): BlogEntry[] {
     let blogs: BlogEntry[] = [];
@@ -70,6 +70,7 @@ export function readPosts(): BlogEntry[] {
 export function createRSSFeed(): string {
     const title = "Taylor Lineman";
     const siteURL = "https://actuallytaylor.com";
+    const date = new Date().toUTCString()
 
     const root = create({version: '1.0'})
         .ele('rss', {
@@ -79,17 +80,24 @@ export function createRSSFeed(): string {
         })
         .ele('channel')
         .ele('title').txt(title).up()
+        .ele('webMaster').txt('website@actuallytaylor.com (Taylor Lineman)').up()
+        .ele('lastBuildDate').txt(date).up()
+        .ele('language').txt('en-US').up()
+        .ele('docs').txt('https://www.rssboard.org/rss-specification').up() // "For people who might stumble across an RSS file on a Web server 25 years from now and wonder what it is."
         .ele('description').txt("Taylor's ramblings and development updates.").up()
         .ele('link').txt(siteURL + '/blog/rss.xml').up()
         .ele('atom:link', {href: siteURL + '/blog/rss.xml', rel: 'self', type: 'application/atom+xml'}).up();
 
     readPosts().forEach((element) => {
+        const html = marked.parse(element.content);
+
         root.ele('item')
             .ele('title').txt(element.title).up()
             .ele('description').txt(element.description).up()
             .ele('pubDate').txt(element.date.toUTCString()).up()
             .ele('link').txt(siteURL + '/blog/' + element.slug).up()
-            .ele('guid', {isPermaLink: 'true'}).txt(siteURL + '/blog/' + element.slug).up()
+            .ele('guid', { isPermaLink: 'true' }).txt(siteURL + '/blog/' + element.slug).up()
+            .ele('content:encoded').dat(html).up();
     })
 
     return root.end({prettyPrint: true});

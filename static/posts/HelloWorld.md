@@ -7,7 +7,7 @@ date: 2022-04-23T00:00:00.000Z
 readingTime: 1 min read
 series: misc
 memoji: smile
-meomojiBackground: dusky_purple
+memojiBackground: dusky_purple
 ---
 ## Opening
 Hello everyone! This is my brand new website. A spent a lot of time working on both designing and developing this site. It is a brand new style, design and codebase.

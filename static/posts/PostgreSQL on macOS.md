@@ -6,7 +6,7 @@ author: Taylor Lineman
 date: 2026-04-15T00:00:00.000Z
 series: misc
 memoji: gossip
-meomojiBackground: dusky_purple
+memojiBackground: dusky_purple
 ---
 
 There are a lot of ways to *properly* install PostgreSQL, the fastest and by far easiest is to just use the [Postgres App](https://postgresapp.com/). I prefer to install it using brew:

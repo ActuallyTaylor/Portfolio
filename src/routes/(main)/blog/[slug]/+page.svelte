@@ -96,21 +96,23 @@
     }
 </style>
 
-<section class="header">
-    <h1 class="title">{data.title}</h1>
-    <h2 class="description">{data.description}</h2>
-    <h3 class="dateAndReadingTime">{data.date.toLocaleDateString("lookup", {
-        weekday: "long",
-        year: "numeric",
-        day: "numeric",
-        month: "long"
-    })}  •  {data.readingTime}</h3>
-</section>
+<main>
+    <header class="header">
+        <h1 class="title">{data.title}</h1>
+        <h2 class="description">{data.description}</h2>
+        <h3 class="dateAndReadingTime">{data.date.toLocaleDateString("lookup", {
+            weekday: "long",
+            year: "numeric",
+            day: "numeric",
+            month: "long"
+        })}  •  {data.readingTime}</h3>
+    </header>
 
-<hr/>
+    <hr/>
 
-<section>
-    <div class="alwaysUnderlinedLink">
-        <SvelteMarkdown source={data.content} />
-    </div>
-</section>
+    <article>
+        <div class="alwaysUnderlinedLink">
+            <SvelteMarkdown source={data.content} />
+        </div>
+    </article>
+</main>

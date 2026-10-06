@@ -43,14 +43,14 @@ export class TaylorOS {
 
         let solarExplorer = new TayFS_File("Solar Explorer", "Solar Explorer is my 2022 submission to Apple's WWDC Swift Student Challenge", "solarexplorer.png", ApplicationDatabase.netsplorer, "./solarexplorer", TayFS_Datatype.url)
         myProjectsDirectory.addUnit(solarExplorer)
-        
+
         let tia = new TayFS_File("T.I.A", "T.I.A is my 2021 submission to Apple's WWDC Swift Student Challenge", "tia.png", ApplicationDatabase.netsplorer, "./tia", TayFS_Datatype.url)
         myProjectsDirectory.addUnit(tia)
 
         let dungoenOfEpsilon = new TayFS_File("Dungeon of Epsilon", "The Dungeon of Epsilon is my 2020 submission to Apple's WWDC Swift Student Challenge", "dungoenofepsilon.png", ApplicationDatabase.netsplorer, "./dungoenofepsilon", TayFS_Datatype.url)
         myProjectsDirectory.addUnit(dungoenOfEpsilon)
 
-        
+
         // // Photography
         // let photographyDirectory = new TayFS_Directory("Photography", "View all of my photo galleries and download any that you want!", "folder.png")
         // documentsDirectory.addUnit(photographyDirectory)
@@ -61,7 +61,7 @@ export class TaylorOS {
 
         // // Passes
         // let passesDirectory = new TayFS_Directory("Wallet Passes", "View and download my Apple World Wide Developer Conference passes!", "folder.png")
-        // documentsDirectory.addUnit(passesDirectory)        
+        // documentsDirectory.addUnit(passesDirectory)
 
         // MARK: Applications
         let applicationsDirectory = new TayFS_Directory("Applications", "The applications folder, containing all of the applications available to Taylor OS", "folder.png")
@@ -85,7 +85,6 @@ export class TaylorOS {
             return app.name == name
         })
 
-        console.log(index)
         if (index == -1) {
             return ApplicationDatabase.applications[0]
         }

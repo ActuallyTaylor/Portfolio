@@ -7,7 +7,7 @@ date: 2023-03-13T22:03:56.356-04:00
 readingTime: 13 min read
 series: misc
 memoji: smile
-meomojiBackground: dusky_purple
+memojiBackground: dusky_purple
 ---
 ![Doom.png](/assets/blogs/portingDoomP1/Doom.png)
 > It's not pretty but it is a fully ported version of Doom!

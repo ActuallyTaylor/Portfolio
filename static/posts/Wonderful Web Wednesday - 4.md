@@ -7,7 +7,7 @@ date: 2023-10-04
 readingTime: 3 min read
 series: wonderfulWeb
 memoji: smile
-meomojiBackground: dusky_purple
+memojiBackground: dusky_purple
 ---
 ## [Lua: The Little Language That Could](https://matt.blwt.io/post/lua-the-little-language-that-could/) - Matt Blewit
 

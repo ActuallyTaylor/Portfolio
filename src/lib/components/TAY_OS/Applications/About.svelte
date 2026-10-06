@@ -11,7 +11,6 @@
 
     export let reference: WindowReference
     export let os: TaylorOS
-    console.log(reference)
 
     function closeWindow(event: CustomEvent) {
         dispatch("closeWindow", {

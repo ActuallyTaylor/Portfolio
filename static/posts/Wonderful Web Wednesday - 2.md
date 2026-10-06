@@ -7,7 +7,7 @@ date: 2023-09-06T09:09:61.961-04:00
 readingTime: 3 min read
 series: wonderfulWeb
 memoji: smile
-meomojiBackground: dusky_purple
+memojiBackground: dusky_purple
 ---
 ## [Testing Converso](https://web.archive.org/web/20230904235656/https%3A%2F%2Fcrnkovic.dev%2Ftesting-converso%2F) - Crnković
 
