@@ -1,5 +1,5 @@
 <script lang="ts">
-    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
+    import OpenGraphMeta from "#lib/components/OpenGraphMeta.svelte";
 </script>
 
 <svelte:head>

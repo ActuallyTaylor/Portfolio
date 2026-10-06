@@ -1,7 +1,7 @@
 import { type RequestEvent, error } from '@sveltejs/kit'
 
-import { works } from "$lib/data"
-import { Project } from "$lib/models/Project"
+import { works } from "#lib/data.js"
+import { Project } from "#lib/models/Project.js"
 
 export async function load(event: RequestEvent) {
     const id = "jellycuts"

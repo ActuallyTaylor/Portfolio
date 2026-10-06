@@ -1,9 +1,9 @@
 <script lang="ts">
-    import WindowChrome from "$lib/components/TAY_OS/window/chrome/WindowChrome.svelte";
+    import WindowChrome from "#lib/components/TAY_OS/window/chrome/WindowChrome.svelte";
     import DraggableResize from "./DraggableResize.svelte";
-    import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
+    import type { WindowPosition } from "#lib/models/TAY_OS/WindowPosition.js";
     import { createEventDispatcher } from 'svelte';
-    import type { WindowReference } from "$lib/models/TAY_OS/WindowReference";
+    import type { WindowReference } from "#lib/models/TAY_OS/WindowReference.js";
     const dispatch = createEventDispatcher();
 
     export let reference: WindowReference

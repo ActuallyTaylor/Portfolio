@@ -1,8 +1,8 @@
-import type { WindowReference } from "$lib/models/TAY_OS/WindowReference"
-import type { Application } from "$lib/models/TAY_OS/Application"
+import type { WindowReference } from "#lib/models/TAY_OS/WindowReference.js"
+import type { Application } from "#lib/models/TAY_OS/Application.js"
 import { ApplicationDatabase } from "./ApplicationDatabase"
 import { TayFS, TayFS_Datatype, TayFS_Directory, TayFS_File, TayFS_Program } from "./FileSystem"
-import type { OSAlert } from "$lib/models/TAY_OS//OSAlert"
+import type { OSAlert } from "#lib/models/TAY_OS//OSAlert.js"
 
 export class TaylorOS {
     id: number = 0

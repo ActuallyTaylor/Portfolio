@@ -1,6 +1,6 @@
 <script lang="ts">
-    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
-    import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
+    import DescriptionSection from "#lib/components/PageSections/DescriptionSection.svelte"
+    import ProjectPageHeader from "#lib/components/ProjectPage/ProjectPageHeader.svelte"
 
     let { data: project } = $props();
 </script>

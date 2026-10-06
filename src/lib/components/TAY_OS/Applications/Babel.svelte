@@ -1,12 +1,12 @@
 <script lang="ts">
-    import type { WindowReference } from "$lib/models/TAY_OS/WindowReference"
-    import Window from "$lib/components/TAY_OS/window/Window.svelte"
-    import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte"
-    import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte"
-    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS"
-    import { TayFS_Filetype, TayFS_Directory, type TayFS_Unit } from "$lib/models/TAY_OS/FileSystem";
+    import type { WindowReference } from "#lib/models/TAY_OS/WindowReference.js"
+    import Window from "#lib/components/TAY_OS/window/Window.svelte"
+    import FileArea from "#lib/components/TAY_OS/files/FileArea.svelte"
+    import FileIcon from "#lib/components/TAY_OS/files/FileIcon.svelte"
+    import type { TaylorOS } from "#lib/models/TAY_OS/TaylorOS.js"
+    import { TayFS_Filetype, TayFS_Directory, type TayFS_Unit } from "#lib/models/TAY_OS/FileSystem.js";
     import { createEventDispatcher } from 'svelte'
-    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition"
+    import { WindowPosition } from "#lib/models/TAY_OS/WindowPosition.js"
 
     const dispatch = createEventDispatcher()
 

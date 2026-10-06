@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS";
-    import MenuBarIcon from "$lib/components/TAY_OS/menubar/MenuBarIcon.svelte";
-    import { MenuBarItem } from "$lib/models/TAY_OS/MenuBarItem";
+    import type { TaylorOS } from "#lib/models/TAY_OS/TaylorOS.js";
+    import MenuBarIcon from "#lib/components/TAY_OS/menubar/MenuBarIcon.svelte";
+    import { MenuBarItem } from "#lib/models/TAY_OS/MenuBarItem.js";
     import { createEventDispatcher } from "svelte";
     
     export let os: TaylorOS

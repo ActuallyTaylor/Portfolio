@@ -1,6 +1,6 @@
 <script lang="ts">
     import type { PageProps } from './$types';
-    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
+    import OpenGraphMeta from "#lib/components/OpenGraphMeta.svelte";
 
 	let { data }: PageProps = $props();
     

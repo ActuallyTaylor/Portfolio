@@ -1,4 +1,4 @@
-import { Application } from "$lib/models/TAY_OS/Application"
+import { Application } from "#lib/models/TAY_OS/Application.js"
 
 export class ApplicationDatabase {
     static babel = new Application("Babel", "Babel is the file explorer that comes with Taylor OS. It's name is a homage to the Library of Babel, known as the infinite library.", "taybot.svg", [])

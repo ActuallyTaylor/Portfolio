@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition"
+    import type { WindowPosition } from "#lib/models/TAY_OS/WindowPosition.js"
     import WindowButton from "./WindowButton.svelte"
     import WindowChromeLines from "./WindowChromeLines.svelte"
     import { createEventDispatcher } from 'svelte'

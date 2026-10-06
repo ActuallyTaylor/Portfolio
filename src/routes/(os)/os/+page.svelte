@@ -1,15 +1,15 @@
 <script lang="ts">
-    import { TaylorOS } from "$lib/models/TAY_OS/TaylorOS"
-    import { WindowReference } from "$lib/models/TAY_OS/WindowReference"
-    import MenuBar from "$lib/components/TAY_OS/menubar/MenuBar.svelte"
-    import { ApplicationDatabase } from "$lib/models/TAY_OS/ApplicationDatabase"
-    import Babel from "$lib/components/TAY_OS/Applications/Babel.svelte"
-    import About from "$lib/components/TAY_OS/Applications/About.svelte"
-    import BabelDesktop from "$lib/components/TAY_OS/Applications/BabelDesktop.svelte"
-    import Alert from "$lib/components/TAY_OS/Alert/Alert.svelte";
-    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
-    import type { OSAlert } from "$lib/models/TAY_OS/OSAlert";
-    import Netsplorer from "$lib/components/TAY_OS/Applications/Netsplorer.svelte";
+    import { TaylorOS } from "#lib/models/TAY_OS/TaylorOS.js"
+    import { WindowReference } from "#lib/models/TAY_OS/WindowReference.js"
+    import MenuBar from "#lib/components/TAY_OS/menubar/MenuBar.svelte"
+    import { ApplicationDatabase } from "#lib/models/TAY_OS/ApplicationDatabase.js"
+    import Babel from "#lib/components/TAY_OS/Applications/Babel.svelte"
+    import About from "#lib/components/TAY_OS/Applications/About.svelte"
+    import BabelDesktop from "#lib/components/TAY_OS/Applications/BabelDesktop.svelte"
+    import Alert from "#lib/components/TAY_OS/Alert/Alert.svelte";
+    import { WindowPosition } from "#lib/models/TAY_OS/WindowPosition.js";
+    import type { OSAlert } from "#lib/models/TAY_OS/OSAlert.js";
+    import Netsplorer from "#lib/components/TAY_OS/Applications/Netsplorer.svelte";
 
     export let os: TaylorOS = new TaylorOS()
     export let innerWidth: number = 0

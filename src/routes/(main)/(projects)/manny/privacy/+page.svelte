@@ -1,5 +1,5 @@
 <script lang="ts">
-    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
+    import DescriptionSection from "#lib/components/PageSections/DescriptionSection.svelte"
 </script>
 <svelte:head>
   <title>Manny Privacy Policy</title>

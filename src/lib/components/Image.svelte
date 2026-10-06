@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { Photo } from "$lib/models/Photo";
+    import { Photo } from "#lib/models/Photo.js";
 
     export let fullscreen: string;
     export let photo: Photo;

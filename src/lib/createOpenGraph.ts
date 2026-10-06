@@ -1,5 +1,5 @@
 import {existsSync, mkdirSync, writeFileSync} from "node:fs";
-import {CircleColor, gradientForCircleColor, Memoji} from "$lib/memoji";
+import {CircleColor, gradientForCircleColor, Memoji} from "#lib/memoji.js";
 import type { CanvasRenderingContext2D } from 'canvas';
 import {createCanvas, loadImage} from 'canvas';
 

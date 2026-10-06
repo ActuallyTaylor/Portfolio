@@ -1,5 +1,5 @@
 import type { RequestEvent } from '@sveltejs/kit'
-import { works, openSource } from "$lib/data"
+import { works, openSource } from "#lib/data.js"
 
 export async function load(event: RequestEvent) {
     let currentProjects = works.filter((project) => {

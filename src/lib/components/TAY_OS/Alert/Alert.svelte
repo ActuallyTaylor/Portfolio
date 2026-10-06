@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { OSAlert } from "$lib/models/TAY_OS/OSAlert";
-    import DraggableResize from "$lib/components/TAY_OS/window/DraggableResize.svelte";
-    import type { WindowPosition } from "$lib/models/TAY_OS/WindowPosition";
+    import type { OSAlert } from "#lib/models/TAY_OS/OSAlert.js";
+    import DraggableResize from "#lib/components/TAY_OS/window/DraggableResize.svelte";
+    import type { WindowPosition } from "#lib/models/TAY_OS/WindowPosition.js";
 
     export let alert: OSAlert
     export let callback: () => void

@@ -1,9 +1,9 @@
 <script lang="ts">
-    import DescriptionSection from "$lib/components/PageSections/DescriptionSection.svelte"
-    import VideoSection from "$lib/components/PageSections/VideoSection.svelte"
-    import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
+    import DescriptionSection from "#lib/components/PageSections/DescriptionSection.svelte"
+    import VideoSection from "#lib/components/PageSections/VideoSection.svelte"
+    import ProjectPageHeader from "#lib/components/ProjectPage/ProjectPageHeader.svelte"
 
-    import { Project } from "$lib/models/Project"
+    import { Project } from "#lib/models/Project.js"
 
     let { data: project } = $props();
 </script>

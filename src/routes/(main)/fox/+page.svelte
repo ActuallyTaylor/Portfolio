@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
+    import OpenGraphMeta from "#lib/components/OpenGraphMeta.svelte";
     
     var imageURL = ""
 

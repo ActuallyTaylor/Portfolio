@@ -1,10 +1,10 @@
 <script lang="ts">
-    import type { WindowReference } from "$lib/models/TAY_OS/WindowReference"
-    import Window from "$lib/components/TAY_OS/window/Window.svelte"
-    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS"
+    import type { WindowReference } from "#lib/models/TAY_OS/WindowReference.js"
+    import Window from "#lib/components/TAY_OS/window/Window.svelte"
+    import type { TaylorOS } from "#lib/models/TAY_OS/TaylorOS.js"
     import { createEventDispatcher, onMount } from 'svelte'
-    import { WindowPosition } from "$lib/models/TAY_OS/WindowPosition"
-    import { TayFS_Datatype, type TayFS_File } from "$lib/models/TAY_OS/FileSystem";
+    import { WindowPosition } from "#lib/models/TAY_OS/WindowPosition.js"
+    import { TayFS_Datatype, type TayFS_File } from "#lib/models/TAY_OS/FileSystem.js";
 
     const dispatch = createEventDispatcher()
 

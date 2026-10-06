@@ -1,4 +1,4 @@
-import {CircleColor, type Memoji} from "$lib/memoji";
+import {CircleColor, type Memoji} from "#lib/memoji.js";
 
 export class BlogEntry {
     title: string

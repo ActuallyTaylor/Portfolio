@@ -1,6 +1,6 @@
 <script lang="ts">
-    import type { TayFS_Program, TayFS_Unit } from '$lib/models/TAY_OS/FileSystem'
-    import { OSAlert } from '$lib/models/TAY_OS/OSAlert';
+    import type { TayFS_Program, TayFS_Unit } from '#lib/models/TAY_OS/FileSystem.js'
+    import { OSAlert } from '#lib/models/TAY_OS/OSAlert.js';
     import { createEventDispatcher } from 'svelte'
 
     export let file: TayFS_Unit

@@ -1,7 +1,7 @@
-import type {BlogEntry} from '$lib/models/BlogEntry'
-import {readPosts} from '$lib/posts'
+import type {BlogEntry} from '#lib/models/BlogEntry.js'
+import {readPosts} from '#lib/posts.js'
 import {error} from '@sveltejs/kit'
-import {createMemoji} from "$lib/createOpenGraph";
+import {createMemoji} from "#lib/createOpenGraph.js";
 import type { EntryGenerator } from './$types';
 
 // We want to prerender this API since it will allow us to generate all the pre-rendered slugs immediately at the beginning of rendering.

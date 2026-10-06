@@ -1,8 +1,8 @@
 <script lang="ts">
     import {onMount} from 'svelte'
     import SvelteMarkdown from '@humanspeak/svelte-markdown'
-    import OpenGraphMeta from "$lib/components/OpenGraphMeta.svelte";
-    import type {OpenGraph} from "$lib/models/OpenGraph";
+    import OpenGraphMeta from "#lib/components/OpenGraphMeta.svelte";
+    import type {OpenGraph} from "#lib/models/OpenGraph.js";
 
     let { data } = $props()
 

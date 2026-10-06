@@ -1,5 +1,5 @@
-import type {BlogEntry} from '$lib/models/BlogEntry'
-import {readPosts} from '$lib/posts'
+import type {BlogEntry} from '#lib/models/BlogEntry.js'
+import {readPosts} from '#lib/posts.js'
 import {error, type RequestEvent} from '@sveltejs/kit'
 import type { EntryGenerator } from './$types';
 

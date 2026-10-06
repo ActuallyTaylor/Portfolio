@@ -1,4 +1,4 @@
-import { readPosts } from '$lib/posts'
+import { readPosts } from '#lib/posts.js'
 import type { RequestEvent } from '@sveltejs/kit'
 export const prerender = true
 

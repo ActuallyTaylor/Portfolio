@@ -1,9 +1,9 @@
 <script lang="ts">
-    import FileArea from "$lib/components/TAY_OS/files/FileArea.svelte"
-    import type { TaylorOS } from "$lib/models/TAY_OS/TaylorOS"
+    import FileArea from "#lib/components/TAY_OS/files/FileArea.svelte"
+    import type { TaylorOS } from "#lib/models/TAY_OS/TaylorOS.js"
     import { createEventDispatcher } from 'svelte'
-    import FileIcon from "$lib/components/TAY_OS/files/FileIcon.svelte"
-    import type { TayFS_Unit } from "$lib/models/TAY_OS/FileSystem";
+    import FileIcon from "#lib/components/TAY_OS/files/FileIcon.svelte"
+    import type { TayFS_Unit } from "#lib/models/TAY_OS/FileSystem.js";
 
     const dispatch = createEventDispatcher()
 

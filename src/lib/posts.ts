@@ -2,7 +2,7 @@ import {create} from 'xmlbuilder2';
 import {readdirSync, readFileSync} from "fs";
 import fm from "front-matter";
 import type {BlogEntry} from "./models/BlogEntry";
-import { CircleColor, Memoji } from "$lib/memoji";
+import { CircleColor, Memoji } from "#lib/memoji.js";
 import { marked } from 'marked';
 
 export function readPosts(): BlogEntry[] {

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { OpenGraph } from '$lib/models/OpenGraph'
+    import type { OpenGraph } from '#lib/models/OpenGraph.js'
 	import { page } from '$app/state';
 
     interface Props {

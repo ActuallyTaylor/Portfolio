@@ -1,8 +1,8 @@
 <script lang="ts">
-    import LeftAlignedDescriptionSection from "$lib/components/PageSections/LeftAlignedDescriptionSection.svelte"
-    import ProjectPageHeader from "$lib/components/ProjectPage/ProjectPageHeader.svelte"
+    import LeftAlignedDescriptionSection from "#lib/components/PageSections/LeftAlignedDescriptionSection.svelte"
+    import ProjectPageHeader from "#lib/components/ProjectPage/ProjectPageHeader.svelte"
 
-    import { Project } from "$lib/models/Project"
+    import { Project } from "#lib/models/Project.js"
 
     let { data: project } = $props();
 </script>
